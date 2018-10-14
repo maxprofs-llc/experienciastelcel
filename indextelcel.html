@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Experiencias Telcel</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/main-header.css">
+
+	<script type="text/javascript" src="js/prefixfree.min.js"></script>
+
+	<style type="text/css">
+		#main-header .wrapper .brandmitelcel {
+
+			
+			-ms-grid-column: 2;
+			-ms-grid-column-span: 6;
+
+			-ms-grid-row: 1;
+			-ms-grid-row-span: 1;
+
+			
+
+			grid-column: 2 / span 4;
+			grid-row: 1 / span 1;
+			align-self: center;
+			justify-self: start;
+
+			-ms-grid-row-align: center;
+			-ms-grid-column-align: start;
+
+			z-index: 8;
+			cursor: pointer;
+		}
+
+		#main-header .wrapper .brandmitelcel img {
+			width: 16rem;
+		}
+	</style>
+
+</head>
+<body class="container-iframe">
+	<div class="container-iframe-no">
+		<div id="main-wrapper" style="padding-top: 0rem;" >
+			
+		</div>
+
+	</div>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+	
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+	<script type="text/javascript" src="js/breakpoints.js"></script>
+	<script type="text/javascript" src="js/main-header_telcel.js"></script>
+	<script type="text/javascript" src="js/telcel.js"></script>
+	
+	<!-- codigo para quitar scroll porveido por IT Telcel -->
+	<script type="text/javascript">
+		// autoprefixer({ grid: true })
+
+		var _layout_anonymous_shift_pressed = false;
+		var KEYCODE_SHIFT = 16;
+
+		(function($) 
+		{  
+		    $.fn.filterNumbersOnly = function(options) 
+		    {  
+		        this.each(function() 
+		        {
+		            var element = $(this);
+		            $(element).keydown(isNumeric);
+		            $(element).keypress(isNumeric);
+		            $(element).keyup(isShiftReleased);
+		        });
+		    }
+		})(jQuery);
+
+
+		function isShiftReleased(e)
+		{
+			if (_layout_anonymous_shift_pressed)
+			{
+			    var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+			    var code = parseInt(key, 10);
+			    
+			    if (code == KEYCODE_SHIFT)
+			    {
+			    	_layout_anonymous_shift_pressed = false;
+			    }
+			}
+		}
+
+
+		function isNumeric(e) {
+		    return e.charCode === 0 || /\d/.test(String.fromCharCode(e.charCode));
+		};
+
+		function isAlpha(e) {
+			
+			e = e || window.event;
+		    var keyCode = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+		    
+		    if( keyCode == 225  || keyCode == 233 || keyCode == 237 || keyCode == 243 || keyCode == 250 || keyCode == 39)
+		    {
+		        return true;
+		    }
+		    else
+		    {
+		        var charCode = (typeof event.which == "undefined") ? event.keyCode : event.which;
+		        return charCode === 0 || charCode === 8 || /^[a-zA-ZñÑ\s]*$/.test(String.fromCharCode(charCode));
+		    }
+		     
+		}
+
+		//Every two seconds....
+		setInterval(function() {
+			var height = $(".container-iframe").height() + 100;
+			parent.postMessage(height,"*");
+		},50);
+		  
+		  
+
+		</script>
+	<!-- fin codigo para quitar scroll porveido por IT Telcel -->
+</body>
+</html>

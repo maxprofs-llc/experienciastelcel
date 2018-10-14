@@ -1,0 +1,670 @@
+
+<style type="text/css">
+		
+
+	/******************* trivia ************************/
+
+	.ventanadinamica {	
+		position: absolute;
+		left: 50%;
+		top: 0px;
+		width: 459px;
+		height: 595px;
+
+		margin-left: calc(459px/-2);
+
+		margin-top: 10px;
+		
+		background-color: white;
+		z-index: 18;
+
+		border-radius: 0.4em;
+		overflow: hidden;
+		box-shadow: 0px 6px 18px rgba(0,0,0,.5);
+
+		display: -ms-grid;
+		-ms-grid-columns: 1fr ;
+		-ms-grid-rows: 0.08fr 0.35fr 0.21fr 0.08fr 0.08fr 0.08fr 0.14fr;
+
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.08fr 0.35fr 0.21fr 0.08fr 0.08fr 0.08fr 0.14fr;
+
+		color: white;
+		
+	}
+
+	.ventanadinamica .wrappertopbar {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 1;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / span 1;
+
+		width: 100%;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 12px;
+		padding-right: 16px;
+	}
+
+
+	.ventanadinamica .tiempopregunta {
+		font-size: 1.4rem;
+		color: black;
+	}
+
+	.ventanadinamica .tiempopregunta .cronometro {
+		margin-left: 0.8rem;
+	}
+
+	.ventanadinamica .iconoreloj {
+		color: black;
+	}
+
+	.ventanadinamica .close {
+		cursor: pointer;
+		color: black;
+	}
+
+	.ventanadinamica .portadav {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 1;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 2 / span 1;
+
+		width: 100%;
+		height: 100%;
+	}
+
+
+	.ventanadinamica .fondoazultelcel {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 1;
+
+		-ms-grid-row: 3;
+		-ms-grid-row-span: 5;
+
+		grid-column: 1 / -1;
+		grid-row:  3 / span 5;
+		background-color: #00338d; /* color hexagesimal azul teelcel */
+	}
+
+	.ventanadinamica .triviacontenido {
+		ms-grid-column: 1;
+		-ms-grid-column-span: 1;
+
+		-ms-grid-row: 3;
+		-ms-grid-row-span: 4;
+
+		grid-column: 1 / -1;
+		grid-row:  3 / span 4;
+
+
+
+	}
+
+	.ventanadinamica .triviacontroles {
+		ms-grid-column: 1;
+		-ms-grid-column-span: 1;
+
+		-ms-grid-row: 7;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row:  7 / span 1;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	.ventanadinamica .instruccion1 {
+		font-size: 0.9rem;
+		line-height: 0.9rem;
+	}
+
+	.ventanadinamica .instruccion2 {
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+
+	}
+
+
+	
+
+	.checkboxwrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.ventanadinamica .wrapperpregunta {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 1;
+
+		-ms-grid-row: 3;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row:  3 / span 1;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 100%;
+		/*height: 130px;*/
+		padding: 1.4rem;
+	}
+
+
+
+
+	.ventanadinamica .numeropregunta {
+		font-size: 0.8rem;
+		line-height: 0.8rem;
+		letter-spacing: 0.1rem;
+		margin-bottom: 0.6rem;
+	}
+
+
+	.ventanadinamica .pregunta {		
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+	}
+
+	.ventanadinamica .opcion1 {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 1;
+
+		-ms-grid-row: 4;
+		-ms-grid-row-span: 1;
+
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  4 / span 1 ;
+		padding-left: 1.3rem;
+		background-color: #1a50a4;
+		font-size: 1.2rem;
+		line-height: 45px;
+	}
+	.ventanadinamica .opcion2 {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 1;
+
+		-ms-grid-row: 5;
+		-ms-grid-row-span: 1;
+
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  5 / span 1;
+		padding-left: 1.3rem;
+		background-color: #346dba;
+		font-size: 1.2rem;
+		line-height: 45px;
+	}
+	.ventanadinamica .opcion3 {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 1;
+
+		-ms-grid-row: 6;
+		-ms-grid-row-span: 1;
+
+		color: white;
+		grid-column: 1 / -1;
+		grid-row:  6 / span 1 ;
+		padding-left: 1.3rem;
+		background-color: #4e8ad1;
+		font-size: 1.2rem;
+		line-height: 45px;
+	}
+
+	.opciones {
+		cursor: pointer;
+	}
+
+
+
+
+	
+	/**************************************************/
+
+
+	@media only screen and (max-width: 960px) { 
+		
+
+		.ventanadinamica {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100vw;
+			
+
+			/*height: 100vh;*/
+
+			margin-left: 0px;
+			margin-top: 0px;
+
+		
+		}
+		
+		
+
+	.ventanadinamica .opcion1 {
+		font-size: 1rem;
+	}
+	.ventanadinamica .opcion2 {
+		font-size: 1rem;
+	}
+	.ventanadinamica .opcion3 {
+		font-size: 1rem;
+	}
+
+
+	.ventanadinamica .pregunta {		
+		font-size: 1rem;
+	}
+
+	}
+
+</style>
+
+<div class="ventanadinamica">
+
+
+	<div class="wrappertopbar">
+		<div class="tiempopregunta">
+			<span class="fa fa-clock-o iconoreloj" aria-hidden="true"></span> 
+			<span class="cronometro no-seleccionable">
+				<span class="hora_">00</span>
+				:
+				<span class="minuto_">00</span>
+				:
+				<span class="segundo_">00</span>
+			</span>
+		</div>
+		<i class="fa fa-times close no-seleccionable" aria-hidden="true"></i>
+	</div>
+	
+	<div class="portadav" ></div>
+	<div class="fondoazultelcel"></div>
+	<div class="triviacontenido"></div>
+	<div class="triviacontroles"></div>
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+	
+
+	var dinamicadataJsonRespuesta = [];
+
+
+	var acomenzado = false;
+	var trivia;
+	var triviaindex = 0;
+	var resultado = "";
+	var confirmacionventaja = false;
+	var confirmacionventajaurl = "";
+	var promo;
+
+	var url_rest = 'https://admin.experienciastelcel.com/restful';
+	var url_pice = '';
+
+
+
+
+
+	$(document).ready( function() {
+		var mensajeventaja = '';	
+		segf_ = ('0' + segundo_).slice (-2);
+		minf_ = ('0' + minuto_).slice (-2);
+		horf_ = ('0' + hora_).slice (-2);
+		diaf_ = ('0' + dia_).slice (-2);
+
+		$('.dia_').text(diaf_);
+		$('.hora_').text(horf_);
+		$('.minuto_').text(minf_);
+		$('.segundo_').text( segf_ ) ;
+		var dinamicaJsonTrivia = $.getJSON( "https://admin.experienciastelcel.com/restful/promocion/"+id_dinamica+"/", function( data ) {
+
+			promo = data.promocion;
+			dinamicadataJsonRespuesta = [ {'name':'promo','value': id_dinamica}, {'name':'uspk','value':upk} ];
+
+		
+  			// portada
+	        trivia = [
+	        	{
+	        		"imagen": data.promocion.imagen_lg,
+	        		"texto": data.promocion.inicio_juego_txt
+	        	}
+	        ]
+
+	        // preguntas
+	         for(var i=0; i<data.promocion.preguntas.length; i++) {
+	        	trivia.push( data.promocion.preguntas[i] );
+	         }
+
+	         // final
+	         trivia.push(
+	        	{
+	        		"imagen": data.promocion.imagen,
+	        		"texto": data.promocion.inicio_juego_txt
+	        	}
+	         )
+
+	        if ( userConVentaja ) {
+		        for( var o=0; o<trivia[1].options.length; o++) {
+	       			if ( trivia[1].options[o].rpk == inicio_p ) {
+	       				trivia[1].respuesta = [
+							 {'name':'pregunta','value': trivia[1].pk },
+							 {'name':'resp_'+trivia[1].pk,'value': inicio_p }
+						]
+						trivia[1].opcion = o;
+						mensajeventaja = "estás participando con ventaja"
+	       			}
+	       		} 
+       		}
+
+
+
+	        portadaTrivia();
+		
+
+		});
+
+		
+
+	})
+
+	
+
+	$(".ventanadinamica .close").click( function() {
+		$(".fondoventanasflotante").hide();
+		$('#boxdinamica').hide();
+	})
+
+	$( "body" ).undelegate(  ".opciones:not(.blocked-option)", "click").delegate( ".opciones:not(.blocked-option)", "click", function() {
+		$(".opciones").find( ".fa" ).removeClass("fa-dot-circle-o");
+		$(".opciones").find( ".fa" ).addClass("fa-circle-o");
+		$(this).find( ".fa" ).removeClass("fa-circle-o");
+		$(this).find( ".fa" ).addClass("fa-dot-circle-o");
+		
+		trivia[triviaindex].respuesta = [
+			 {'name':'pregunta','value': $(this).data("pk") },
+			 {'name':'resp_'+$(this).data("pk"),'value': $(this).data("rpk") }
+		]
+		trivia[triviaindex].opcion =  ($(this).index()-1);
+
+	})
+
+	$( "body" ).undelegate(  ".continuar", "click").delegate( ".continuar", "click", function() {
+		triviaindex++;
+		if ( triviaindex == 1 && confirmacionventaja ) {
+			var ventajaJson = $.getJSON( confirmacionventajaurl, function( data ) {
+           		console.log(data)
+        	})
+        	for( var o=0; o<trivia[1].options.length; o++) {
+       			if ( trivia[1].options[o].rpk == inicio_p ) {
+       				trivia[1].respuesta = [
+						 {'name':'pregunta','value': trivia[1].pk },
+						 {'name':'resp_'+trivia[1].pk,'value': inicio_p }
+					]
+					trivia[1].opcion = o;
+       			}
+       		}
+		} 
+		preguntaTrivia();	
+	})
+
+	$( "body" ).undelegate(  ".regresar", "click").delegate( ".regresar", "click", function() {
+		triviaindex--;
+		if ( triviaindex == 0 ) {
+			portadaTrivia()
+		} else {
+			preguntaTrivia();
+		}	
+	})
+
+	$( "body" ).undelegate(  ".finalizar", "click").delegate( ".finalizar", "click", function() {
+		triviaindex++;
+		clearInterval( cuentaprogresiva );
+		console.log(trivia);
+		for(var r=1; r<trivia.length-2; r++ ) {
+			try{
+				dinamicadataJsonRespuesta.push( trivia[r].respuesta[0] );
+				dinamicadataJsonRespuesta.push( trivia[r].respuesta[1] );
+			}
+			catch(err){
+				er = err;
+			}
+		}
+		dinamicadataJsonRespuesta.push( {'name':'tiempo','value': horf_+":"+minf_+":"+ segf_ } ) ;
+		console.log( dinamicadataJsonRespuesta );
+
+		$.ajax({'url':'https://admin.experienciastelcel.com/restful/finaltrivia/',
+	        'type':'GET',
+	        'dataType':'json',
+	        'data':dinamicadataJsonRespuesta,
+	        'success':function(response){
+	            resultado = '<p style="font-size:1rem;">Obtuviste '+response.correctas+' de '+(trivia.length-2)+' respuestas correctas<br>en un tiempo de:</p>'
+				resultado += '<p style="font-size:2rem; margin-top:1.5rem">'+response.tiempo+'</p>'
+				resultado += '<p style="font-size:1rem;margin-top:1.5rem">Si eres ganador, serás contactado por Telcel una vez finalizado el concurso.</p>'
+				resultado += '<p style="font-size:2rem;margin-top:1.5rem">¡Mucha suerte!</p>'
+				$(".aceptoterminoscondiciones, .terminoscondiciones, .comenzar").remove();
+				$(".graciasporparticipar").show();
+				finalTrivia();
+
+	    	}
+		});
+			
+		
+
+			
+	})
+
+
+
+
+	$( "body" ).undelegate(  ".seguirjugando", "click").delegate( ".seguirjugando", "click", function() {
+		cargaContenido( "inicio.html" );	
+	})
+	
+	$( "body" ).undelegate(  ".aceptoventaja", "click").delegate( ".aceptoventaja", "click", function() {
+
+
+		
+		if ($(this).is(':checked')) {
+			confirmacionventaja = true;
+
+			confirmacionventajaurl = 'https://admin.experienciastelcel.com/restful/settuser/?u='+upk+'&servicios='+ventaja ;
+			userConVentaja = true;
+              url_pice = 'settuser';
+		} else {
+			confirmacionventaja = false;
+			confirmacionventajaurl = '';
+			userConVentaja = false;
+              url_pice = 'rmserviceuser';
+		}
+
+            
+
+            var uri = url_rest + '/'+url_pice+'/?u='+upk+'&servicios='+ventaja;
+            $.ajax({url:uri,success:function(response){
+            	respuesta = true;
+            }});
+
+
+
+
+	});
+
+	function portadaTrivia() {
+		$(".ventanadinamica .portadav").css("background", "url("+trivia[0].imagen+")" );
+        $(".ventanadinamica .portadav").css("background-repeat","no-repeat" );
+        $(".ventanadinamica .portadav").css("background-size","cover" );
+        $(".ventanadinamica .portadav").css("background-position","center" );
+        $(".triviacontenido").empty();
+        $(".continuar").css("margin-left", "0rem");
+        $(".triviacontenido").css("padding", "2.6rem");
+        var htmlcontent = '<p class="instruccion1 blanco">'+trivia[0].texto+'</p>'
+			htmlcontent += '<p class="instruccion2" style="margin-top: 1rem;"><span class="azulclarotexttelcel">¡Mucha suerte!</span></p>'
+
+
+
+
+
+
+              $.getJSON("https://admin.experienciastelcel.com/restful/getuser/?upk="+upk,function(data){
+
+
+                if(data.usuario.ventaja=='1'){
+                 checado = 'checked="checked"';
+                }
+                				else{
+					checado = '';
+				}
+
+
+		 		htmlcontent += '<div class="checkbox azulclarotexttelcel tengolaventaja checkboxwrapper" style="margin-top: 2rem;">'
+				htmlcontent += '<input type="checkbox" class=" aceptoventaja" '+checado+' name="aplicaventaja" style="padding-top: 5px;"   >'
+				htmlcontent += '<div class="linkcyanmayuscula_ no-seleccionable" style="margin-left: 0.8rem">Tengo el servicio <span class="ventaja_titulo bold">'+ventaja_titulo+'</span></div>';
+
+		
+
+		    
+        $(".triviacontenido").append( htmlcontent );
+
+        htmlcontent = '<div class="btn continuar" >Continuar</div>';
+        $(".triviacontroles").empty();
+        $(".triviacontroles").append( htmlcontent );
+
+
+              });
+
+
+	}
+
+	function preguntaTrivia() {
+		$(".triviacontenido").empty();
+	    $(".triviacontenido").css("padding", "0rem");
+
+	    $(".ventanadinamica .portadav").css("background", "url("+trivia[triviaindex].img+")" );
+	    $(".ventanadinamica .portadav").css("background-repeat","no-repeat" );
+        $(".ventanadinamica .portadav").css("background-size","cover" );
+        $(".ventanadinamica .portadav").css("background-position","center" );
+
+        if ( triviaindex > 1 ) {
+        	mensajeventaja = '';
+        }
+
+		var preguntaHTML = '<div class="wrapperpregunta"  data-pk="'+trivia[triviaindex].pk+'">'
+		    preguntaHTML += '	<div class="numeropregunta" >'+triviaindex+' de '+(trivia.length-2)+' </div>'
+		    preguntaHTML += '	<div class="pregunta">'+trivia[triviaindex].pregunta+'</div>'
+		    preguntaHTML += '</div>'
+		
+		if ( (userConVentaja ||  confirmacionventaja) &&  triviaindex == 1 ) {
+			var opcionesHTML = '<div class="opcion1 opciones no-seleccionable blocked-option" data-rpk="'+trivia[triviaindex].options[0].rpk+'" style="cursor: not-allowed" data-pk="'+trivia[triviaindex].pk+'">'
+				opcionesHTML += '	<i class="fa fa-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+trivia[triviaindex].options[0].texto+' ';
+				opcionesHTML += '</div>'
+
+				opcionesHTML += '<div class="opcion2 opciones no-seleccionable blocked-option" data-rpk="'+trivia[triviaindex].options[1].rpk+'" style="cursor: not-allowed" data-pk="'+trivia[triviaindex].pk+'">'
+				opcionesHTML += '	<i class="fa fa-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+trivia[triviaindex].options[1].texto+' ';
+				opcionesHTML += '</div>'
+
+				opcionesHTML += '<div class="opcion3 opciones no-seleccionable blocked-option" data-rpk="'+trivia[triviaindex].options[2].rpk+'" style="cursor: not-allowed" data-pk="'+trivia[triviaindex].pk+'">'
+				opcionesHTML += '	<i class="fa fa-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+trivia[triviaindex].options[2].texto+' ';
+				opcionesHTML += '</div>'
+		} else {
+			var opcionesHTML = '<div class="opcion1 opciones no-seleccionable" data-rpk="'+trivia[triviaindex].options[0].rpk+'" style="cursor: pointer" data-pk="'+trivia[triviaindex].pk+'">'
+				opcionesHTML += '	<i class="fa fa-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+trivia[triviaindex].options[0].texto+' ';
+				opcionesHTML += '</div>'
+
+				opcionesHTML += '<div class="opcion2 opciones no-seleccionable" data-rpk="'+trivia[triviaindex].options[1].rpk+'" style="cursor: pointer" data-pk="'+trivia[triviaindex].pk+'">'
+				opcionesHTML += '	<i class="fa fa-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+trivia[triviaindex].options[1].texto+' ';
+				opcionesHTML += '</div>'
+
+				opcionesHTML += '<div class="opcion3 opciones no-seleccionable" data-rpk="'+trivia[triviaindex].options[2].rpk+'" style="cursor: pointer" data-pk="'+trivia[triviaindex].pk+'">'
+				opcionesHTML += '	<i class="fa fa-circle-o" aria-hidden="true" style="margin-right: 1.5rem"> </i>'+trivia[triviaindex].options[2].texto+' ';
+				opcionesHTML += '</div>'
+		}
+		
+
+        $(".triviacontenido").append( preguntaHTML );
+        $(".triviacontenido").append( opcionesHTML );
+        
+        var htmlcontent = '';//'<!-- <div class="btninvert regresar" >Regresar</div> -->';
+        
+        if ( triviaindex == 1 && !acomenzado ) {
+        	acomenzado = true;
+        	comenzarCuentaProgresiva();
+        }
+        if ( triviaindex == trivia.length-2 ) {
+        	htmlcontent += '<div class="btn finalizar" >Finalizar</div>';
+        } else {
+        	htmlcontent += '<div class="btn continuar" >Continuar</div>'; 
+        }
+		
+		
+		$(".triviacontroles").empty();
+        $(".triviacontroles").append( htmlcontent );
+
+        $(".regresar").css("margin-right", "1rem");
+        if ( triviaindex == trivia.length-2 ) {
+	        $(".finalizar").css("margin-left", "1rem");
+	    } else {
+	    	$(".continuar").css("margin-left", "1rem");
+	    }
+        
+        
+
+        if ( trivia[triviaindex].opcion != null ) {
+	        $(".opciones").find( ".fa" ).removeClass("fa-dot-circle-o");
+			$(".opciones").find( ".fa" ).addClass("fa-circle-o");
+			$(".opciones").eq(trivia[triviaindex].opcion).find( ".fa" ).removeClass("fa-circle-o");
+			$(".opciones").eq(trivia[triviaindex].opcion).find( ".fa" ).addClass("fa-dot-circle-o");
+		}
+
+        
+	}
+
+	function finalTrivia() {
+		$(".triviacontenido").empty();
+	    $(".triviacontenido").css("padding", "2.6rem");
+
+	    $(".ventanadinamica .portadav").css("background", "url("+trivia[triviaindex].imagen+")" );
+	    $(".ventanadinamica .portadav").css("background-repeat","no-repeat" );
+        $(".ventanadinamica .portadav").css("background-size","cover" );
+        $(".ventanadinamica .portadav").css("background-position","center" );
+
+        $(".triviacontenido").append( resultado );
+        
+
+	    var htmlcontent = '<div class="btn seguirjugando" >Seguir jugando</div>';
+        
+		$(".triviacontroles").empty();
+        $(".triviacontroles").append( htmlcontent );
+
+		
+	}
+
+
+
+
+</script>

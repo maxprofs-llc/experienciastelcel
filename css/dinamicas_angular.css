@@ -1,0 +1,174 @@
+
+		/******************* SOPA ************************/
+
+
+	.trivia{
+		position:absolute;
+	    z-index: 211;
+	    height: auto;
+	    width: 599px;
+	    background: #fff;
+	    top:0px;
+	    left:50%;
+		border-radius: 0.4em;
+		overflow: hidden;
+		box-shadow: 0px 6px 18px rgba(0,0,0,.5);
+		margin-left: calc(599px/-2);
+		margin-top: 10px;
+	}
+
+
+
+
+	.tiempopregunta{
+
+			color: black;
+			font-size: 1.4rem;
+			padding-left: 1rem;
+			background-color: white;
+
+	}
+
+
+
+	.texto-alto{
+		    font-size: 2rem;
+	    margin-top: 1.5rem;
+	}
+
+
+
+
+		.tablero-col{
+			display: inline-block;
+			width:8%;
+			border:none;
+			text-align: center;
+			font-weight: bolder;
+			padding: 12px;
+			cursor: pointer;
+			color:#000000;
+		}
+
+		@media (max-width: 959px) {
+			.tablero-col {
+			  width: 10%;
+			  padding: 6px;
+			}
+		  }
+
+
+		.upercaser{
+			/* Diego */
+			color: #ffffff;
+			text-transform: uppercase;
+			font-weight: bold;
+			background:blue !important;
+		}
+
+
+
+		.preselect{
+			color: #ffffff;
+			text-transform: uppercase;
+			font-weight: bold;
+			background:blue !important;
+		}
+
+
+
+		.errselect{
+			color: #ffffff;
+			text-transform: uppercase;
+			font-weight: bold;
+			background:red !important;
+		}
+
+		#game-box div {
+			text-align: center;
+		  }
+
+
+
+
+
+/*  ************************* PUZZLE ***************************  */
+
+
+	
+
+	.distancia{
+		padding:20px;
+		text-align: right;
+	}
+
+
+
+
+
+	.links{
+		cursor: pointer;
+	}
+
+	.blue-box{
+		background: #00338d;padding:40px;color:#fff;
+	}
+
+
+	.texto-alto{
+		    font-size: 2rem;
+	    margin-top: 1.5rem;
+	}
+
+
+
+
+
+
+/*  DINAMICA SWIPER  */
+
+
+
+
+.swiper-img:hover{
+
+	border:2px solid black;
+
+}
+
+
+.rotado_0{
+	transform: rotate(9deg);
+}
+
+
+
+.disableds{
+	display: none !important;
+	
+}
+
+
+
+
+		/**************************************************/
+
+
+	@media only screen and (max-width: 960px) { 
+		
+
+		.trivia {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: auto;
+			margin-left: 0px;
+			margin-top: 0px;					
+		}
+		
+	
+
+	}
+
+

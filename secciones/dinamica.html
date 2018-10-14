@@ -1,0 +1,1618 @@
+<style type="text/css">
+	
+	.categoriadinamica {
+		padding-top: 52px;
+		padding-bottom: 52px;
+		width: 920px;
+		margin: auto;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+
+	.headerdinamica {
+		width: 960px;
+		margin: auto;
+		padding-top: 84px;	
+		display: grid;
+		grid-template-columns: 10px repeat(7, 1fr) [datasocial-inicio] repeat(5, 1fr) [datasocial-final] 10px ;
+		grid-column-gap: 20px;
+
+ 	}
+
+ 	.headerdinamica .linea {
+ 		grid-column: 2 / -2;
+ 		grid-row: 2 / 3;
+ 		height: 1rem;
+ 		border-bottom: 1px solid rgb(80,80,80);
+ 	}
+
+ 	.headerdinamica h1 {
+ 		grid-column: 2 / span 5;
+ 		grid-row: 1 / 2;
+ 	}
+ 	.headerdinamica .wrapper {
+ 		grid-column: datasocial-inicio/datasocial-final;
+ 		grid-row: 1 / 2;
+ 		display: flex;
+ 		flex-direction: row;
+ 		align-items: end;
+ 		justify-content: space-between;
+ 	}
+
+ 	.headerdinamica .wrapper .div {
+ 		
+ 		display: flex;
+ 		flex-direction: row;
+ 		justify-content: space-between;
+ 	}
+
+
+	.invisible {
+		opacity: 0;
+	}
+
+
+	/*************  dinamicas sugenrencias ok *************/
+
+	.titulodinamica {
+ 		font-size: 1.2rem;
+		font-weight: bold;
+		line-height: 1.2rem;
+		width: 100%;
+	}
+
+	.dinamicacard {
+		width: 286px;
+		height: 423px;
+
+		margin: 10px;
+
+		display: -ms-grid;
+	    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+		-ms-grid-rows:  8px 36px 230px 154px 48px;
+
+
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: 8px 36px 230px 154px [footer] 48px;
+
+
+
+		font-size: 1rem;
+		background-color: white;
+
+		border-radius: 0.4em;
+		overflow: hidden;
+		border: 0.5px solid #baccd3;
+
+		cursor: pointer;
+
+		font-size: 0.9rem;
+		font-weight: normal;
+		line-height: 0.8rem;
+	}
+	
+	.dinamicacard .bartop {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / span 1;
+		background-color: white;
+	}
+
+	.dinamicacard .imagedinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 2;
+
+		grid-column: 1 / -1;
+		grid-row: 2 / span 2;
+
+	}
+
+	.dinamicacard .proximamentetext {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 8;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 2 / 10;
+		grid-row: 2 / 3;
+		background-color: white;
+		text-align: center;
+		line-height: 36px;
+	}
+
+	.dinamicacard .tagdinamica {
+		-ms-grid-column: 4;
+		-ms-grid-column-span: 6;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 4 / 10;
+		grid-row: 2 / 3;
+		background-color: white;
+		text-align: center;
+		line-height: 36px;
+	}
+
+	.dinamicacard .diaevento {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 2;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 2 / 4;
+		grid-row: 2 / 3;
+		
+		background-color: rgb(62,62,62);
+		color: white;
+		
+		display: flex;
+		flex-direction: column;
+		
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	.dinamicacard .diaevento div {
+		text-align: center;
+	}
+
+	.dinamicacard .diaevento .diacard {
+		margin-top: 0.1rem;
+		font-size: 1.1rem;
+		line-height: 0.8rem;
+		font-weight: bold;
+	}
+
+	.dinamicacard .diaevento .mescard {
+		font-size: 0.9rem;
+		font-weight: normal;
+	}
+
+	.dinamicacard .segmento {
+		-ms-grid-column: 10;
+		-ms-grid-column-span: 2;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 10 / 12;
+		grid-row: 2 / 3;
+		
+		background-color: #f5f5f5;
+
+		border-radius: 0rem 0rem 0.5rem 0rem;
+
+		display: flex;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+	}
+
+	.dinamicacard .segmento img {
+		height: 1.3rem;
+	}
+
+	.dinamicacard .infodinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 4;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 4 / 5;
+		background-color: #f5f5f5;
+		padding: 20px 20px 15px 20px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.dinamicacard footer {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 5;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 5 / 6;
+		background-color: white;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px 18px;
+	}
+
+	.dinamicacard footer div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	/******************************************************/
+
+
+	/* css dinamica car en contexto */
+
+	.ladinamica {
+		width: 960px;
+		margin: auto;
+
+		display: -ms-grid;
+		-ms-grid-columns: 10px 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 10px;
+		
+		-ms-grid-rows: 246px 202px 48px auto auto auto;
+
+
+		display: grid;
+		grid-template-columns: 10px 1fr [info-start] repeat(5, 1fr) [info-end] 1fr [form-start] repeat(4 , 1fr) [form-end] 1fr 10px;
+		
+		grid-template-rows: 246px 202px 48px auto auto auto;
+		
+		grid-gap: 0px 20px; /* row gap   column gap */
+	}
+
+	.portada {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 27;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 2;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / span 2;
+		
+		
+	}
+
+	.infosombra {
+		-ms-grid-column: 5;
+		-ms-grid-column-span: 9;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 2;
+
+		grid-column: info-start / info-end;
+		grid-row: 2/4;
+		/*background-color: rgb(220,220,220);*/
+		box-shadow:2px 2px 6px rgb(200,200,200);
+		z-index: 1;
+	}
+
+	.info {
+		-ms-grid-column: 5;
+		-ms-grid-column-span: 9;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: info-start / info-end;
+		grid-row: 2/3;
+		background-color: rgb(220,220,220);
+		z-index: 2;
+		margin-bottom: 0px;
+		padding: 8px 18px 18px 21px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.info h2 {
+		font-size: 1.6rem;
+		line-height: 1.8rem;
+		margin-bottom: 1rem;
+	}
+
+	.info .viral {
+		width: calc(50% - 20px);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.wrapperdiaeventociudad {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.wrapperdiaeventociudad .diaevento {
+		display: flex;
+	    flex-direction: column;
+	    flex-wrap: wrap;
+	    justify-content: space-around;
+	    align-items: center;
+
+	}
+
+	.wrapperdiaeventociudad .diae {
+		font-size: 1.3rem;
+		font-weight: bold;
+
+	}
+
+	.wrapperdiaeventociudad .diaevento .diacard {
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
+
+	.wrapperdiaeventociudad .diaevento .mescard {
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	.wrapperdiaeventociudad .ciudad {
+		margin-left: 1.5rem;
+	}
+
+	.socialdata {
+		-ms-grid-column: 5;
+		-ms-grid-column-span: 9;
+
+		-ms-grid-row: 3;
+		-ms-grid-row-span: 1;
+
+		grid-column: info-start / info-end;
+		grid-row: 3/4;
+		background-color: white;
+		z-index: 2;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+	.socialdata div {
+
+		display: flex;
+		flex-direction: row;
+		align-items: center; 
+		font-size: 0.9rem;
+
+	}
+
+	.contadorregresivo {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 27;
+
+		-ms-grid-row: 3;
+		-ms-grid-row-span: 2;
+
+		grid-column: 1 / -1;
+		grid-row: 3/5;
+		background-color: white;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.contadorregresivo .numeros {
+		display: flex;
+		flex-direction: row;
+		font-size: 4rem;
+	}
+
+	.contadorregresivo .numeros .tagnumero{
+		font-size: 0.9rem;
+		text-align: center;
+		margin-top: 2rem;
+	}
+
+	.contadorregresivo .titulo {
+		font-size: 0.9rem;
+		margin-bottom: 2rem;
+		margin-top: 2rem;
+	}
+
+	.fondogris {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 27;
+
+		-ms-grid-row: 5;
+		-ms-grid-row-span: 2;
+
+		grid-column: 1 / -1;
+		grid-row: 5/7;
+		background-color: rgb(240,240,240);
+	}
+	.detalles {
+		-ms-grid-column: 5;
+		-ms-grid-column-span: 9;
+
+		-ms-grid-row: 5;
+		-ms-grid-row-span: 1;
+
+		grid-column: info-start / info-end;
+		grid-row: 5/6;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+		line-height: 1.4rem;
+	}
+
+	.ladinamica h3 {
+		font-size: 1.6rem;
+		margin-bottom: 1.4rem;
+		font-weight: lighter;
+	}
+
+	.detalles p {
+		margin-bottom: 1.6rem;
+	}
+
+	.terminoscondiciones {
+		
+	}
+
+	#wrapperterminosycondiciones {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.comenzar {
+		-ms-grid-column: 5;
+		-ms-grid-column-span: 4;
+
+		-ms-grid-row: 6;
+		-ms-grid-row-span: 1;
+
+		grid-column: info-start / span 2;
+		grid-row: 6/7;
+		text-align: center;
+
+		margin-bottom: 2rem;
+		
+		cursor: pointer;
+
+	}
+
+	.formulario {
+		-ms-grid-column: 17;
+		-ms-grid-column-span: 7;
+
+		-ms-grid-row: 5;
+		-ms-grid-row-span: 1;
+
+		grid-column: form-start / form-end;
+		grid-row: 5/6;
+
+		margin-top: 3rem;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.formulario .wrapperventaja {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.iconoventaja {
+		width: 4rem;
+		align-self: flex-start;
+	}
+
+	.textoventaja {
+		margin-left: 1rem;
+		width: 200px;
+	}
+
+	.formulario input {
+		width: 100%;
+		height: 3rem;
+	}
+
+	.formulario .btn {
+		width: calc( 50% - 20px ) !important;
+		margin-top: 2rem;
+		text-align: center;
+	}
+
+
+	.graciasporparticipar {
+	    font-size: 1.8rem;
+	    margin-top: 2.0rem;
+	    margin-bottom: 2.0rem;
+	    font-weight: 400;
+	    line-height: 1.8rem;
+	}
+
+
+	.btn {
+		text-align: center;
+		width: 120px;
+		background-color: #fa6400;
+		padding: 5px 15px 5px 15px;
+		box-shadow:2px 2px 6px rgba(0,0,0,.5);
+		color: white;
+	}
+
+	.btninvert {
+		text-align: center;
+		width: 120px;
+		background-color: white;
+		padding: 5px 15px 5px 15px;
+		box-shadow:2px 2px 6px rgba(0,0,0,.5);
+		color: #fa6400;
+	}
+
+
+
+	.linkcyanmayuscula {
+		color: #0097a7;
+		font-size: 0.9rem;
+		font-weight: normal;
+		cursor: pointer;
+		text-transform: capitalize;
+	}
+
+	.wrappercomodin {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.wrappercomodin div {
+		font-size: 3rem;
+		font-weight: bold;
+		margin-left: 0.5rem;
+	}
+
+	.separador {
+		width: 100%;
+		height: 1px;
+		border-bottom: 1px solid #AAAAAA;
+	}
+
+
+	.disabled {
+		background-color: rgb(220,220,220);
+		color: white;
+	}
+
+	.fondoventanasflotante {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,.6);
+		z-index: 15;
+	}
+
+
+
+	
+	/*********** ventana terminos y condiciones *******/
+
+	.ventanaterminoscondiciones {
+		position: fixed;
+		left: 50%;
+		top: 0px;
+		width: 462px;
+		height: 594px;
+		margin-left: calc(462px/-2);
+		margin-top: 10px;
+		background-color: white;
+		z-index: 17;
+		border: 4px solid #fff;
+		padding-top:38px;
+
+	}
+
+	.ventanaterminoscondiciones .cuerpotexto {
+
+		overflow-y: scroll;
+		padding-left: 20px;
+		padding-right: 20px;
+		font-size: 0.9rem;
+		line-height: 1.2rem;
+		height: 400px;
+
+	}
+
+	.ventanaterminoscondiciones .cuerpotexto .titulo {
+		font-size: 1rem;
+	}
+
+	.ventanaterminoscondiciones .cuerpotexto p, .ventanaterminoscondiciones .cuerpotexto #tyc_dinamica p {
+		margin-bottom: 0.6rem;
+	}
+
+	.ventanaterminoscondiciones .separador {
+		height:40px;
+		border-bottom: 1px solid #444;
+	}
+
+	.ventanaterminoscondiciones .checkbox {
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 20px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start ;
+	}
+
+	.ventanaterminoscondiciones .botones {
+		padding-left: 20px;
+		padding-right: 20px;
+		
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}	
+
+	.ventanaterminoscondiciones .close {
+		justify-self: end;
+		font-size: 1rem;
+		padding-right: 2px;
+		cursor: pointer;
+		margin-top: 0.1rem;
+    	margin-right: 0.1rem;
+	}
+
+	/**********************************************/
+
+
+	
+
+	#dinamicaloaded {
+
+	}
+
+	/************************************************/
+
+	@media only screen and (max-width: 960px) { 
+		#main-wrapper {
+			width: 100%;
+		}
+
+		.ladinamica {
+			width: 100%;
+		}
+
+		.portada {
+			width: 100%;
+		} 
+
+		.infosombra {
+			grid-column: 2 / -2;
+			grid-row: 2/4;
+
+		}
+
+		.info {
+			grid-column: 2 / -2;
+			grid-row: 2/3;
+		}
+
+		.socialdata {
+			grid-column: 2 / -2;
+			grid-row: 3/4;
+
+		}
+
+		.contadorregresivo .numeros > div{
+			font-size: 4rem;
+		}
+
+
+		.detalles {
+			grid-column: 2 / -2;
+			grid-row: 5/6;
+			margin-bottom: 0rem;
+		}
+
+		
+		.formulario {
+			grid-column: 2 / -2;
+			grid-row: 6/7;
+			margin-top: 2rem;
+		}
+
+		.ganadores, .dinamicas, .experienciastelcel, .promo3dinamicas, .categoriadinamica, .headerdinamica {
+			width: 100%;
+		}
+
+		.headerdinamica .linea {
+	 		/
+	 	}
+
+	 	.headerdinamica h1 {
+	 		
+	 	}
+
+
+		.categoriadinamica {
+			justify-content: center;
+		}
+
+		.carruselcards .mascara {
+			position: relative;
+			height: 432px;
+			
+			grid-column: 1/-1;
+			grid-row: 1/2;
+
+			overflow: auto;
+   			white-space: nowrap;
+		}
+
+
+		.ventanaterminoscondiciones {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			/*height: 100%;*/
+			margin-left: 0px;
+			margin-top: 0px;
+			padding-top:38px;
+			/*background-color: white;*/
+
+
+		}
+
+
+	}
+
+
+
+	@media only screen and (max-width: 400px) { 
+
+
+	.info h2 {
+		font-size: 1.1rem;
+		line-height: 1.8rem;
+		margin-bottom: 1rem;
+	}
+
+}
+
+
+dl dt{
+	font-weight: bold;
+	font-size: 1rem;
+	padding:10px 0px;
+}
+
+dl dd{
+	font-size: 0.95rem;
+	font-weight: normal;
+	padding:10px 0px;
+}
+
+
+
+</style>
+
+
+	<section class="ladinamica">
+
+		<div class="portada">
+
+		</div>
+
+		
+
+		<div class="infosombra"></div>
+
+		<div class="info">
+			<div class="wrapperdiaeventociudad">
+				<div class="diaevento" >
+					<div class="diae grismuyoscuro"></div>
+					<div class="mese grismuyoscuro"></div>
+				</div>
+				<div class="ciudad typodetallesvigencia grisoscuro"></div>
+			</div>
+
+			<h2 class="typotitulocard"></h2>
+			<div class="vigencia">Vigencia: <span></span></div>
+		</div>
+
+		<div class="socialdata">
+			<div class="likes manita" data-id="-1">
+				<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
+				<div class="valorlikes totallikes"></div>
+			</div>
+			<div class="social">
+				<div class="fa fa-user-o" style="margin-right:0.5em"></div>
+				<div class="valorshares"></div>
+			</div>
+		</div>
+
+		<div class="contadorregresivo" style="padding:60px 0px;">
+			<div class="titulo">Tiempo de la promoción</div>
+			<div class="numeros">
+				<div class="numero">
+					<div class="dia">00</div>
+					<div class="tagnumero">Días</div>
+				</div>
+				<div class="numero">
+					<div>:</div>
+				</div>
+				<div class="numero">
+					<div class="hora">00</div>
+					<div class="tagnumero">Horas</div>
+				</div>
+				<div>:</div>
+				<div class="numero">
+					<div class="minuto">00</div>
+					<div class="tagnumero">Minutos</div>
+				</div>
+				<div>:</div>
+				<div class="numero">
+					<div class="segundo">00</div>
+					<div class="tagnumero">Segudos</div>
+				</div>
+			</div>
+			
+			
+		</div>
+
+		<div class="fondogris"></div>
+
+		<div class="detalles">
+			<h3>Premio</h3> 
+
+			<div class="bases"></div>
+
+		</div>
+
+		<div class="formulario">
+
+			<h3 class="titulopremio">Ventaja</h3>
+
+			<div class="wrapperventaja">
+				<img src="images/iconoventaja.png" class="iconoventaja">
+				<div class="premios textoventaja">Recuerda que del  <span id="ventaja_fecha">16 al 31 de mayo</span> <span class="servicioventaja bold" id="ventaja_titulo">Claro Música</span> le está dando una ventaja a todos los contratantes del servicio.</div>
+			</div>
+
+			<div id="wrapperterminosycondiciones" style="margin:20px 0px">
+				<div class="fa fa-square-o aceptoterminoscondiciones linkcyanmayuscula no-seleccionable" aria-hidden="true" style="font-size: 1.5rem; margin-top: 2rem;"></div>
+				<span class="terminoscondiciones linkcyanmayuscula no-seleccionable" style="margin-top: 2rem; margin-left: 0.6rem;"> Ver términos y condiciones</span>
+			</div>
+			<div class="btn comenzar no-seleccionable disabled">Participar</div>
+
+			<div class="graciasporparticipar azultelcel" style="display: none">¡Muchas gracias<br>por participar!</div>
+			
+		</div>
+
+	</section>
+
+
+	<header class="headerdinamica" id="otrasrecs">
+		<div class="linea"></div>
+		<h1 class="titulo36bold grismuyoscuro">Otras recomendaciones</h1>
+		
+	</header>
+
+	<section class="categoriadinamica">
+		
+	</section>
+
+	<section class="publicidad" data-url="http://telcel.clubapps.com.mx/web/index.html">
+		<div class="wrapperp">
+			<img src="images/publicidad/club-claro-apps-bne.jpg" class="imgdesktop">
+			<img src="images/publicidad/club-claro-apps-bnm.jpg" class="imgmobile">
+		</div>
+	</section>
+
+	
+
+
+
+<div class="fondoventanasflotante"></div>
+
+
+
+
+
+
+
+<div class="ventanaterminoscondiciones">
+	<div class="fa fa-times close" aria-hidden="true" style="position: absolute;right:15px;top:80px;"></div>
+	
+	
+
+	<div class="cuerpotexto" style="margin-top:80px;">
+		<p class="titulo">Términos y Condiciones</p>
+
+
+		<div id="terms">
+			<dl style="list-style: circle;">
+				<dt><h1 style="font-size: 1.3rem;font-weight: bold;">Términos y condiciones de la Promoción  <span id="nombrepormo"></span>  </h1></dt>
+				<dd>
+
+					<p>Reglas y Bases del Concurso </p>
+
+
+					<div style="border:1px solid black;padding:5px;">
+						<b>Importante:</b> Los Participantes deberán leer y entender íntegramente las reglas y condiciones abajo descritas antes de enviar cualquier información y/o manifestar su deseo de participar en el presente Concurso. 
+					</div>
+				</dd>
+
+
+
+
+				<dt>I. Organizadores de la Promoción.</dt>
+				<dd>
+					El “Organizador” y responsable de la promoción es Radiomovil Dipsa S.A. de C.V. (“Telcel”), con domicilio en Lago Zúrich 245, Col. Ampliación Granada, Del. Miguel Hidalgo, Ciudad de México, México. CP. 11529.
+				</dd>
+
+
+
+				
+				<dt> II. ¿Quién puede participar? </dt>
+				<dd>
+					2.1 Puede participar: a. Cualquier persona física que sea mayor de edad, que cuente con una línea activa de Telcel en la modalidad “prepago” o “pospago” y que resida dentro de la República Mexicana (México). El participante deberá tener 18 años cumplidos a la fecha de su inicio de participación, b. Que haya aceptado los términos y condiciones establecidos en las presentes Bases. 
+					<br>
+					2.2 No podrá participar: a. Cualquier persona que sea empleado de los Organizadores. b. Los clientes que cuenten con una línea y se encuentren bajo el estatus de suspensión del servicio. c. Quienes hayan sido ganadores de cualquiera de las actividades o concursos realizados a través de Telcel dentro del último mes. d. Empleados de Grupo Carso y/o de las empresas subsidiarias y/o filiales, o desarrolladoras de la aplicación; su cónyuge y/o sus familiares cercanos hasta primer grado de consanguinidad o primero de afinidad.
+
+				</dd>
+
+
+				<dt>III. Duración del concurso.</dt>
+				<dd>
+					El concurso estará vigente a partir de las 00:01 horas del <span id="publicacion_terminos"></span> y terminará a las 23:59 horas del 
+					<span id="vigencia_terminos"></span> Promoción válida únicamente dentro de la República Mexicana (México). Los usuarios podrán participar desde el momento en que se publiquen los retos a través de la https://www.mitelcel.com/experiencias 
+				</dd>
+
+
+				<dt>IV. ¿Cómo participar?</dt>
+				<dd>
+					Para participar, los usuarios deberán: a. Contar con un equipo de cómputo o Smartphone que tenga la capacidad, tecnología y los programas necesarios para visualizar videos y archivos multimedia; b. Tener una conexión a Internet c. Ser titulares de una línea Telcel en modalidad prepago o pos pago y estar al corriente de pago durante toda la vigencia de la promoción y, hasta la entrega del premio; d. Haber leído, aceptado y entendido completamente las presentes Bases, y e. Seguir todos los pasos descritos en el apartado V “Dinámica del concurso” de las presentes Bases. 
+				</dd>
+
+
+
+				<dt>V. Dinámica del concurso.</dt>
+
+				<dd>
+					<span>Para comenzar a participar: El usuario deberá aceptar los términos y condiciones de la promoción <b>a.</b></span>
+					<span id="termdin"></span><span id="bases_txt"></span>
+					<b>b.</b>
+					Los participantes que tengan contratado el servicio de <span id="ventaja_term"></span> contarán con un “comodín” el cual les dará la ventaja de <span id="ventaja_desc"></span> 
+					<br>
+					<br>
+					<div style="border:1px solid black;padding:5px;">
+						<b>Importante:</b> 
+						Por menor tiempo posible se entenderá el menor número de segundos y/o minutos que le tome al participante contestar y/o completar el reto correctamente. 
+					</div>
+
+
+				</dd>
+
+
+				<dt>VI. Premio.</dt>
+				<dd >
+					<div id="premio"></div>
+					<div id="premio_terms"></div>
+					<br>
+					<div>
+							El premio se deberá recoger en el Centro de Atención a Clientes Telcel, ubicado en <span id="cede"></span>. Una vez que se haga la entrega del premio, Telcel, no se hará responsable por robo o cualquier situación relacionada. El premio no podrá ser canjeado por dinero en efectivo, ni transferido a terceras personas. En caso de residir fuera de la ciudad en la que se realizará el evento y resultar ganador, el premio podrá ser entregado a un tercero, ésta persona debe contar con una carta poder e identificación oficial, tanto de la persona que resultó ganadora, como de la persona que recoge el premio. Aquellos gastos asociados con la aceptación/reclamo/uso/goce o disfrute del Premio que no se encuentren expresamente indicados en estas Bases, estarán a cargo y serán de la exclusiva responsabilidad del ganador y deberá ser erogado por este último a fin de poder hacer efectiva la entrega del Premio. El ganador del Concurso, según corresponda y aplique, es responsable por el pago de los impuestos que, de acuerdo a la legislación fiscal aplicable, deba pagar a fin de recibir y disfrutar del Premio. No está permitida la sustitución de Premio, excepto por decisión de los Organizadores dado el caso de indisponibilidad del mismo por causas de fuerza mayor y solo por otro premio de similar o mayor valor. Al recibir el Premio, el ganador acepta el Premio sin ninguna responsabilidad adicional por parte de los Organizadores. Los Organizadores no serán responsables por insatisfacción del ganador al Premio recibido. Las imágenes que pudieran aparecer del Premio en los medios de comunicación que promocionen el Concurso son de referencia. Telcel será el único responsable de obtener y asumir los costos del Premio de este Concurso. Telcel será el responsable de llevar a cabo la mecánica y ejecución del Concurso. Se corroborará que los ganadores cuenten con una línea Telcel vigente y al corriente de pago.
+						
+					</div>
+				</dd>
+
+
+
+
+				<dt>VII. Ganadores.</dt>
+				<dd >
+					<div id="texto_ganadores"></div> 
+					En caso de empate, se considerará como ganador a la persona que haya resuelto el reto en el menor tiempo posible. Las personas que se hayan determinado como ganadores del Concurso, Telcel lo contactará a través de una llamada telefónica al número registrado en Mi Telcel. El posible ganador deberá proporcionar: a. Nombre completo; b. Teléfono móvil para contacto, y c. Correo electrónico con el que se tenga registrada la cuenta de Mi Telcel. Una vez que Telcel haya logrado contactar al ganador del concurso vía telefónica, le indicará que asista a la dirección especificada con una copia de su identificación oficial vigente y copia de la identificación del titular de la línea en caso necesario. El ganador deberá manifestar expresamente su consentimiento para recibir el Premio correspondiente y deberán firmar los documentos que soliciten los organizadores de manera previa a la entrega del mismo. Para le entrega del premio, el ganador deberá presentar identificación oficial y el nombre deberá coincidir con los datos registrados en Mi Telcel. Adicional, se le solicitará hacer Login en su teléfono personal a su cuenta en Mi Telcel. El ganador será publicado en https://www.mitelcel.com/experiencias
+				</dd>
+
+
+
+
+
+				<dt>VIII. Comunicación a los ganadores.</dt>
+				<dd >
+					Telcel publicará los nombres de los usuarios y la primer inicial de sus apellidos en la página https://www.mitelcel.com/experiencias , tal y como lo hayan escrito en su registro dentro de Mi Telcel. Los resultandos serán finales e inapelables en todos sus aspectos. Los ganadores serán notificados por Telcel con las instrucciones para recibir el premio a través de una llamada telefónica. El ganador deberá proporcionar la información necesaria para su identificación y seguir todas las instrucciones de los organizadores o de lo contrario no se le podrá entregar el premio. Telcel no se hará responsable por ninguna situación que se pudiera presentar si el ganador no sigue las instrucciones de los organizadores. Es responsabilidad de los participantes seguir estas instrucciones entregando la información correcta. La fecha límite de aceptación del premio será un (1) día después de haberle informado que resultó ganador. Deberán presentarse al lugar indicado por Telcel con los siguientes documentos: - Fotocopia de la identificación oficial del titular de la línea y fotocopia de la identificación oficial del ganador. Al ganador se le intentará contactar dos (2) veces al día por un período de un (1) día. Si transcurrido este plazo, el ganador, no hubiese respondido al llamado, perderá irrevocablemente todo tipo de derecho sobre el premio procediéndose a realizar una nueva asignación de ganador bajo las mismas condiciones de estas bases. El nuevo ganador asignado tendrá los mismos derechos en tiempo para ser contactado. Si el ganador se encuentra bajo el estatus de cancelación o suspensión de línea de Telcel, automáticamente perderá todo derecho sobre el premio, procediéndose así a realizar una nueva asignación del ganador bajo las mismas condiciones de estas bases.
+				</dd>
+
+
+				<dt>IX. Requisitos para la entrega del premio.</dt>
+				<dd >
+					Al momento de reclamar el premio, el usuario deberá mostrar original y copia de su documento de identificación, firmar un acuerdo de uso de imagen en caso de que Telcel decida publicar la foto de los ganadores en sus medios. En caso de que el ganador envíe a una persona a reclamar su premio, ésta deberá llevar una carta poder e identificaciones oficiales del ganador y de la persona que recoge el premio. El nombre en la identificación deberá coincidir con los datos proporcionados en Mi Telcel.
+				</dd>
+
+
+				<dt>X. Publicación de las bases y reglas.</dt>
+				<dd >
+
+					La publicación de estas bases y reglas se realizará en la página de www.mitelcel.com/experiencias  con el fin de hacer del conocimiento de todos aquellos suscriptores interesados: a. los requisitos para poder participar; b. los mecanismos de participación; y c. su obligación de aceptar las bases y reglas. El ganador tendrá un plazo máximo de 1 día para reclamar el premio a través de las reglas estipuladas anteriormente.
+
+				</dd>
+
+
+
+				<dt>XI. Aceptación de las Bases del concurso.</dt>
+				<dd >
+
+					Por el solo hecho de aceptar las Bases de este Concurso y/o llevar a cabo, alguna de las acciones y/o actividades detalladas en cada una de las fases del Concurso y/o de aceptar el Premio: a. Autoriza en forma absoluta y gratuita a los Organizadores, el uso de su nombre, lugar de residencia (ciudad), voz, fotografía, imagen, video, entrevistas grabadas y cualquier declaración realizada o atribuida al Participante respecto de los Organizadores o del Premio, de forma indefinida, en todo el mundo, para fines publicitarios y promocionales de éstos y cualquier otra promoción similar, en cualquier tipo de medio conocido o por conocerse (incluyendo, pero no limitándose, a televisión, gráfica, Internet y radio) sin derecho a previo aviso ni retribución o contraprestación de algún tipo. b. Autoriza en forma irrevocable y absolutamente gratuita a los Organizadores la publicación de las imágenes (sin que por esto los Organizadores estén obligados a publicarlas) a través de sus páginas web, así como al uso y publicación de su nombre completo, lugar de residencia (ciudad) de resultar ganador, a perpetuidad, ya sea para fines publicitarios y/o promocionales, en las páginas web de los Organizadores y en cualquier otro tipo de soporte o medio conocido o por conocerse (incluyendo, pero no limitándose, a televisión, gráfica, Internet y radio) sin derecho a aviso previo, retribución o contraprestación alguna por ningún concepto, y c. Automáticamente acepta ceder o transferir a Telcel, a sus empresas controlantes, subsidiarias, vinculadas, afiliadas, y a sus agencias de publicidad y promociones, en todo el universo y a perpetuidad todos los derechos incluyendo sin limitación, los derechos de autor, los derechos a utilizar su nombre, fotografías, imagen, así como cualquier otro dato personal del Participante, y los derechos a reproducir, publicar, editar, adaptar o modificar su contestación, total o parcialmente, del modo que Telcel libremente determine, para fines publicitarios y promocionales de este Concurso y/o cualquier otro concurso posterior organizado por Telcel en cualquier tipo de medio conocido o por conocerse (incluyendo pero no limitándose a televisión, gráfica, Internet y radio) sin necesidad de requerir autorización ni conformidad alguna y sin necesidad de contraprestación alguna por ningún concepto. Telcel podrá mencionar el nombre del Participante, pero no estará, en ningún caso, obligado a ello. Adicionalmente, sin limitar lo establecido anteriormente, el ganador acepta ceder todos los derechos sobre los videos, título, fotografías, voz y cualquier comentario hecho por él o atribuidos a él en relación con la Contestación y/o durante el disfrute del Premio, incluyendo pero no limitándose a derechos de autor, en el mundo entero, y deberán aceptar y suscribir cualquier documento o realizar cualquier acción que los Organizadores consideren necesarios para lograr y mantener la mencionada transferencia de derechos.
+				</dd>
+
+
+				<dt>XI. Aceptación de las Bases del concurso.</dt>
+				<dd >
+
+					Por el solo hecho de aceptar las Bases de este Concurso y/o llevar a cabo, alguna de las acciones y/o actividades detalladas en cada una de las fases del Concurso y/o de aceptar el Premio: a. Autoriza en forma absoluta y gratuita a los Organizadores, el uso de su nombre, lugar de residencia (ciudad), voz, fotografía, imagen, video, entrevistas grabadas y cualquier declaración realizada o atribuida al Participante respecto de los Organizadores o del Premio, de forma indefinida, en todo el mundo, para fines publicitarios y promocionales de éstos y cualquier otra promoción similar, en cualquier tipo de medio conocido o por conocerse (incluyendo, pero no limitándose, a televisión, gráfica, Internet y radio) sin derecho a previo aviso ni retribución o contraprestación de algún tipo. b. Autoriza en forma irrevocable y absolutamente gratuita a los Organizadores la publicación de las imágenes (sin que por esto los Organizadores estén obligados a publicarlas) a través de sus páginas web, así como al uso y publicación de su nombre completo, lugar de residencia (ciudad) de resultar ganador, a perpetuidad, ya sea para fines publicitarios y/o promocionales, en las páginas web de los Organizadores y en cualquier otro tipo de soporte o medio conocido o por conocerse (incluyendo, pero no limitándose, a televisión, gráfica, Internet y radio) sin derecho a aviso previo, retribución o contraprestación alguna por ningún concepto, y c. Automáticamente acepta ceder o transferir a Telcel, a sus empresas controlantes, subsidiarias, vinculadas, afiliadas, y a sus agencias de publicidad y promociones, en todo el universo y a perpetuidad todos los derechos incluyendo sin limitación, los derechos de autor, los derechos a utilizar su nombre, fotografías, imagen, así como cualquier otro dato personal del Participante, y los derechos a reproducir, publicar, editar, adaptar o modificar su contestación, total o parcialmente, del modo que Telcel libremente determine, para fines publicitarios y promocionales de este Concurso y/o cualquier otro concurso posterior organizado por Telcel en cualquier tipo de medio conocido o por conocerse (incluyendo pero no limitándose a televisión, gráfica, Internet y radio) sin necesidad de requerir autorización ni conformidad alguna y sin necesidad de contraprestación alguna por ningún concepto. Telcel podrá mencionar el nombre del Participante, pero no estará, en ningún caso, obligado a ello. Adicionalmente, sin limitar lo establecido anteriormente, el ganador acepta ceder todos los derechos sobre los videos, título, fotografías, voz y cualquier comentario hecho por él o atribuidos a él en relación con la Contestación y/o durante el disfrute del Premio, incluyendo pero no limitándose a derechos de autor, en el mundo entero, y deberán aceptar y suscribir cualquier documento o realizar cualquier acción que los Organizadores consideren necesarios para lograr y mantener la mencionada transferencia de derechos.
+				</dd>
+
+
+
+				<dt>XII. Exoneración y limitación de responsabilidad.</dt>
+				<dd >
+
+					Sin limitar lo establecido en otras Secciones de estas Bases, los Participantes al participar en el Concurso y/o el ganador al recibir el Premio, automáticamente aceptan eximir y liberar a los Organizadores y a sus respectivas compañías controlantes, subsidiarias, entidades afiliadas, franquiciantes, licenciatarios, agencias de publicidad y promociones, abogados, consultores, agentes y a todos los funcionarios, ejecutivos, socios, directores, empleados, agentes o representantes de dichas compañías (las "Partes Liberadas") de todo tipo de responsabilidad legal (contractual y extracontractual), obligación futura o demanda, por cualquier clase de pérdidas o daños a personas, propiedades o cosas, incluyendo, pero no limitándose, a lesiones e incluso la muerte, causadas a los mismos participantes o a terceros, relacionadas total o parcial, directa o indirectamente con la aceptación a las presentes Bases, su participación en el Concurso, participación en cualquier actividad relacionada con el mismo o con el Premio y con el recibo, aceptación y efectiva utilización del Premio. Las Partes Liberadas no asumen responsabilidad por: (a) ningún tipo de daño o lesión a personas, bienes o cosas que surjan, directa o indirectamente, total o parcialmente, como consecuencia de la aceptación por parte del Participante a estas Bases o su participación en el Concurso, o por la recepción y/o el uso del Premio; (b) por inscripciones inválidas o incompletas; y, (c) por Contestaciones recibidas fuera del periodo establecido en estas Bases o que no se reciban a causa de fallas de transmisión o técnicas de envío, incluyendo, pero sin limitarse, al funcionamiento defectuoso de cualquier red, equipo o programa de computadora, así como a la congestión de tráfico en Internet, la disponibilidad de los servicios de proveedores de acceso por Internet y de la página web de alguno de los Organizadores (incluyendo el link para aceptar los términos a estas Bases) bien sean estos fallos originados por errores humanos, electrónicos, técnicos o de cualquier otra naturaleza. Asimismo, en el supuesto de que exista algún error en los datos proporcionados por los Participantes o por alguna razón ajena a los Organizadores, de forma que no sea posible la identificación o el contacto con alguno de los Participantes que haya sido declarado ganador, los Organizadores tanto en lo individual como en su conjunto quedarán libres y exentos de cualquier responsabilidad y el Participante con derecho a obtener el Premio, perderá el derecho al mismo.
+
+
+				</dd>
+
+
+
+				<dt>XIII. Aviso de privacidad y autorización de tratamiento de datos personales.</dt>
+				<dd >
+
+					Radiomovil Dipsa S.A de C.V. (Telcel), con domicilio en Lago Zúrich No. 245, Col. Ampliación Granada, Del. Miguel Hidalgo, Ciudad de México, México. C.P. 11529, será el responsable del tratamiento de los datos personales que tanto los Participantes como en su caso el ganador proporcionen directa o indirectamente. Los datos personales que se podrán recabar son: nombre, imagen, teléfono, correo electrónico y/o cualesquiera que el mismo participante o ganador proporcione mediante las imágenes que voluntariamente facilite para el cumplimiento de las presentes Bases. Las finalidades para las que dichos datos personales se tratarán son: para llevar a cabo el Concurso en cualquiera de sus fases, informarles a los Participantes de eventos sociales y/u otros que pueda organizar y desarrollar Telcel siempre que el tratamiento de los datos para las comunicaciones se realice directamente por parte de Telcel de un tercero autorizado que preste servicios a ellos; y/o llevar a cabo cualesquiera otras actividades suplementarias o auxiliares relacionadas con la operación de este sitio web. Dicha información personal podrá ser transmitida entre Telcel y algún tercero con quien hubiere establecido relaciones comerciales o de colaboración, con motivo de la realización de este Concurso. Telcel, establecerá las condiciones necesarias para la protección de su información personal. En la realización de este Concurso, no se recabarán datos considerados como sensibles. Cualquier cambio al presente aviso de privacidad y o estas Bases se dará a conocer a través de la página oficial de Telcel en https://www.telcel.com/experiencias La participación en este Concurso implica la autorización del Participante respectivo sobre los datos personales que con motivo del mismo se publiquen en alguna de las plataformas, redes sociales y/o sitios web empleados para la realización del Concurso y/o se entreguen directamente a los Organizadores por cualquier otro medio con motivo del Concurso.
+
+
+				</dd>
+
+
+
+				<dt>XIV. Condiciones generales.</dt>
+				<dd >
+					La sola participación en el Concurso, implica el conocimiento y aceptación de estas Bases y de todos sus términos y condiciones. Únicamente estarán a cargo de los Organizadores aquellos gastos que se encuentren expresamente imputados a su cargo conforme a estas Bases, por lo que cualquier gasto no incluido dentro de las presentes Bases corre por cuenta del ganador. Está prohibido y será anulado cualquier intento o método de aceptación o participación en el Concurso que se realice por cualquier proceso, técnica o mecánica de participación distinta a la detallada en estas Bases. La utilización de técnicas de aceptación o de participación en el Concurso de naturaleza robótica, repetitiva, automática, programada, mecanizada, inadecuada, fraudulenta o similar, como aplicaciones y programas informáticos que imiten “ser una persona” y puedan realizar determinadas acciones previamente programadas llevará a la anulación de la aceptación y/o participación del Participante en el Concurso. En caso de controversia relacionada con la identidad de un Participante, el titular de la cuenta de Mi Telcel utilizada para dar la Contestación será considerado como participante. Los Organizadores se reservan a su entera discreción, el derecho a: (i) descalificar a cualquier individuo que haya interferido indebidamente en los procedimientos del Concurso o que no respete lo establecido en estas Bases; y, (ii) el derecho de establecer y pronunciarse sobre aquellas situaciones o circunstancias que no estén expresamente previstas en estas Bases, reservándose asimismo el derecho de cancelar, suspender o modificar el Concurso, por circunstancias no previstas que sean ajenas a la voluntad de los Organizadores, aclarándose que cualquier modificación será ajustada conforme a la legislación vigente en la materia, previa notificación a través del perfil oficial de experiencias Telcel: https://www.mitelcel.com/experiencias El Organizador puede sancionar o iniciar acciones legales contra cualquier actividad fraudulenta hasta donde sea permitido por la legislación aplicable en México. Sin limitar lo establecido anteriormente en estas Bases, cualquier condición o término de éstas que sea considerado inválido, ilegal o inexigible, no afectará por ello, a ningún otro término o condición de estas Bases. Ninguna renuncia a cualquier término o condición por parte de los Organizadores será considerada como una renuncia a cualquier otro término o condición; y, la renuncia de los Organizadores respecto a cualquier incumplimiento bajo estas Reglas no podrá ser interpretada como una renuncia al ejercicio de sus derechos con respecto a cualquier otro incumplimiento. La falta o atraso en el ejercicio de cualquier derecho, poder o privilegio aquí previsto, no podrá ser entendido como una renuncia al ejercicio de los mismos.
+
+
+				</dd>
+
+
+
+
+
+			</dl>
+
+		</div>
+
+		<div id="xventaja_terminos"></div>
+		<div id="xtyc_dinamica" ></div>
+	</div>
+	
+	<div class="separador"></div>
+	
+	<div style="position:absolute;top: 0px;background-color: #fff;width:100%;height:12%;z-index:15;border-bottom: 2px solid #4c4c4c;">
+
+		<div class="checkbox" >
+			<div class="fa fa-square-o aceptoterminoscondiciones linkcyanmayuscula no-seleccionable" aria-hidden="true" style="font-size: 1.5rem;"> </div>
+			<div class="linkcyanmayuscula no-seleccionable " style="margin-left: 0.8rem;width:210px;">Acepto los términos y condiciones</div>
+		</div>
+		<div class="botones">
+			<!--<div class="linkcyanmayuscula no-seleccionable cancelar">Cancelar</div> -->
+			<div class="linkcyanmayuscula no-seleccionable aceptar" style="position: absolute;right:10px;bottom:17px;">
+				<button style="background-color:#efefef;border: 0px solid;padding: 10px;">Aceptar</button>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+
+	finalizoDinamica = false;
+	var inicio_p;
+
+	var cuentaprogresiva;
+	var dia_ = 0
+	var hora_ = 0
+	var minuto_ = 0
+	var segundo_ = 0;
+	//comenzarCuentaProgresiva();
+
+	var cuentaregresiva;
+	var dia = 0
+	var hora = 0
+	var minuto = 0
+	var segundo = 0;
+	// comenzarCuentaRegresiva();
+
+	var tipodinamica;
+
+	$('.dia').text(dia);
+	$('.hora').text(hora);
+	$('.minuto').text(minuto);
+	$('.segundo').text(segundo);
+/*
+
+	clearInterval( cuentaprogresiva);
+	clearInterval( cuentaregresiva);
+
+	cuentaregresiva = setInterval( function() {
+		segundo -= 1;
+		if ( segundo < 1 ) {
+			segundo = 60;
+			minuto -= 1;
+			if ( minuto < 1 ) {
+				minuto = 60;
+				hora -= 1;
+				if ( hora < 1 ) {
+					hora = 24;
+					dia -= 1;
+					if ( dia == 0) {
+						// se acabo
+					}
+				}
+			}
+		}
+		segf = ('0' + segundo).slice (-2);
+		minf = ('0' + minuto).slice (-2);
+		horf = ('0' + hora).slice (-2);
+		diaf = ('0' + dia).slice (-2);
+
+		//console.log(dia,hora,minuto,segundo);
+		if(dia=='0' & hora=='0' & minuto=='0' & segundo==1){
+			console.log('aqui');
+			clearInterval(cuentaprogresiva);
+			clearInterval( cuentaregresiva);
+			$('.dia').text('00');
+			$('.hora').text('00');
+			$('.minuto').text('00');
+			$('.segundo').text('00') ;
+			$('.comenzar').remove();
+
+		}
+		else{
+			$('.dia').text(diaf);
+			$('.hora').text(horf);
+			$('.minuto').text(minf);
+			$('.segundo').text( segf ) ;
+
+		}
+
+
+
+	}, 1000);
+*/
+	function comenzarCuentaProgresiva() {
+		clearInterval( cuentaprogresiva );
+
+		cuentaprogresiva = setInterval( function() {
+			segundo_ += 1;
+			if ( segundo_ > 59 ) {
+				segundo_ = 0;
+				minuto_ += 1;
+					if ( minuto_ > 59 ) {
+					minuto_ = 0;
+					hora_ += 1;
+					if ( hora_ > 23 ) {
+						hora_ = 0;
+						dia_ += 1;
+						if ( dia_ > 0) {
+							// se acabo
+						}
+					}
+				}
+			}
+			segf_ = ('0' + segundo_).slice (-2);
+			minf_ = ('0' + minuto_).slice (-2);
+			horf_ = ('0' + hora_).slice (-2);
+			diaf_ = ('0' + dia_).slice (-2);
+
+			$('.dia_').text(diaf_);
+			$('.hora_').text(horf_);
+			$('.minuto_').text(minf_);
+			$('.segundo_').text( segf_ ) ;
+
+		}, 1000);
+	}
+
+
+
+
+	var aceptado = false;
+
+	function convertMS(ms) {
+	  var d, h, m, s;
+	  s = Math.floor(ms / 1000);
+	  m = Math.floor(s / 60);
+	  s = s % 60;
+	  h = Math.floor(m / 60);
+	  m = m % 60;
+	  d = Math.floor(h / 24);
+	  h = h % 24;
+	  return { d: d, h: h, m: m, s: s };
+	};
+
+
+
+  function formatnumbers(numero){
+    formado = '0' + numero;
+    return formado.slice(-2);
+  }
+
+
+
+function downTime(countTo) {
+  var now = new Date();
+  var countTo = new Date(countTo);
+  var difference = (countTo-now);
+  var tiempox=convertMS(difference);
+	$('.dia').text(formatnumbers(tiempox.d));
+	$('.hora').text(formatnumbers(tiempox.h));
+	$('.minuto').text(formatnumbers(tiempox.m));
+	$('.segundo').text( formatnumbers(tiempox.s)) ;
+	
+	if(tiempox.d==0 & tiempox.s==0 & tiempox.h==0 & tiempox.m==0){
+
+		$('.comenzar').remove();
+
+	}
+	else{
+		clearTimeout(downTime.to);
+	  	downTime.to=setTimeout(function(){ downTime(countTo); },1000);
+
+	}
+
+}
+
+
+
+
+	function mktime(hour,minute,month,day,year){
+	  a=new Date()
+	  a.setHours(hour)
+	  a.setMinutes(minute)
+	  a.setDate(day)
+	  a.setYear(year)
+	  return a.getTime()/1000
+	}
+
+
+
+
+	$(document).ready( function() {
+
+
+
+
+		parent.postMessage('scrollthem,0', '*');
+
+		$("#ventaja_titulo").text(ventaja_titulo);
+		$("#ventaja_fecha").text(ventaja_fecha);
+		$(".iconoventaja").attr("src", "images/iconosventaja/"+ventaja+".png")
+
+
+
+		var getStatusJson = $.getJSON( "https://admin.experienciastelcel.com/restful/participando/"+upk+"/"+id_dinamica+"/", function(data) {
+			if ( data.status == "finalizo" ) {
+				$(".aceptoterminoscondiciones, .terminoscondiciones, .comenzar").remove();
+				$(".graciasporparticipar").show();
+			} else {
+				inicio_p = data.inicio_p;
+			}
+		});
+		
+
+		$(".fondoventanasflotante").hide();
+		$(".wrapperventanaterminoscondiciones").hide();
+		$(".ventanaterminoscondiciones").hide();
+
+
+        var dinamicaJson = $.getJSON( "https://admin.experienciastelcel.com/restful/promocion/"+id_dinamica+"/?upk="+upk, function( data ) {
+        	dinamicadataJson = data;
+
+        	console.log(data);
+
+        	if(data.promocion.status=='publish'){
+
+        	}
+        	else{
+        		$('.contadorregresivo').html('&nbsp;');
+        		$('.comenzar').remove();
+        	}
+
+        	$('#nombrepormo').html(data.promocion.titulo);
+        	$('#termdin').html(data.promocion.termsdin);
+        	$('#bases').html(data.promocion.bases);
+        	$('#publicacion_terminos').html(data.promocion.fecha_publicacion_terminos);
+        	$('#vigencia_terminos').html(data.promocion.vigencia_terminos);
+        	$('#bases_txt').html(data.promocion.termsdin);
+        	$('#ventaja_term').html(data.ventaja);
+        	$('#cede').html(data.promocion.ciudad);
+        	$('#premio_terms').html(data.promocion.premioterms);
+        	$('#numero_ganadores').html(data.promocion.numero_ganadores);
+        	$('#nombre_dinamica').html(data.promocion.dinamica);
+        	$('#ventaja_desc').html(data.promocion.descpdin);
+        	$('#texto_ganadores').html(data.promocion.terminosycondiciones);
+        	
+
+
+        	var cierraalas = new Date(data.promocion.vigenciaUTC*1000);
+        	
+        	downTime(cierraalas);
+
+
+        	var fechacierre = data.promocion.vigenciaUTC;
+        	var fechaactual =  data.promocion.tiempoahora;
+
+
+
+        	var objtiemporestante = convertMS(fechacierre - fechaactual);
+
+        	//console.log(fechacierre,fechaactual,fechacierre - fechaactual);
+        	
+        	dia = objtiemporestante.d;
+        	hora = objtiemporestante.h;
+        	minuto = objtiemporestante.m;
+        	segundo = objtiemporestante.s;
+ 
+ 			$(".ciudad").text(data.promocion.ciudad);
+ 			$(".diaevento .diae").text(data.promocion.dia_evento);
+ 			$(".diaevento .mese").text(data.promocion.mes_evento);
+
+ 			$(".ladinamica .portada").css("background", "url("+data.promocion.imagen_lg+")");
+		    $(".ladinamica .portada").css("background-repeat", "no-repeat");
+		    $(".ladinamica .portada").css("background-size", "cover");
+		    $(".ladinamica .portada").css("background-position", "right center");
+
+        	$(".ladinamica .info h2").text(data.promocion.titulo);
+        	$(".ladinamica .info .vigencia span").text(data.promocion.vigencia);
+        	$("#tyc_dinamica").html(data.promocion.terminosycondiciones);
+
+        	if ( data.promocion.liked == 1 ) {
+        		$(".ladinamica .socialdata .likes").removeClass("manita");
+        		$(".ladinamica .socialdata .likes .fa").removeClass("fa-heart-o");
+        		$(".ladinamica .socialdata .likes .fa").addClass("fa-heart");
+        		$(".ladinamica .socialdata .likes .fa").addClass("grisrojooscuro");
+        		$(".ladinamica .socialdata .likes").addClass("liked");
+        		$(".ladinamica .socialdata .liked").removeClass("likes");
+        	} else {
+        		$(".ladinamica .socialdata .likes").data("id", data.promocion.pk);   		
+        	}
+        	
+
+        	$(".ladinamica .socialdata .valorlikes").text(data.promocion.likes);
+        	$(".ladinamica .socialdata .valorshares").text(data.promocion.shares);
+        	$(".bases").html(data.promocion.bases);
+	
+
+        	tipodinamica = data.promocion.dinamica;
+
+        	if ( data.promocion.segmentos.length > 0  ) {
+        		if (  data.promocion.segmentos.indexOf(servicioUser) > 0 ) {
+        			servicioBeneficio = true;
+        		};
+        	}
+
+        	
+        })
+
+				
+		
+		$( "body" ).undelegate(  ".comenzar:not(.disabled)", "click").delegate( ".comenzar:not(.disabled)", "click", function() {
+			
+
+			$(".aceptoterminoscondiciones").addClass("disabled");
+		  	$(".fondoventanasflotante").show();
+		  	
+		  	parent.postMessage('scrollthem,0', '*');
+
+
+
+			contenidodinamica = $('#boxdinamica').html();
+
+			if(contenidodinamica==undefined){
+	
+				 $.get("secciones/"+tipodinamica+".html", function (data_d) {
+					 	$('#boxdinamica').html('');
+					 	
+					 	
+					 	divbox = document.createElement('div');
+					 	$(divbox).attr('id','boxdinamica');
+					 	$(divbox).append(data_d); 
+		                $("#main-wrapper").append(divbox);
+
+		                
+		             });
+
+
+			}
+			else{
+
+				$('#boxdinamica').show();		
+			}
+
+             
+
+		});
+
+
+		$(".fondoventanasflotante").click( function() {
+
+			$(".fondoventanasflotante").hide();
+			$( ".ventanadinamica" ).remove();
+			$(".ventanaterminoscondiciones").hide();
+			$('#boxdinamica').hide();	
+			clearInterval(sizeWindowparent);
+		})
+
+		$(".ventanaterminoscondiciones .close, .ventanaterminoscondiciones .aceptar, .ventanaterminoscondiciones  .cancelar").click( function() {
+			$(".fondoventanasflotante").hide();
+			$(".ventanaterminoscondiciones").hide();
+			$('#boxdinamica').hide(); 
+		})
+
+		$(".dinamicacard2").click( function() {
+			$(".containergrid").fadeTo(400,0.0, function() {
+				$('html, body').scrollTop(0);
+				$(".containergrid").load("secciones/dinamica.html", function() {
+					$(".containergrid").fadeTo(400,1.0);
+				});
+			})
+		})
+
+
+		$( "body" ).undelegate(  ".aceptoterminoscondiciones:not(.disabled)", "click").delegate( ".aceptoterminoscondiciones:not(.disabled)", "click", function() {
+
+			
+						$(".fondoventanasflotante").show();
+			$(".ventanaterminoscondiciones").show();
+			parent.postMessage('scrollthem,0', '*');
+
+			$(".aceptoterminoscondiciones").toggleClass("fa-check-square");
+			aceptado =  $(".aceptoterminoscondiciones").hasClass("fa-check-square");
+			$(".comenzar").toggleClass("disabled");
+		});
+
+
+
+		$(".terminoscondiciones").click( function() {
+			$(".fondoventanasflotante").show();
+			$(".ventanaterminoscondiciones").show();
+			parent.postMessage('scrollthem,0', '*');
+		})
+
+		function cargaRecomendacionesLiked() {
+
+
+			$(".categoriadinamica").html('');
+			$( ".dinamicas .carruselcards .mascara .wrappercards" ).empty();
+            
+            var url = "https://admin.experienciastelcel.com/restful/promos/?recomendados=1&upk="+upk+'&dpk='+id_dinamica;
+
+            var dinamicasJson = $.getJSON( url , function( data ) {
+                var dinamicasHTML = '';
+                try{
+                	ventajaterminos = data.ventajaterminos.replace(/(?:\r\n|\r|\n)/g, '<br>');
+                	$('#ventaja_terminos').html(ventajaterminos);
+                }
+                catch(err){
+                	er= err;
+                }
+                
+
+
+                if(data.dinamicas.length>0){
+
+	                for(i=0; i<3; i++) {
+	                	try{
+
+
+	                    if ( data.dinamicas[i].status == "proximamente" ) {
+	                        dinamicasHTML += '<div class="dinamicacard proximamente shadowcard puntero"  data-id="'+data.dinamicas[i].pk+'" style="cursor:not-allowed" >'
+	                    } else {
+	                        dinamicasHTML += '<div class="dinamicacard shadowcard puntero"  data-id="'+data.dinamicas[i].pk+'" >'
+	                    }
+
+
+	                    dinamicasHTML += '  <div class="bartop"></div>'
+
+
+	                    dinamicasHTML += '   <div class="imagedinamica" style="background: url('+data.dinamicas[i].imagen+');background-repeat: no-repeat;background-size: cover;background-position: center center;" >'
+	                    dinamicasHTML += '  </div>'
+
+	                    if ( data.dinamicas[i].status == "proximamente" ) {
+	                        dinamicasHTML += '  <div class="proximamentetext typotagcard grisoscuro">Próximamente</div>'
+	                    } else {
+	                        dinamicasHTML += '  <div class="tagdinamica typotagcard grismedio">'+data.dinamicas[i].ciudad+'</div>'
+	                        dinamicasHTML += '  <div class="diaevento grismedio" >';
+	                        dinamicasHTML += '      <div class="diacard">'+data.dinamicas[i].dia_evento+'</div>'
+	                        dinamicasHTML += '      <div class="mescard">'+data.dinamicas[i].mes_evento+'</div>'
+	                        dinamicasHTML += '  </div>'
+	                    }
+
+
+	                    dinamicasHTML += '  <div class="infodinamica">'
+	                    dinamicasHTML += '      <div class="typotitulocard grismuyoscuro">'
+	                    dinamicasHTML += '          '+data.dinamicas[i].titulo_completo
+	                    dinamicasHTML += '      </div>'
+
+	                    if ( data.dinamicas[i].status != "proximamente" ) {
+	                        dinamicasHTML += '      <div class="vigencia typodetallesvigencia grisoscuro">Vigencia: '+data.dinamicas[i].vigencia+'</div>'
+	                    }
+	                    
+
+	                    dinamicasHTML += '  </div>'
+	                    dinamicasHTML += '  <footer class="grismedio">'
+
+	                    if ( data.dinamicas[i].liked == 1 ) {
+	                        dinamicasHTML += '      <div class="liked grisoscuro"  data-id="'+data.dinamicas[i].pk+'">'
+	                        dinamicasHTML += '          <div class="fa fa-heart grisrojooscuro" style="margin-right:0.5em"></div>'
+	                    } else {
+	                        dinamicasHTML += '      <div class="likes grisoscuro"  data-id="'+data.dinamicas[i].pk+'">'
+	                        dinamicasHTML += '          <div class="fa fa-heart-o" style="margin-right:0.5em"></div>'
+	                    }
+
+
+	                    dinamicasHTML += '          <div class="totallikes">'+data.dinamicas[i].likes+'</div>'
+	                    dinamicasHTML += '      </div>'
+	                    dinamicasHTML += '      <div class="social">'
+	                    dinamicasHTML += '          <div class="fa fa-user-o" style="margin-right:0.5em"></div>'
+	                    dinamicasHTML += '          <div>'+data.dinamicas[i].participaciones+'</div>'
+	                    dinamicasHTML += '      </div>'
+	                    dinamicasHTML += '  </footer>'
+	                    dinamicasHTML += '</div>'
+	                	}
+	                	catch(err){
+	                		console.log(err);
+	                	}
+	                }
+
+            	}
+            	else{
+            		$('#otrasrecs').hide();
+            	}
+
+                $(".categoriadinamica").append( dinamicasHTML );
+            });
+		}
+
+
+		cargaRecomendacionesLiked();
+
+		
+		
+	});
+
+
+
+</script>

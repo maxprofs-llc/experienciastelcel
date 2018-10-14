@@ -1,0 +1,94 @@
+<link rel="stylesheet" type="text/css" href="/css/dinamicas_angular.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+<section id="main-sopa">
+
+	<div class="trivia" ng-app="puzzleApp" ng-controller="swiperCtr">
+
+
+		<div style="padding:20px;font-size: 1.1rem;">
+			<!-- <div class="pagina"> -->
+			<div id="ventaja_informa" style="display: none;float: left;">Tienes ventaja de 30 seg</div>
+			<div id="counterup"  contador-juego style="float: left;">
+				<span class="fa fa-clock-o" aria-hidden="true"></span> &nbsp;&nbsp;
+				<span class="cronometro no-seleccionable">
+					<span id="days" class="hora_">00</span>
+					:
+					<span id="hours" class="hora_">00</span>
+					:
+					<span id="minutes" class="minuto_">00</span>
+					:
+					<span id="seconds" class="segundo_">00</span>
+				</span>
+			</div>
+			<div style="float: right;">
+			<i class="fa fa-times close no-seleccionable links" aria-hidden="true"></i>
+			</div>
+			<div style="clear: both;height: 0px;"></div>
+		</div>
+
+
+		<section ng-show="startgame==0">
+				<div class="blue-box" >
+					<div ng-bind-html="dinamica.inicio_juego_txt">{{dinamica.inicio_juego_txt}}</div>
+					<p style="font-size:2rem;margin-top:1.5rem">¡Mucha suerte!</p>
+
+			 		<div class="checkbox azulclarotexttelcel tengolaventaja checkboxwrapper" style="margin-top: 2rem;">
+						<div class="linkcyanmayuscula_ no-seleccionable" style="margin-left: 0.8rem">
+							<input type="checkbox" name="aplicaventaja" style="padding-top: 5px;" check-ventaja>
+							<span style="margin:0px 5px;">Tengo el servicio</span>
+							 <span class="ventaja_titulo bold">{{ventaja}}</span></div>
+
+						<div class="continuarp" style="margin: 20px 0px;">
+							<div id="iniciador" class="btn negro iniciar-pz" start-game>Iniciar Juego</div>
+						</div>
+					</div>
+				</div>
+		</section>
+
+
+		<section ng-show="startgame==1">
+			<div ng-repeat="p in dinamica.preguntas" ng-show="preguntalevel==$index">
+				<h1>{{p.pregunta}}</h1>
+				<div style="position: relative;background:#00338d;height:520px;width:600px;overflow: hidden;">
+						<div id="leftside" style="display: none; font-size:40px;color:#fff;position:absolute;left:10%;top: 210px;height:20px;width:10%;z-index: 11;">
+							<i class="far fa-hand-point-down"></i>j
+						</div>
+						<div id="rightside" style="display: none;font-size:40px;color:#fff;position:absolute;right:10%;top:210px;height:20px;width:10%;z-index: 11;">
+							<i class="far fa-hand-point-up"></i>i
+						</div>
+							<img src="{{path_site}}{{i.img}}" style="box-shadow: 5px 5px rgba(0,0,0,0.1);position:absolute;left:15%;top:10%;cursor:move;z-index: 10;border:5px solid white;" swiper-on class="swipeable rotado_{{$index}}" ng-repeat="i in p.imgs" />		
+				</div>
+			</div>
+		</section>
+
+
+
+
+		<section class="blue-box" ng-show="startgame==2">
+					<div>Gracias por participar <br> Respondisté <span id="corrs"></span> de <span id="tots"></span> preguntas y  tú tiempo fué:</div>
+					<div class="texto-alto" >{{tiempofinal}}</div>
+					<div class="texto-alto">¡Mucha Suerte!</div>
+		</section>
+
+	</div>
+</section>
+
+	<script type="text/javascript">
+		
+			$(".close").click( function() {
+				$(".fondoventanasflotante").hide();
+				$('#boxdinamica').hide();	
+			});		
+
+	</script>
+
+		<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="/js/chumbucket.js"></script>
+		<script type="text/javascript" src="/js/hammer.min.js"></script>
+		<script type="text/javascript" src="/js/angular.min.js"></script>
+		<script type="text/javascript" src="/js/angular-route.min.js"></script>
+		<script type="text/javascript" src="/js/angular-sanitize.js"></script>
+		<script type="text/javascript" src="/js/swiper_ctr.js"></script>
+
+</section>

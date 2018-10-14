@@ -1,0 +1,266 @@
+<style type="text/css">
+	
+
+	.headercategoria {
+
+		width: 960px; 
+		margin: auto;
+		display: grid;
+		grid-template-columns: 10px repeat(12, 1fr) 10px ;
+		grid-template-rows: 113px ;
+		grid-column-gap: 20px;
+		color: white;
+
+		border-bottom: 1px solid rgb(180,180,180);
+
+	}
+
+
+	
+
+	
+
+ 	.headercategoria .linea {
+ 		grid-column: 2 / -2;
+ 		grid-row: 1 / 2;
+ 		border-bottom: 1px solid rgb(180,180,180);
+ 	}
+
+ 	.headercategoria h1 {
+ 		grid-column: 2 / span 3;
+ 		grid-row: 1 / 2;
+ 		align-self: end;
+ 		padding-bottom: 1.2rem;
+ 	}
+
+ 	.wrappercategoria {
+ 		width: 920px;
+		margin: auto;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		color: white;
+		padding-top: 40px;
+		padding-bottom: 2.5rem;
+ 	}
+
+
+
+
+	/* css dinamica car en contexto */
+
+ 	.ganadorescard {
+ 		width: 286px;
+		height: 423px;
+
+		margin: 10px;
+
+		background-color: white;
+
+		display: -ms-grid;
+	    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+		-ms-grid-rows: 8px 183px 29px 29px 120px 52px;
+
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: 8px 183px 29px 29px 120px 52px;	
+
+		border-radius: 0.4em;
+		overflow: hidden;
+		border: 0.5px solid #baccd3;
+		cursor: pointer;
+	}
+
+	.ganadorescard .bartop {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+		background-color: white;
+	}
+
+	.ganadorescard .imagedinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 2;
+
+		grid-column: 1 / -1;
+		grid-row: 2 / 4;
+
+	}
+
+	
+	.ganadorescard .infodinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 4;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / 13;
+		grid-row: 4 / 6;
+		background-color: #fff;
+		padding: 20px 20px 15px 20px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+	}
+
+	.ganadorescard .detalles {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 6;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / 13;
+		grid-row: 6 / 7;
+		background-color: white;
+		color: rgb(100,100,100);
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px 18px;
+	}
+	/*****************************************************/ 
+
+
+
+	@media only screen and (max-width: 960px) { 
+		.headercategoria {
+			width: 100%; 
+		}
+		.headercategoria .linea {
+	 		grid-column: 2 / -2;
+	 		grid-row: 2 / 3;
+	 	}
+
+	 	.headercategoria .wrapper {
+	 		
+			-ms-grid-row: 2;
+			-ms-grid-row-span: 1;
+
+	 		grid-row: 2 / 3;
+	 		font-size: 0.4rem;
+	 	}
+
+		#main-wrapper {
+			width: 100%;
+		}
+
+		.wrappercategoria {
+			width: calc(100% - 40px);
+			justify-content: center;
+		}
+
+		.publicidad {
+			width: calc(100% - 0px);
+		}
+
+		.publicidad .wrapperp {
+			-ms-grid-column: 1;
+			-ms-grid-column-span: 28;
+
+			grid-column: 1 / -1;
+		}
+
+		.ganadores, .dinamicas, .experienciastelcel, .promo3dinamicas, .categoriadinamica, .headerdinamica {
+			width: 100%;
+		}
+	}
+
+
+
+	.espera{
+		zoom: 1;
+		filter: alpha(opacity=50);
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+
+</style>
+
+
+<header class="headercategoria">
+	<h1 class="typotituloseccion grisoscuro">Ganadores</h1>
+</header>
+
+
+
+<div class="wrappercategoria">
+	
+
+</div>
+
+
+<section class="publicidad " data-url="https://www.telcel.com/personas/telefonia/la-red-de-mayor-cobertura/red-tecnologia/4-5g-gigared?campaignid=1140309535&network=g&device=c&gclid=EAIaIQobChMIjJSPpaTn2wIVz7jACh0NBA2nEAAYASAAEgJyV_D_BwE">
+	<div class="wrapperp">
+		<img src="images/publicidad/gigared-bne.jpeg" class="imgdesktop">
+		<img src="images/publicidad/gigared-bnm.jpeg" class="imgmobile">
+	</div>
+</section>
+
+
+
+<script type="text/javascript">
+	
+	$(document).ready( function() {
+		parent.postMessage('scrollthem,0', '*');
+
+		$(".dinamicafinalizada").click( function() {
+			cargaContenido("dinamicaganadores.html")
+		})
+
+
+		/****************** ganadores *******************************************/
+
+		var ganadoresJson = $.getJSON( "https://admin.experienciastelcel.com/restful/finalizados/", function( data ) {
+			var cardHTML = '';
+			for(i=0; i<data.dinamicas.length; i++) {
+
+				if(data.dinamicas[i].status=='espera'){
+					mensaje = '<div class="detalles typodetallesvigencia" style="font-size:1.5rem;font-weight:bolder;">Espera los resultados</div>';
+				}
+				else{
+					mensaje = '<div class="detalles typodetallesvigencia">Detalles</div>';
+				}
+
+
+				cardHTML += '<div class="ganadorescard dinamicafinalizada '+data.dinamicas[i].status+' shadowcard" data-id="'+data.dinamicas[i].pk+'" >'
+				cardHTML += '	<div class="bartop"></div>'
+
+
+				cardHTML += '	<div class="imagedinamica" style="background: url('+data.dinamicas[i].imagen+');background-repeat: no-repeat;background-size: cover;background-position: center center;" >'
+				cardHTML += '	</div>'
+
+				
+				var limiteganadores = Math.min( data.dinamicas[i].ganadores_list.length, 3);
+				
+				cardHTML += '	<div class="infodinamica">'
+				cardHTML += '		<div class="typotitulocard grismuyoscuro">'+data.dinamicas[i].titulo_final+'</div>'
+				cardHTML += '	</div>'
+				cardHTML += mensaje
+				cardHTML += '</div>'
+			}
+			$(".wrappercategoria").append( cardHTML );
+
+				
+		});
+		/**********************************************************************/
+
+	})
+		
+</script>

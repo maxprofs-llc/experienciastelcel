@@ -1,0 +1,123 @@
+
+<link rel="stylesheet" type="text/css" href="/css/dinamicas_angular.css"/>
+
+<link rel="stylesheet" type="text/css" href="/puzz/css/styles.css"/>
+
+<div class="trivia" id="puzzle-canvas" ng-app="puzzleApp">
+
+
+	<div style="padding:20px;font-size: 1.1rem;">
+		<!-- <div class="pagina"> -->
+		<div id="ventaja_informa" style="display: none;float: left;">Tienes ventaja de 30 seg</div>
+		<div id="counterup"  contador-juego style="float: left;">
+			<span class="fa fa-clock-o" aria-hidden="true"></span> &nbsp;&nbsp;
+			<span class="cronometro no-seleccionable">
+				<span id="days" class="hora_">00</span>
+				:
+				<span id="hours" class="hora_">00</span>
+				:
+				<span id="minutes" class="minuto_">00</span>
+				:
+				<span id="seconds" class="segundo_">00</span>
+			</span>
+		</div>
+		<div style="float: right;">
+		<i class="fa fa-times close no-seleccionable links" aria-hidden="true"></i>
+		</div>
+		<div style="clear: both;height: 0px;"></div>
+	</div>
+
+
+	<section ng-show="startgame==0">
+			<div class="blue-box" >
+				<div id="txt-html"></div>
+				<p style="font-size:2rem;margin-top:1.5rem">¡Mucha suerte!</p>
+
+		 		<div class="checkbox azulclarotexttelcel tengolaventaja checkboxwrapper" style="margin-top: 2rem;">
+					<div class="linkcyanmayuscula_ no-seleccionable" style="margin-left: 0.8rem">
+						<p>
+							<input type="checkbox" name="aplicaventaja"  style="padding-top: 5px;" check-ventaja>
+							<span style="margin:0px 5px;">Tengo el servicio</span>
+							<span class="ventaja_titulo bold">{{ventaja}}</span></div>
+						</p>
+					<div class="continuarp" style="margin: 20px 0px;">
+						<div id="iniciador" class="btn negro iniciar-pz">Iniciar Juego</div>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<section id="jugando-puzzle" ng-show="startgame==1">
+		
+		<div>
+			<div id="finalizarbox"></div>
+			<div ng-app="puzzleApp" id="puzzbox" >
+				<div ng-show="hiddens">
+				
+				<div ng-include="type"></div>
+				
+				<script type="text/ng-template" id="sliding-puzzle">
+					<fieldset id="sliding-simple" style="border: 0px solid;margin:10px 0px; ">
+						<sliding-puzzle size="3x3" src="{{src}}" style="width:300px;margin: auto;"></sliding-puzzle>
+					</fieldset>
+				</script>
+
+				</div>
+				<div ng-show="finalizado">
+					Gracias por participar
+				</div>
+			</div>
+
+
+
+		</div>
+
+	</section>
+	<section id="final-puzzle" ng-show="startgame==2">
+		<div class="blue-box" >
+			<div>Resolviste el rompecabezas en un tiempo de:</div>
+					<div class="texto-alto tiempofinal" ></div>
+					<p style="font-size:1rem;margin-top:1.5rem">Si eres ganador, serás contactado por Telcel una vez finalizado el concurso.</p>
+					<div class="texto-alto">¡Mucha Suerte!</div>
+					<div class="continuarp" style="margin: 40px 0px;text-align: center;">
+						<div class="btn negro reiniciarpage"   style="display: inline-block;">Seguir <br> Jugando</div>
+					</div>
+
+
+		</div>
+
+
+
+	</section>
+
+
+
+</div>
+
+
+	<script type="text/javascript">
+		
+			$(".close").click( function() {
+				$(".fondoventanasflotante").hide();
+				$('#boxdinamica').hide();	
+			});		
+
+
+	            $('.reiniciarpage').click(function(e){
+
+					cargaContenido( "inicio.html" );	            	
+
+	            });
+
+
+	</script>
+
+    <script type="text/javascript" src="/puzz/js/lib/angular/angular.js"></script>
+    <script type="text/javascript" src="/puzz/js/puzzle/slidingPuzzle.js"></script>
+	<script type="text/javascript" src="/puzz/js/app.js"></script>
+
+	
+
+
+
+

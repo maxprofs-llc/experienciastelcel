@@ -1,0 +1,1190 @@
+<style type="text/css">
+
+    /******************* perfil *********************/
+    .perfil {
+        width: 960px;
+        margin: auto;
+
+        display: -ms-grid;
+        -ms-grid-columns: 10px 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 10px;
+        -ms-grid-rows: 260px 70px 70px 338px;
+
+
+        display: grid;
+        grid-template-columns: 10px [perfil-start] repeat(4, 1fr) [perfil-end bloqueder-start] repeat(8 , 1fr) [bloqueder-end] 10px;
+        grid-template-rows: 260px 70px 70px 338px;
+        grid-gap: 0px 20px; 
+    }
+
+        .perfil .portada {
+            -ms-grid-column: 2;
+            -ms-grid-column-span: 25;
+
+            -ms-grid-row: 1;
+            -ms-grid-row-span: 2;
+
+            grid-column: 2 / -2;
+            grid-row: 1 / span 2;
+        }
+
+        .perfil .portada img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .perfil .aliasperfil {
+            -ms-grid-column: 5;
+            -ms-grid-column-span: 4;
+
+            -ms-grid-row: 2;
+            -ms-grid-row-span: 2;
+
+            grid-column: 3 / span 2;
+            grid-row: 2 / span 2;
+
+        }
+
+            .perfil .aliasperfil {
+
+                width: 135px;
+                height: 135px;
+                border-radius: 50%;
+                border: 5px #57c9e8 solid;
+                box-shadow:3px 3px 8px black;
+                background-size:cover; 
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+
+            .perfil .aliasperfil img {
+                width: 100%;
+                height: 100%;
+                
+            }
+
+            .perfil .aliasperfil svg {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 5px #fff solid;
+                box-shadow:3px 3px 8px black;
+                display: none;
+            }
+
+        .perfil .datosperfil {
+            -ms-grid-column: 2;
+            -ms-grid-column-span: 8;
+
+            -ms-grid-row: 3;
+            -ms-grid-row-span: 2;
+
+            grid-column: 2 / span 4;
+            grid-row: 3 / span 2;
+            background-color: #57c9e8;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+            .perfil .datosperfil .loadfoto {
+                color: #57c9e8;
+                background-color: #002f87;
+                padding: 0.6rem;
+                border-radius: 50%;
+                margin-top: -2rem;
+                margin-bottom: 3rem;
+                cursor: pointer;
+            }
+
+            .perfil #formulario #cargaimagen {
+                display: block;
+                visibility: hidden;
+                width: 0;
+                height: 0;
+            }
+
+            .perfil .datosperfil .nombre {
+                font-size: 1.8rem;
+                font-weight: bold;
+                color: #002f87;
+                margin-bottom: 2.5rem;
+            }
+            .perfil .datosperfil .ciudad {
+                font-size: 1rem;
+                color: white;
+                margin-bottom: 1rem;
+            }
+            .perfil .datosperfil .miembrodesde {
+                font-size: 0.8rem;
+                color: #002f87;
+            }
+
+        .perfil .misguardadoscard {
+            -ms-grid-column: 11;
+            -ms-grid-column-span: 8;
+
+            -ms-grid-row: 3;
+            -ms-grid-row-span: 2;
+
+            grid-column: 6 / span 4;
+            grid-row: 3 / span 2;
+        }
+
+
+        .perfil .mihistorialcard {
+            -ms-grid-column: 19;
+            -ms-grid-column-span: 7;
+
+            -ms-grid-row: 3;
+            -ms-grid-row-span: 2;
+
+            grid-column: 10 / span 4;
+            grid-row: 3 / span 2;
+        }
+
+        .perfil .misguardadoscard .imagedinamica {
+            background: url(images/perfilguardados.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .perfil .mihistorialcard .imagedinamica {
+            background: url(images/perfilhistorial.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+
+
+    /***********************************************/
+
+
+    /************** perfilcard *********************/
+
+    .perfil .perfilcallcards {
+        height: 382px; 
+        background-color: white;
+
+        display: -ms-grid;
+        -ms-grid-columns: 1fr ;
+        -ms-grid-rows: 8px 240px 82px 52px;
+
+        -ms-grid-row-align: end;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 8px 240px 82px 52px;    
+        
+        align-self: end;
+        margin-right: 20px;
+        border-radius: 0.4em;
+        overflow: hidden;
+
+        cursor: pointer;
+    }
+
+    .perfil .perfilcallcards .bartop {
+        -ms-grid-column: 19;
+        -ms-grid-column-span: 7;
+
+        -ms-grid-row: 3;
+        -ms-grid-row-span: 2;
+
+        grid-column: 1 / -1;
+        grid-row: 1 / span 1;
+        background-color: white;
+    }
+
+    .perfil .perfilcallcards .imagedinamica {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+
+        grid-column: 1 / -1;
+        grid-row: 2 / span 1;
+
+    }
+
+
+    .perfil .perfilcallcards .infodinamica {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+
+        -ms-grid-row: 3;
+        -ms-grid-row-span: 1;
+
+        grid-column: 1 / -1;
+        grid-row: 3 / span 1;
+
+        padding-left: 1rem;
+        font-size: 1.6rem;
+        line-height: 82px;
+        font-weight: bold;
+
+        border-bottom: 1px #000 solid;
+    }
+
+    .perfil .perfilcallcards .detalles {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+
+        -ms-grid-row: 4;
+        -ms-grid-row-span: 1;
+
+        grid-column: 1 / -1;
+        grid-row: 4 / span 1;
+        color: #0097a7;
+
+        padding-left: 1rem;
+        padding-top: 1rem;
+
+    }
+
+    
+    /****************************************************/
+
+    .wrappermisguardados , .wrappermihistorial {
+        width: 920px; 
+        margin: auto;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        color: white;
+        padding-top: 40px;
+    }
+
+
+    .perfilcard {
+        width: 220px;
+        height: 423px;
+        margin: 5px;
+        background-color: white;
+
+        display: -ms-grid;
+        -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+        -ms-grid-rows: 8px 183px 29px 29px 120px 52px;
+
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 8px 183px 29px 29px 120px 52px; 
+
+        border-radius: 0.4em;
+        overflow: hidden;
+        border: 0.5px solid #baccd3;
+
+        cursor: pointer;
+    }
+
+    .perfilcard .bartop {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 12;
+
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        background-color: white;
+    }
+
+    .perfilcard .imagedinamica {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 12;
+
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 2;
+
+        grid-column: 1 / -1;
+        grid-row: 2 / 4;
+
+    }
+
+    .perfilcard .infodinamica {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 12;
+
+        -ms-grid-row: 4;
+        -ms-grid-row-span: 1;
+
+        grid-column: 1 / 13;
+        grid-row: 4 / 6;
+        background-color: #f5f5f5;
+        padding: 20px 20px 15px 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .perfilcard .detalles {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 12;
+
+        -ms-grid-row: 6;
+        -ms-grid-row-span: 1;
+
+        grid-column: 1 / 13;
+        grid-row: 6 / 7;
+        background-color:#f5f5f5;
+        color: rgb(100,100,100);
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 18px;
+    }
+
+
+    .titulodinamica {
+        font-size: 1.2rem;
+        font-weight: bold;
+        line-height: 1.2rem;
+        width: 100%;
+    }
+
+    .dinamicacard {
+        width: 220px;
+        height: 423px;
+        margin: 5px;
+
+        display: -ms-grid;
+        -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+        -ms-grid-rows:  8px 36px 230px 154px 48px;
+
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 8px 36px 230px 154px [footer] 48px;
+
+
+
+        font-size: 1rem;
+        background-color: white;
+
+        border-radius: 0.4em;
+        overflow: hidden;
+        border: 0.5px solid #baccd3;
+
+        cursor: pointer;
+/
+
+        font-size: 0.8rem;
+        font-weight: normal;
+        line-height: 0.8rem;
+    }
+    
+
+    .dinamicacard .bartop {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 12;
+
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+
+        grid-column: 1 / -1;
+        grid-row: 1 / span 1;
+        background-color: white;
+    }
+
+    .dinamicacard .imagedinamica {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 12;
+
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 2;
+
+        grid-column: 1 / -1;
+        grid-row: 2 / span 2;
+
+    }
+
+
+
+    .proximamente{
+        cursor:not-allowed;
+    }
+
+    .dinamicacard .proximamentetext {
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 8;
+
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+
+        grid-column: 2 / 10;
+        grid-row: 2 / 3;
+        background-color: white;
+        text-align: center;
+        line-height: 36px;
+    }
+
+    .dinamicacard .tagdinamica {
+        -ms-grid-column: 4;
+        -ms-grid-column-span: 6;
+
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+
+        grid-column: 4 / 10;
+        grid-row: 2 / 3;
+        background-color: white;
+        text-align: center;
+        line-height: 36px;
+    }
+
+    .dinamicacard .diaevento {
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 2;
+
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+        background-color: rgb(62,62,62);
+        color: white;
+
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .dinamicacard .diaevento div {
+        text-align: center;
+    }
+
+    .dinamicacard .diaevento .diacard {
+        margin-top: 0.1rem;
+        font-size: 1.1rem;
+        line-height: 0.8rem;
+        font-weight: bold;
+    }
+
+    .dinamicacard .diaevento .mescard {
+        font-size: 0.7rem;
+        font-weight: normal;
+    }
+
+    .dinamicacard .segmento {
+        -ms-grid-column: 10;
+        -ms-grid-column-span: 2;
+
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+
+        grid-column: 10 / 12;
+        grid-row: 2 / 3;
+
+        background-color: #f5f5f5;
+
+        border-radius: 0rem 0rem 0.5rem 0rem;
+
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .dinamicacard .segmento img {
+        height: 1.3rem;
+    }
+
+    .dinamicacard .infodinamica {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 12;
+
+        -ms-grid-row: 4;
+        -ms-grid-row-span: 1;
+
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+        background-color: #f5f5f5;
+        padding: 20px 20px 15px 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .dinamicacard footer {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 12;
+
+        -ms-grid-row: 5;
+        -ms-grid-row-span: 1;
+
+        grid-column: 1 / -1;
+        grid-row: 5 / 6;
+        background-color: white;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 18px;
+    }
+
+    .dinamicacard footer div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /******************************************************/
+
+
+    /*************** sugerencia dinamicas **********/
+
+    .categoriadinamica {
+        padding-top: 52px;
+
+        padding-bottom: 52px;
+
+
+
+        width: 920px; 
+        margin: auto;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+
+    }
+
+
+    .headerdinamica {
+        width: 960px;
+        margin: auto;
+        padding-top: 84px;  
+        display: grid;
+        grid-template-columns: 10px repeat(7, 1fr) [datasocial-inicio] repeat(5, 1fr) [datasocial-final] 10px ;
+        grid-column-gap: 20px;
+
+    }
+
+    .headerdinamica .linea {
+        grid-column: 2 / -2;
+        grid-row: 2 / 3;
+        height: 1rem;
+        border-bottom: 1px solid rgb(80,80,80);
+    }
+
+    .headerdinamica h1 {
+        grid-column: 2 / span 5;
+        grid-row: 1 / 2;
+    }
+    .headerdinamica .wrapper {
+        grid-column: datasocial-inicio/datasocial-final;
+        grid-row: 1 / 2;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: space-between;
+    }
+
+    .headerdinamica .wrapper .div {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+   
+
+    .invisible {
+        opacity: 0;
+    }
+
+
+
+    
+
+    .misguardados, .mihistorial {
+        /*display: none;*/
+    }
+
+    /***************************************************/
+    @media only screen and (max-width: 960px) { 
+
+        .wrappermisguardados , .wrappermihistorial, .categoriadinamica {
+            padding-left: 40px;
+            padding-right: 40px;
+
+        }
+
+
+        .perfil, .publicidad, .dinamicas, .headerdinamica, .linea, .wrappermisguardados , .wrappermihistorial, .categoriadinamica  {
+            width: 100%;
+        }
+
+        .perfil  {
+
+            grid-template-rows: repeat(auto-fit, auto);
+            grid-gap: 20px 0px; 
+
+            -ms-grid-rows: 260px 70px 70px 130px;
+
+
+            grid-template-rows: 260px 70px 70px 130px;
+        }
+
+         
+
+
+        .perfil .datosperfil {
+            -ms-grid-column: 2;
+            -ms-grid-column-span: 25;
+
+            -ms-grid-row: 3;
+            -ms-grid-row-span: 2;
+
+            grid-column: 2 / -2;
+            grid-row: 3 / span 2;
+            margin-top: -20px;
+
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        
+
+        .perfil .aliasperfil {
+            -ms-grid-column: 2;
+            -ms-grid-column-span: 25;
+
+            -ms-grid-row: 2;
+            -ms-grid-row-span: 2;
+
+            grid-column: 2 / -2;
+            grid-row: 2 / span 2;
+            justify-self: center;
+            -ms-grid-column-align: center;
+        }
+
+        .perfil .datosperfil .loadfoto {
+            margin-top: -2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .perfil .datosperfil .miembrodesde {
+            font-size: 0.8rem;
+            color: #002f87;
+            margin-bottom: 2.0rem;
+        }
+
+        .perfil .misguardadoscard {
+            -ms-grid-column: 2;
+            -ms-grid-column-span: 25;
+
+            -ms-grid-row: 5;
+            -ms-grid-row-span: 2;
+
+            grid-column: 2 / -2;
+            grid-row: 5 / span 2;
+            margin-right: 0px;
+        }
+
+        .perfil .mihistorialcard {
+            -ms-grid-column: 2;
+            -ms-grid-column-span: 25;
+
+            -ms-grid-row: 7;
+            -ms-grid-row-span: 2;
+
+            grid-column: 2 / -2;
+            grid-row: 7 / span 2;
+            margin-right: 0px;
+        }
+
+
+        .editarservicios {
+            width: 100%;
+            height: auto;
+            margin: auto;
+
+            background-color: white;
+
+            grid-template-columns: 5px 1fr 5px;
+            grid-template-rows: auto auto auto auto;
+
+            grid-gap: 0px 20px;
+
+            border-radius: 0.3rem; 
+
+        }
+
+        .editarservicios header {
+            grid-column: 2 / -2;
+            grid-row: 1 / span 1;
+            margin-bottom: 2rem;
+        }
+
+        .editarservicios .columnaizq {
+            grid-column: 2 / -2;
+            grid-row: 2 / span 1;
+
+            padding-top: 0rem;
+            padding-bottom: 0rem;
+
+        }
+
+        .editarservicios .columnader {
+            grid-column: 2 / -2;
+            grid-row: 3 / span 1;
+
+            padding-top: 0rem;
+            padding-bottom: 0rem;
+
+        }
+
+        .editarservicios .guardar {
+            display: none;
+        }
+
+        .editarservicios .guardarmobile {
+            display: block;
+            grid-column: 2 / -2;
+            height: 2rem;
+            text-align: center;
+            line-height: 2rem;
+        }
+
+
+
+        .headerdinamica h1 {
+            -ms-grid-column: 1;
+            -ms-grid-column-span: 25;
+
+            -ms-grid-row: 1;
+            -ms-grid-row-span: 1;
+
+            grid-column: 2 / -2;
+            grid-row: 1 / 2;
+        }
+
+    }
+
+
+
+    .dia_evento{
+        background:#404040;
+        display: inline-block;
+        color:#fff;
+        width:35px;
+        height: 40px;
+        text-align: center;
+        position:absolute;
+        top:1px;
+        left:10px;
+
+    }
+
+    .dia{
+        font-size:1.05rem;
+        font-weight: bold;
+        height: 15px;
+        margin-top: 5px;
+
+    }
+
+    .mes{
+        font-size:0.7rem;
+        height: 10px;
+    }
+
+    .ciudad_evento{
+        display: inline-block;
+        text-align: center;
+        padding-top:2%;
+        position: absolute;
+        top:1px;
+        background:#FFF;
+        width:120px;
+        height: 40px;
+        left:45px;
+        color:#404040;
+        padding-top:5%;
+    }
+
+
+    .no_proximamente{
+        display: none !important;
+    }
+
+
+
+    .yajugo,.yajugogrande{
+
+
+    position: absolute;
+    top: 192px;
+    /* right: 24%; */
+    background-color:#0096d1;
+    padding:8px 20px;
+    font-size: 0.9rem;
+    line-height: 1;
+    width: 100%;
+    color:#fff;
+
+
+    }
+
+
+    .yajugogrande{
+         top: 257px;    
+    }
+
+</style>
+
+<section class="perfil">
+    <div class="portada">
+    </div>
+    
+    <form name='formulario' id='formulario' method='post' action='https://admin.experienciastelcel.com/restful/fotoperfil/' target='_self' enctype="multipart/form-data"> 
+         <input id="cargaimagen" type="file" name="archivo1" accept=".jpg,.jpeg,.png" maxsize="">   
+         <input id="upkinput" type="hidden" name="upk" value="162">
+    </form>
+
+
+    <div class="datosperfil">
+        <div class="fa fa-camera loadfoto" aria-hidden="true"></div>
+        <div class="miembrodesde">MIEMBRO DESDE: FEB. 08 | 2018</div>
+    </div>
+
+    <div class="aliasperfil">
+       &nbsp;
+    </div>
+
+    <div class="misguardadoscard perfilcallcards shadowcard">
+        <div class="bartop"></div>
+        <div class="imagedinamica" >
+        </div>
+        <div class="infodinamica">Mis guardados</div>
+        <div class="detalles">Detalles</div>
+    </div>
+
+    <div class="mihistorialcard perfilcallcards shadowcard">
+        <div class="bartop"></div>
+        <div class="imagedinamica" >
+        </div>
+        <div class="infodinamica">Mi historial</div>
+        <div class="detalles">Detalles</div>
+    </div>
+</section>
+
+
+<header id="misguardados" class="headerdinamica misguardados">
+    <div class="linea"></div>
+    <h1 class="titulo36bold grismuyoscuro">Mis guardados</h1>
+    
+</header>
+
+<section class="wrappermisguardados misguardados">    
+</section>
+
+
+
+<header id="mihistorial" class="headerdinamica mihistorial">
+    <div class="linea"></div>
+    <h1 class="titulo36bold grismuyoscuro">Mi historial</h1>
+    
+</header>
+
+<section class="wrappermihistorial mihistorial">
+    
+</section>
+
+
+<header class="headerdinamica" id="otrasrecs">
+    <div class="linea"></div>
+    <h1 class="titulo36bold grismuyoscuro">Otras recomendaciones</h1>
+    
+</header>
+
+<section class="categoriadinamica">
+    
+</section>
+
+<section class="publicidad" data-url="https://www.clarovideo.com/">
+	<div class="wrapperp">
+		<img src="images/publicidad/claro-video-bne.jpg" class="imgdesktop">
+		<img src="images/publicidad/claro-video-bnm.jpg" class="imgmobile">
+	</div>
+</section>
+
+
+<script type="text/javascript">
+    $(document).ready( function() {
+        parent.postMessage('scrollthem,0', '*');
+
+        $("#upkinput").val(upk);
+        
+
+
+        var listaportadas = ["portada1.jpg", "portada2.jpg", "portada3.jpg", "portada4.jpg", "portada5.jpg", "portada6.jpg"];
+
+        var portadaAzar = Math.floor( Math.random()*6 );;
+
+        $(".perfil .portada").css("background", "url(images/portadasperfil/"+listaportadas[portadaAzar]+")");
+        $(".perfil .portada").css("background-repeat", "no-repeat");
+        $(".perfil .portada").css("background-size", "cover");
+        $(".perfil .portada").css("background-position", "right center");
+
+
+        var likesJson = $.getJSON( "https://admin.experienciastelcel.com/restful/getprofileuser/?upk="+upk, function( data ) {
+
+            if ( data.usuario.imagen.length > 3 ) {
+                //$(".aliasperfil img").attr("src","https://admin.experienciastelcel.com/"+data.usuario.imagen);
+
+                $(".aliasperfil").css({'background-image':'url("https://admin.experienciastelcel.com/'+data.usuario.imagen+'")'});
+
+            }
+            
+            else{
+                $(".aliasperfil").css({'background-image':'url("/images/iconouser.png")'});
+                console.log('as');
+            }
+
+            $(".wrappermisguardados").empty();  
+            var cardHTML = '';
+
+
+
+            for(i=0; i<data.usuario.likes.length; i++) {
+
+               var clase_status = data.usuario.likes[i].status;
+
+               if(clase_status=='proximamente'){
+                    mensaje = 'Proximamente';
+               }
+               else{
+                    mensaje = data.usuario.likes[i].ciudad;
+               }
+
+
+                cardHTML += '<div class="perfilcard  '+clase_status+' shadowcard" data-id="'+data.usuario.likes[i].promopk+'" data-vigencia="'+data.usuario.likes[i].vigencia+'" style="position:relative;">'
+                cardHTML += '   <div class="bartop"></div>'
+                
+                cardHTML += '<div class="topboxinfo">';
+                cardHTML += '<div class="dia_evento no_'+clase_status+'" >';
+                cardHTML += '<div class="dia">'+data.usuario.likes[i].dia_evento+'</div>';
+                cardHTML += '<div class="mes">'+data.usuario.likes[i].mes_evento+'</div>';
+                cardHTML += '</div>';
+                cardHTML += '<div class="ciudad_evento">'+mensaje+'</div>';
+                cardHTML += '</div>';
+
+                cardHTML += '   <div class="imagedinamica" style="background: url(https://admin.experienciastelcel.com/'+data.usuario.likes[i].imagen+');background-repeat: no-repeat;background-size: cover;background-position: center center;" >'
+                
+                cardHTML += '   </div>'
+                cardHTML += '   <div class="infodinamica">'
+                cardHTML += '       <div class="typotitulocard grismuyoscuro">'+data.usuario.likes[i].titulo+'</div>'
+                cardHTML += '   </div>'
+                cardHTML += '   <div class="detalles typodetallesvigencia">';
+                cardHTML += '<div>Vigencia: '+data.usuario.likes[i].fecha_vigencia+'</div>';
+                cardHTML += '<div></div></div>'
+                cardHTML += '</div>';
+               
+            }
+            
+            
+            $(".wrappermisguardados").append( cardHTML );
+            
+
+
+            $(".wrappermihistorial").empty();
+            cardHTML = '';
+            for(i=0; i<data.usuario.participaciones.length; i++) {
+
+                console.log(i);
+               var clase_status = data.usuario.participaciones[i].status;
+
+
+                cardHTML += '<div class="perfilcard '+clase_status+' shadowcard" data-id="'+data.usuario.participaciones[i].promopk+'" data-vigencia="'+data.usuario.participaciones[i].vigencia+'" style="position:relative;">'
+                cardHTML += '   <div class="bartop"></div>'
+                
+                cardHTML += '<div class="topboxinfo">';
+                cardHTML += '<div class="dia_evento">';
+                cardHTML += '<div class="dia">'+data.usuario.participaciones[i].dia_evento+'</div>';
+                cardHTML += '<div class="mes">'+data.usuario.participaciones[i].mes_evento+'</div>';
+                cardHTML += '</div>';
+                cardHTML += '<div class="ciudad_evento">'+data.usuario.participaciones[i].ciudad+'</div>';
+                cardHTML += '</div>';
+
+                cardHTML += '   <div class="imagedinamica" style="background: url(https://admin.experienciastelcel.com/'+data.usuario.participaciones[i].imagen+');background-repeat: no-repeat;background-size: cover;background-position: center center;" >'
+                
+                cardHTML += '   </div>'
+                cardHTML += '   <div class="infodinamica">'
+                cardHTML += '       <div class="typotitulocard grismuyoscuro">'+data.usuario.participaciones[i].titulo+'</div>'
+                cardHTML += ' <div class="yajugo">Gracias por participar.</div>  </div>'
+                cardHTML += '   <div class="detalles typodetallesvigencia">Vigencia: '+data.usuario.participaciones[i].fecha_vigencia+'</div>'
+                cardHTML += '</div>'
+            }
+
+            $(".wrappermihistorial").append( cardHTML );
+
+
+        });
+        //}
+
+
+        /*************** servicios *****************/
+
+        $(".editarservicios .serviciosdeclarados .servicio").click( function() {
+            $(this).find(".checkbox").toggleClass("fa-check-square");
+        })
+
+        /*******************************************/
+
+
+        function cargaRecomendaciones() {
+            $( ".dinamicas .carruselcards .mascara .wrappercards" ).empty();
+            
+            var url = "https://admin.experienciastelcel.com/restful/promos/?recomendados=1&upk="+upk;
+
+            var dinamicasJson = $.getJSON( url , function( data ) {
+                var dinamicasHTML = '';
+                 if(data.dinamicas.length>0){
+                    for(i=0; i< 3; i++) {
+                        try{
+
+
+
+                        if ( data.dinamicas[i].status == "proximamente" ) {
+
+                            dinamicasHTML += '<div class="dinamicacard proximamente shadowcard puntero"  data-id="'+data.dinamicas[i].pk+'" style="cursor:not-allowed" >'
+                        } else {
+                            dinamicasHTML += '<div class="dinamicacard shadowcard puntero"  data-id="'+data.dinamicas[i].pk+'" >'
+                        }
+
+
+                        dinamicasHTML += '  <div class="bartop"></div>'
+
+
+                        dinamicasHTML += '   <div class="imagedinamica" style="background: url('+data.dinamicas[i].imagen+');background-repeat: no-repeat;background-size: cover;background-position: center center;" >'
+                        dinamicasHTML += '  </div>'
+
+                        if ( data.dinamicas[i].status == "proximamente" ) {
+                            dinamicasHTML += '  <div class="proximamentetext typotagcard grisoscuro">Próximamente</div>'
+                        } else {
+                            dinamicasHTML += '  <div class="tagdinamica typotagcard grismedio">'+data.dinamicas[i].ciudad+'</div>'
+                            dinamicasHTML += '  <div class="diaevento grismedio" >';
+                            dinamicasHTML += '      <div class="diacard">'+data.dinamicas[i].dia_evento+'</div>'
+                            dinamicasHTML += '      <div class="mescard">'+data.dinamicas[i].mes_evento+'</div>'
+                            dinamicasHTML += '  </div>'
+                        }
+
+
+                        dinamicasHTML += '  <div class="infodinamica">'
+                        dinamicasHTML += '      <div class="typotitulocard grismuyoscuro">'
+                        dinamicasHTML += '          '+data.dinamicas[i].titulo_completo
+                        dinamicasHTML += '      </div>'
+
+                        if ( data.dinamicas[i].status != "proximamente" ) {
+                            dinamicasHTML += '      <div class="vigencia typodetallesvigencia grisoscuro">Vigencia: '+data.dinamicas[i].vigencia+'</div>'
+                        }
+                        
+
+                        dinamicasHTML += '  </div>'
+                        dinamicasHTML += '  <footer class="grismedio">'
+
+                        if ( data.dinamicas[i].liked == 1 ) {
+                            dinamicasHTML += '      <div class="liked grisoscuro"  data-id="'+data.dinamicas[i].pk+'">'
+                            dinamicasHTML += '          <div class="fa fa-heart grisrojooscuro" style="margin-right:0.5em"></div>'
+                        } else {
+                            dinamicasHTML += '      <div class="likes grisoscuro"  data-id="'+data.dinamicas[i].pk+'">'
+                            dinamicasHTML += '          <div class="fa fa-heart-o" style="margin-right:0.5em"></div>'
+                        }
+
+
+                        dinamicasHTML += '          <div class="totallikes">'+data.dinamicas[i].likes+'</div>'
+                        dinamicasHTML += '      </div>'
+                        dinamicasHTML += '      <div class="social">'
+                        dinamicasHTML += '          <div class="fa fa-user-o" style="margin-right:0.5em"></div>'
+                        dinamicasHTML += '          <div>'+data.dinamicas[i].participaciones+'</div>'
+                        dinamicasHTML += '      </div>'
+                        dinamicasHTML += '  </footer>'
+                        dinamicasHTML += '</div>'
+                        }
+                        catch(err){
+                        eror = err;
+                        }
+                    }
+                }
+                else{
+                    $('#otrasrecs').hide();
+                }
+                $(".categoriadinamica").append( dinamicasHTML );
+            });
+        }
+
+        cargaRecomendaciones();
+
+        $(".misguardadoscard").click( function() {
+            var scrollTopContent = $('#misguardados').offset().top+100;
+            parent.postMessage('scrollthem,'+scrollTopContent+'', '*');
+
+        })
+
+
+        $(".mihistorialcard").click( function() {
+            var scrollTopContent = $('#mihistorial').offset().top+100;
+            parent.postMessage('scrollthem,'+scrollTopContent+'', '*');
+        })
+
+        
+
+
+        /******************** cargar foto ************************/
+
+        $('.perfil .datosperfil .loadfoto').click(function(){
+            $('#cargaimagen').click();
+        });
+
+        $( "#cargaimagen" ).change(function() {
+
+               var url = $('#formulario').attr('action');
+                var type = $('#formulario').attr('method');
+                forma = $('#formulario').get(0);
+                
+                var data = new FormData(forma);
+
+                
+                $.ajax({url:url,
+                        type:type,
+                        data:data,
+                        cache: false,
+                        processData: false,
+                        contentType:false,
+                        dataType: 'json',
+                        success:function(response){
+                            //$(".aliasperfil img").attr("src", response.img);
+                            $(".aliasperfil").css({'background-image':'url("'+response.img+'")'});
+                        }
+
+                });
+                $('#formulario')[0].reset();
+                $("#upkinput").val(upk);
+            });
+
+        /******************** fin cargar foto **********************/
+            
+
+    });
+
+</script>

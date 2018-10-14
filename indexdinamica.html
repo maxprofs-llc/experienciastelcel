@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Experiencias Telcel</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/main-header.css">
+
+	<script type="text/javascript" src="js/prefixfree.min.js"></script>
+	<script src="//js.honeybadger.io/v0.5/honeybadger.min.js" type="text/javascript" data-apiKey="60817078"></script>
+
+
+</head>
+<body class="container-iframe" >
+	<div class="container-iframe-no">
+		<header id="main-header">
+			<div class="wrapper">
+
+				<div id="menu-handler" class="icon-menu fa fa-bars hide_desktop no-seleccionable" aria-hidden="true"></div>
+
+				<div class="brand no-seleccionable">
+					<img src="images/marca_sitio.png" width="300">
+				</div>
+
+				
+				<nav id="menudesktop" class="hide_mobile">
+					<div id="experiencias" class="bold18 puntero no-seleccionable">Categorías<span class="fa fa-caret-down" aria-hidden="true" style="margin-left: 0.6em"></span></div>
+					<div id="ganadores" class="bold18 puntero no-seleccionable">Ganadores</div>
+					<div id="comofunciona" class="bold18 puntero no-seleccionable" >¿Cómo funciona?</div>
+					<div id="perfil" class="bold18 puntero no-seleccionable" >Perfil</div>
+				</nav>
+
+				<nav id="menumobile" class="hide_desktop">
+					<div id="experiencias" class="bold18 puntero no-seleccionable">Categorías<span class="fa fa-caret-down" aria-hidden="true" style="margin-left: 0.2em"></span></div>
+					<div id="ganadores" class="bold18 puntero no-seleccionable">Ganadores</div>
+					<div id="comofunciona" class="bold18 puntero no-seleccionable" >¿Cómo funciona?</div>
+					<div id="perfil" class="bold18 puntero no-seleccionable" >Perfil</div>
+				</nav>
+
+				<div id="menufiltros" class="desplegados">
+				</div>
+
+				<div id="menufiltrosmobile" class="desplegados">
+				</div>
+
+
+				
+			</div>
+		</header>
+
+
+		<div id="main-wrapper">
+			cargando dinamicas, espere :)
+		</div>
+
+
+	</div>
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+	<script type="text/javascript" src="js/breakpoints.js"></script>
+	<script type="text/javascript" src="js/main-header.js"></script>
+	
+	<!-- codigo para quitar scroll porveido por IT Telcel -->
+	<script type="text/javascript">
+		var upk=getCookie('upk');
+		var whereishome = window.location.host;
+		var region = 0;
+		var datosUsuario = 0;
+		var usuarioreg = false;
+		var ventaja_terminos;
+		var nomoretelcel = true;
+		// autoprefixer({ grid: true })
+
+		var _layout_anonymous_shift_pressed = false;
+		var KEYCODE_SHIFT = 16;
+
+		(function($) 
+		{  
+		    $.fn.filterNumbersOnly = function(options) 
+		    {  
+		        this.each(function() 
+		        {
+		            var element = $(this);
+		            $(element).keydown(isNumeric);
+		            $(element).keypress(isNumeric);
+		            $(element).keyup(isShiftReleased);
+		        });
+		    }
+		})(jQuery);
+
+
+		function isShiftReleased(e)
+		{
+			if (_layout_anonymous_shift_pressed)
+			{
+			    var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+			    var code = parseInt(key, 10);
+			    
+			    if (code == KEYCODE_SHIFT)
+			    {
+			    	_layout_anonymous_shift_pressed = false;
+			    }
+			}
+		}
+
+
+		function isNumeric(e) {
+		    return e.charCode === 0 || /\d/.test(String.fromCharCode(e.charCode));
+		};
+
+		function isAlpha(e) {
+			
+			e = e || window.event;
+		    var keyCode = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+		    
+		    if( keyCode == 225  || keyCode == 233 || keyCode == 237 || keyCode == 243 || keyCode == 250 || keyCode == 39)
+		    {
+		        return true;
+		    }
+		    else
+		    {
+		        var charCode = (typeof event.which == "undefined") ? event.keyCode : event.which;
+		        return charCode === 0 || charCode === 8 || /^[a-zA-ZñÑ\s]*$/.test(String.fromCharCode(charCode));
+		    }
+		     
+		}
+
+		setInterval(function() {
+			var height = $(".container-iframe").height() + 100;
+			parent.postMessage(height,"*");
+		},100);
+		  
+
+	</script>
+
+	<script type="text/javascript">
+		var upk = null;
+		var id_dinamica = null;
+		var region = 0;
+		var datosUsuario = 0;
+		var usuarioreg = false;
+		var ventaja_terminos;
+		var nomoretelcel = true;
+
+		function forGet(parameterName) {
+		    var result = null,
+		        tmp = [];
+		    var items = location.search.substr(1).split("&");
+		    for (var index = 0; index < items.length; index++) {
+		        tmp = items[index].split("=");
+		        if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+		    }
+		    return result;
+		}
+
+		 upk = forGet('u');
+		 //id_dinamica = forGet('d');
+		 pata = window.location.href;
+		alert(pata);
+	</script>
+
+
+
+	</body>
+</html>

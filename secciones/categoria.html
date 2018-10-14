@@ -1,0 +1,449 @@
+<style type="text/css">
+	
+
+	.headercategoria {
+
+		width: 960px;
+		margin: auto;
+
+		display: -ms-grid;
+	    -ms-grid-columns: -ms-grid-columns: 10px 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 10px;
+		-ms-grid-rows: 113px;
+
+		display: grid;
+		grid-template-columns: 10px repeat(5, 1fr) [datasocial-inicio] repeat(7, 1fr) [datasocial-final] 10px ;
+		grid-template-rows: 113px ;
+
+		grid-column-gap: 20px;
+		color: white;
+		border-bottom: 1px solid rgb(180,180,180);
+
+	}
+
+
+	
+
+
+	
+
+ 	.headercategoria .linea {
+ 		-ms-grid-column: 2;
+		-ms-grid-column-span: 27;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+ 		grid-column: 2 / -2;
+ 		grid-row: 1 / 2;
+ 		
+ 		border-bottom: 1px solid rgb(180,180,180);
+ 	}
+
+ 	.headercategoria h1 {
+ 		-ms-grid-column: 2;
+		-ms-grid-column-span: 6;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+ 		grid-column: 2 / span 6;
+ 		grid-row: 1 / 2;
+ 		align-self: end;
+ 		padding-bottom: 1.2rem;
+ 	}
+
+
+
+
+ 	.wrappercategoria {
+ 		width: 920px; 
+		margin: auto;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		
+		color: white;
+		padding-top: 40px;
+		padding-bottom: 2.5rem;
+ 	}
+
+
+ 	.dinamicacard {
+		
+		width: 286px;
+		height: 512px;
+
+		margin: 10px;
+
+
+		display: -ms-grid;
+	    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		-ms-grid-rows: 8px 36px 177px 154px 48px;
+
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: 8px 36px 177px 154px [footer] 48px;
+
+
+		background-color: white;
+
+		border-radius: 0.4em;
+		overflow: hidden;
+		border: 0.5px solid #baccd3;
+
+		cursor: pointer;
+
+		font-size: 0.8rem;
+		font-weight: normal;
+		line-height: 0.8rem;
+
+
+	font-size: 1rem;
+    height: 512px;
+    width: 286px;
+    background-color: white;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 0.375em 2.8em 14.7em 11.125em 2.9375em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.375em 2.8em 14.7em 11.125em 2.9375em;
+    border-radius: 0.4em;
+    overflow: hidden;
+    border: 0.5px solid #baccd3;
+    cursor: pointer;
+    position: relative;
+
+
+	}
+	
+
+	.dinamicacard .bartop {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / span 1;
+		background-color: white;
+	}
+
+	.dinamicacard .imagedinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 2;
+
+		grid-column: 1 / -1;
+		grid-row: 2 / span 2;
+
+	}
+
+
+	.dinamicacard .proximamentetext {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 8;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 2 / 10;
+		grid-row: 2 / 3;
+		background-color: white;
+		text-align: center;
+		line-height: 36px;
+	}
+
+	.dinamicacard .tagdinamica {
+		-ms-grid-column: 4;
+		-ms-grid-column-span: 6;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 4 / 10;
+		grid-row: 2 / 3;
+		background-color: white;
+		text-align: center;
+		line-height: 36px;
+	}
+
+	.dinamicacard .diaevento {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 2;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 2 / 4;
+		grid-row: 2 / 3;
+		
+		background-color: rgb(62,62,62);
+		color: white;
+		
+
+		display: flex;
+		flex-direction: column;
+		
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	.dinamicacard .diaevento div {
+		text-align: center;
+	}
+
+	.dinamicacard .diaevento .diacard {
+		margin-top: 0.1rem;
+		font-size: 1.1rem;
+		line-height: 0.8rem;
+		font-weight: bold;
+	}
+
+	.dinamicacard .diaevento .mescard {
+		font-size: 0.7rem;
+		font-weight: normal;
+	}
+
+	.dinamicacard .segmento {
+		-ms-grid-column: 10;
+		-ms-grid-column-span: 2;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 10 / 12;
+		grid-row: 2 / 3;
+		
+		background-color: #f5f5f5;
+
+		border-radius: 0rem 0rem 0.5rem 0rem;
+
+		display: flex;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+	}
+
+	.dinamicacard .segmento img {
+		height: 1.3rem;
+	}
+
+	.dinamicacard .infodinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 4;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 4 / 5;
+		background-color: #f5f5f5;
+		padding: 20px 20px 15px 20px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.dinamicacard footer {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 5;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 5 / 6;
+		background-color: white;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px 18px;
+	}
+
+	.dinamicacard footer div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+
+	
+
+	@media only screen and (max-width: 960px) { 
+		.headercategoria {
+			width: 100%; 
+			grid-template-columns: 10px [datasocial-inicio] repeat(5, 1fr)  repeat(7, 1fr) [datasocial-final] 10px ;
+			grid-template-rows: 113px 1fr ;
+		}
+		.headercategoria .linea {
+	 		grid-column: 2 / -2;
+	 		grid-row: 2 / 3;
+	 	}
+
+	 	.headercategoria .wrapper {
+	 		grid-row: 2 / 3;
+	 		font-size: 0.4rem;
+	 	}
+
+		#main-wrapper {
+			width: 100%;
+		}
+
+		.wrappercategoria {
+			width: calc(100% - 40px);
+			justify-content: center;
+		}
+
+		
+	}
+
+
+
+
+	.yajugo,.yajugogrande{
+
+
+    position: absolute;
+    top: 192px;
+    /* right: 24%; */
+    background-color:#0096d1;
+    padding:8px 20px;
+    font-size: 0.9rem;
+    line-height: 1;
+    width: 100%;
+    color:#fff;
+
+
+	}
+
+
+	.yajugogrande{
+		 top: 257px;	
+	}
+
+
+
+
+	.nada{
+		display: none !important;
+	}
+
+
+</style>
+
+
+<header class="headercategoria">
+	<h1 class="titulocategoria typotituloseccion grisoscuro"></h1>
+</header>
+
+
+<div class="wrappercategoria">
+</div>
+
+
+<section class="publicidad" data-url="http://www.clarojuegos.com/">
+	<div class="wrapperp">
+		<img src="images/publicidad/claro-juegos-bne.jpg" class="imgdesktop">
+		<img src="images/publicidad/claro-juegos-bnm.jpg" class="imgmobile">
+	</div>
+</section>
+
+
+
+<script type="text/javascript">
+	
+	$(document).ready( function() {
+
+		parent.postMessage('scrollthem,0', '*');
+		
+		$(".titulocategoria").text(categoriaTitulo);
+		
+		var dinamicasJson = $.getJSON( "https://admin.experienciastelcel.com/restful/promosby/?search="+categoria+"&upk="+upk , function( data ) {
+
+			var dinamicasHTML = '';
+			for(i=0; i<data.dinamicas.length; i++) {
+
+
+				if(data.dinamicas[i].participo==false){
+					clasejugo = 'nada';
+				}
+				else{
+					clasejugo = 'yajugogrande';
+				}
+
+
+
+				if ( data.dinamicas[i].status == "proximamente" ) {
+					dinamicasHTML += '<div class="dinamicacard proximamente shadowcard puntero"  data-id="'+data.dinamicas[i].pk+'" style="cursor:not-allowed" >'
+				} else {
+					dinamicasHTML += '<div class="dinamicacard shadowcard puntero"  data-id="'+data.dinamicas[i].pk+'" >'
+				}
+				
+				dinamicasHTML += '	<div class="bartop"></div>'
+				
+				
+				dinamicasHTML += '	<div class="imagedinamica" style="background: url('+data.dinamicas[i].imagen+');background-repeat: no-repeat;background-size: cover;background-position: center;" >'
+				
+				dinamicasHTML += '	</div>'
+				
+
+				if ( data.dinamicas[i].status == "proximamente" ) {
+					dinamicasHTML += '	<div class="proximamentetext typotagcard grisoscuro">Próximamente</div>'
+				} else {
+					dinamicasHTML += '	<div class="tagdinamica typotagcard grismedio">'+data.dinamicas[i].ciudad+'</div>'
+					dinamicasHTML += '	<div class="diaevento grismedio" >';
+					dinamicasHTML += '		<div class="diacard">'+data.dinamicas[i].dia_evento+'</div>'
+					dinamicasHTML += '		<div class="mescard">'+data.dinamicas[i].mes_evento+'</div>'
+					dinamicasHTML += '	</div>'
+				}
+
+
+				dinamicasHTML += '	<div class="infodinamica">'
+				dinamicasHTML += '		<div class="typotitulocard grismuyoscuro">'
+				dinamicasHTML += '			'+data.dinamicas[i].titulo_completo
+				dinamicasHTML += '		</div>'
+
+				if ( data.dinamicas[i].status != "proximamente" ) {
+					dinamicasHTML += '		<div class="vigencia typodetallesvigencia grisoscuro">Vigencia: '+data.dinamicas[i].vigencia+'</div>'
+				}
+				
+				dinamicasHTML += '	</div>'
+				dinamicasHTML += '	<footer class="grismedio">'
+
+				if ( data.dinamicas[i].liked == 1 ) {
+					dinamicasHTML += '		<div class="liked grisoscuro"  data-id="'+data.dinamicas[i].pk+'">'
+					dinamicasHTML += '			<div class="fa fa-heart grisrojooscuro" style="margin-right:0.5em"></div>'
+				} else {
+					dinamicasHTML += '		<div class="likes grisoscuro"  data-id="'+data.dinamicas[i].pk+'">'
+					dinamicasHTML += '			<div class="fa fa-heart-o" style="margin-right:0.5em"></div>'
+				}
+				
+				
+
+				dinamicasHTML += '			<div class="totallikes">'+data.dinamicas[i].likes+'</div>'
+				dinamicasHTML += '		</div>'
+				dinamicasHTML += '		<div class="social">'
+				dinamicasHTML += '			<div class="fa fa-user-o" style="margin-right:0.5em"></div>'
+				dinamicasHTML += '			<div>'+data.dinamicas[i].participaciones+'</div>'
+				dinamicasHTML += '		</div>'
+				dinamicasHTML += '<div class="'+clasejugo+'">Gracias por participar.</div></footer>'
+				dinamicasHTML += '</div>'
+
+			}
+			$(".wrappercategoria").append( dinamicasHTML );
+		});
+		
+
+	})
+		
+</script>

@@ -1,0 +1,33 @@
+{
+	"promocion": {
+		"imagen": "http://telcel.local/static/temps/promo_30_min.JPG", 
+		"likes": 340, 
+		"titulo": "rey leon en", 
+		"imagen_lg": "http://telcel.local/static/temps/promo_30_min.jpg", 
+		"vigencia": "May. 11 | 2018", 
+		"premio": "", "preguntas": [
+			{	"pk": 24, 
+				"pregunta": "\u00bfQuine interpreto a Simba SIMBA SIMBA?", 
+				"img": "telcel.localstatic/media/promocion/crop_24_54vyaVt.jpeg", 
+				"options": [
+					{"indice": "A", "cor": "False", "texto": "Sergio Ramoscccc"}, 
+					{"indice": "B", "cor": "False", "texto": "Juan Luis Guerraccc"}, 
+					{"indice": "C", "cor": "True", "texto": "Carlos Rivera"}
+				]
+			}, {"pk": 25, 
+				"pregunta": "\u00bfCual es el nombre del rey leon?", 
+				"img": "telcel.localstatic/media/promocion/crop_25.jpeg", 
+				"options": [
+					{"indice": "A", "cor": "True", "texto": "Mufasa"}, 
+					{"indice": "B", "cor": "False", "texto": "Fidel"}, 
+					{"indice": "C", "cor": "False", "texto": "Puttin"}
+				]
+			}
+		], 
+		"shares": 120, 
+		"bases": "", 
+		"dinamica": "trivia", 
+		"pk": 30, 
+		"vigenciaUTC": 1525996800.0
+	}
+}

@@ -1,0 +1,1293 @@
+<style type="text/css">
+	
+	.categoriadinamica {
+		padding-top: 52px;
+		padding-bottom: 52px;
+		width: 920px;
+		margin: auto;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+
+	.headerdinamica {
+		width: 960px;
+		margin: auto;
+		padding-top: 84px;	
+		display: grid;
+		grid-template-columns: 10px repeat(7, 1fr) [datasocial-inicio] repeat(5, 1fr) [datasocial-final] 10px ;
+		grid-column-gap: 20px;
+
+ 	}
+
+ 	.headerdinamica .linea {
+ 		grid-column: 2 / -2;
+ 		grid-row: 2 / 3;
+ 		height: 1rem;
+ 		border-bottom: 1px solid rgb(80,80,80);
+ 	}
+
+ 	.headerdinamica h1 {
+ 		grid-column: 2 / span 5;
+ 		grid-row: 1 / 2;
+ 	}
+ 	.headerdinamica .wrapper {
+ 		grid-column: datasocial-inicio/datasocial-final;
+ 		grid-row: 1 / 2;
+ 		display: flex;
+ 		flex-direction: row;
+ 		align-items: end;
+ 		justify-content: space-between;
+ 	}
+
+ 	.headerdinamica .wrapper .div {
+ 		
+ 		display: flex;
+ 		flex-direction: row;
+ 		justify-content: space-between;
+ 	}
+
+
+	.invisible {
+		opacity: 0;
+	}
+
+
+	/*************  dinamicas sugenrencias ok *************/
+
+	.titulodinamica {
+ 		font-size: 1.2rem;
+		font-weight: bold;
+		line-height: 1.2rem;
+		width: 100%;
+	}
+
+	.dinamicacard {
+		width: 286px;
+		height: 423px;
+
+		margin: 10px;
+
+		display: -ms-grid;
+	    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+		-ms-grid-rows:  8px 36px 230px 154px 48px;
+
+
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: 8px 36px 230px 154px [footer] 48px;
+
+
+
+		font-size: 1rem;
+		background-color: white;
+
+		border-radius: 0.4em;
+		overflow: hidden;
+		border: 0.5px solid #baccd3;
+
+		cursor: pointer;
+
+		font-size: 0.9rem;
+		font-weight: normal;
+		line-height: 0.8rem;
+	}
+	
+	.dinamicacard .bartop {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / span 1;
+		background-color: white;
+	}
+
+	.dinamicacard .imagedinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 2;
+
+		grid-column: 1 / -1;
+		grid-row: 2 / span 2;
+
+	}
+
+	.dinamicacard .proximamentetext {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 8;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 2 / 10;
+		grid-row: 2 / 3;
+		background-color: white;
+		text-align: center;
+		line-height: 36px;
+	}
+
+	.dinamicacard .tagdinamica {
+		-ms-grid-column: 4;
+		-ms-grid-column-span: 6;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 4 / 10;
+		grid-row: 2 / 3;
+		background-color: white;
+		text-align: center;
+		line-height: 36px;
+	}
+
+	.dinamicacard .diaevento {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 2;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 2 / 4;
+		grid-row: 2 / 3;
+		
+		background-color: rgb(62,62,62);
+		color: white;
+		
+		display: flex;
+		flex-direction: column;
+		
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	.dinamicacard .diaevento div {
+		text-align: center;
+	}
+
+	.dinamicacard .diaevento .diacard {
+		margin-top: 0.1rem;
+		font-size: 1.1rem;
+		line-height: 0.8rem;
+		font-weight: bold;
+	}
+
+	.dinamicacard .diaevento .mescard {
+		font-size: 0.9rem;
+		font-weight: normal;
+	}
+
+	.dinamicacard .segmento {
+		-ms-grid-column: 10;
+		-ms-grid-column-span: 2;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 10 / 12;
+		grid-row: 2 / 3;
+		
+		background-color: #f5f5f5;
+
+		border-radius: 0rem 0rem 0.5rem 0rem;
+
+		display: flex;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+	}
+
+	.dinamicacard .segmento img {
+		height: 1.3rem;
+	}
+
+	.dinamicacard .infodinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 4;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 4 / 5;
+		background-color: #f5f5f5;
+		padding: 20px 20px 15px 20px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.dinamicacard footer {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 5;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 5 / 6;
+		background-color: white;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px 18px;
+	}
+
+	.dinamicacard footer div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	/******************************************************/
+
+
+	/* css dinamica car en contexto */
+
+	.ladinamica {
+		width: 960px;
+		margin: auto;
+
+		display: -ms-grid;
+		-ms-grid-columns: 10px 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 10px;
+		-ms-grid-rows: 246px 202px 48px 548px auto auto;
+
+
+		display: grid;
+		
+		grid-template-columns: 10px 1fr [info-start] repeat(5, 1fr) [info-end] 1fr [form-start] repeat(4 , 1fr) [form-end] 1fr 10px;
+
+		grid-template-rows: 246px 202px 48px 2px auto auto;
+
+		-ms-grid-template-rows: 246px 202px 48px 2px auto auto;
+
+		grid-gap: 0px 20px; /* row gap   column gap */
+	}
+
+	.portada {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 27;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 2;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / span 2;
+		
+		
+	}
+
+
+		.portada img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+
+	.infosombra {
+		-ms-grid-column: 5;
+		-ms-grid-column-span: 9;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 2;
+
+		grid-column: info-start / info-end;
+		grid-row: 2/4;
+		/*background-color: rgb(220,220,220);*/
+		box-shadow:2px 2px 6px rgb(200,200,200);
+		z-index: 1;
+	}
+
+	.info {
+		-ms-grid-column: 5;
+		-ms-grid-column-span: 9;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: info-start / info-end;
+		grid-row: 2/3;
+		background-color: rgb(220,220,220);
+		z-index: 2;
+		margin-bottom: 0px;
+		padding: 8px 18px 18px 21px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.info h2 {
+		font-size: 1.6rem;
+		line-height: 1.8rem;
+		margin-bottom: 1rem;
+	}
+
+	.info .viral {
+		width: calc(50% - 20px);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.wrapperdiaeventociudad {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.wrapperdiaeventociudad .diaevento {
+		display: flex;
+	    flex-direction: column;
+	    flex-wrap: wrap;
+	    justify-content: space-around;
+	    align-items: center;
+
+	}
+
+	.wrapperdiaeventociudad .diae {
+		font-size: 1.3rem;
+		font-weight: bold;
+
+	}
+
+	.wrapperdiaeventociudad .diaevento .diacard {
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
+
+	.wrapperdiaeventociudad .diaevento .mescard {
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	.wrapperdiaeventociudad .ciudad {
+		margin-left: 1.5rem;
+	}
+
+	.socialdata {
+		-ms-grid-column: 5;
+		-ms-grid-column-span: 9;
+
+		-ms-grid-row: 3;
+		-ms-grid-row-span: 1;
+
+		grid-column: info-start / info-end;
+		grid-row: 3/4;
+		background-color: white;
+		z-index: 2;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+	.socialdata div {
+
+		display: flex;
+		flex-direction: row;
+		align-items: center; 
+		font-size: 0.9rem;
+
+	}
+
+	.contadorregresivo {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 27;
+
+		-ms-grid-row: 3;
+		-ms-grid-row-span: 2;
+
+		grid-column: 1 / -1;
+		grid-row: 3/5;
+		background-color: white;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.contadorregresivo .numeros {
+		display: flex;
+		flex-direction: row;
+		font-size: 4rem;
+	}
+
+	.contadorregresivo .numeros .tagnumero{
+		font-size: 0.9rem;
+		text-align: center;
+		margin-top: 2rem;
+	}
+
+	.contadorregresivo .titulo {
+		font-size: 0.9rem;
+		margin-bottom: 2rem;
+		margin-top: 2rem;
+	}
+
+	.fondogris {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 27;
+
+		-ms-grid-row: 5;
+		-ms-grid-row-span: 2;
+
+		grid-column: 1 / -1;
+		grid-row: 5/7;
+		background-color: rgb(240,240,240);
+	}
+	.detalles {
+		-ms-grid-column: 5;
+		-ms-grid-column-span: 9;
+
+		-ms-grid-row: 4;
+		-ms-grid-row-span: 1;
+
+		grid-column: info-start / info-end;
+		grid-row: 4/6;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+		line-height: 1.4rem;
+	}
+
+	.ladinamica h3 {
+		font-size: 1.6rem;
+		margin-bottom: 1.4rem;
+		font-weight: lighter;
+	}
+
+	.detalles p {
+		margin-bottom: 1.6rem;
+	}
+
+	.terminoscondiciones {
+		
+	}
+
+	#wrapperterminosycondiciones {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.comenzar {
+		-ms-grid-column: 5;
+		-ms-grid-column-span: 4;
+
+		-ms-grid-row: 6;
+		-ms-grid-row-span: 1;
+
+		grid-column: info-start / span 2;
+		grid-row: 6/7;
+		text-align: center;
+
+		margin-bottom: 2rem;
+		
+		cursor: pointer;
+
+	}
+
+	.formulario {
+		-ms-grid-column: 17;
+		-ms-grid-column-span: 7;
+
+		-ms-grid-row: 3;
+		-ms-grid-row-span: 1;
+
+		grid-column: form-start / form-end;
+		grid-row: 3/6;
+
+		margin-top: 3rem;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.formulario .wrapperventaja {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.iconoventaja {
+		width: 4rem;
+		align-self: flex-start;
+	}
+
+	.textoventaja {
+		margin-left: 1rem;
+		width: 200px;
+	}
+
+	.formulario input {
+		width: 100%;
+		height: 3rem;
+	}
+
+	.formulario .btn {
+		width: calc( 50% - 20px ) !important;
+		margin-top: 2rem;
+		text-align: center;
+	}
+
+
+	.graciasporparticipar {
+	    font-size: 1.8rem;
+	    margin-top: 2.0rem;
+	    margin-bottom: 2.0rem;
+	    font-weight: 400;
+	    line-height: 1.8rem;
+	}
+
+
+	.btn {
+		text-align: center;
+		width: 120px;
+		background-color: #fa6400;
+		padding: 5px 15px 5px 15px;
+		box-shadow:2px 2px 6px rgba(0,0,0,.5);
+		color: white;
+	}
+
+	.btninvert {
+		text-align: center;
+		width: 120px;
+		background-color: white;
+		padding: 5px 15px 5px 15px;
+		box-shadow:2px 2px 6px rgba(0,0,0,.5);
+		color: #fa6400;
+	}
+
+
+
+	.linkcyanmayuscula {
+		color: #0097a7;
+		font-size: 0.9rem;
+		font-weight: normal;
+		cursor: pointer;
+		text-transform: capitalize;
+	}
+
+	.wrappercomodin {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.wrappercomodin div {
+		font-size: 3rem;
+		font-weight: bold;
+		margin-left: 0.5rem;
+	}
+
+	.separador {
+		width: 100%;
+		height: 1px;
+		border-bottom: 1px solid #AAAAAA;
+	}
+
+
+	.disabled {
+		background-color: rgb(220,220,220);
+		color: white;
+	}
+
+	.fondoventanasflotante {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.96);
+		z-index: 15;
+	}
+
+
+
+	
+	/*********** ventana terminos y condiciones *******/
+
+	.ventanaterminoscondiciones {
+		position: fixed;
+		left: 50%;
+		top: 0px;
+		width: 462px;
+		height: 594px;
+		margin-left: calc(462px/-2);
+		margin-top: 10px;
+		background-color: white;
+		z-index: 17;
+		border: 4px solid #fff;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: 0.03fr 0.82fr 0.005fr 0.09fr 0.05fr 0.005fr;
+		grid-column-gap: 20px;
+	}
+
+	.ventanaterminoscondiciones .cuerpotexto {
+		grid-column: 1 / -1;
+		grid-row: 2 / 3;
+		overflow-y: scroll;
+		padding-left: 20px;
+		padding-right: 20px;
+		font-size: 0.9rem;
+		line-height: 1.2rem;
+	}
+
+	.ventanaterminoscondiciones .cuerpotexto .titulo {
+		font-size: 1rem;
+	}
+
+	.ventanaterminoscondiciones .cuerpotexto p, .ventanaterminoscondiciones .cuerpotexto #tyc_dinamica p {
+		margin-bottom: 0.6rem;
+	}
+
+	.ventanaterminoscondiciones .separador {
+		height: 100%;
+		grid-column: 1 / -1;
+		grid-row: 3 / 4;
+		border-bottom: 1px solid #444;
+	}
+
+	.ventanaterminoscondiciones .checkbox {
+		grid-column: 1 / -1;
+		grid-row: 4 / 5;
+		padding-left: 20px;
+		padding-right: 20px;
+		
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start ;
+	}
+
+	.ventanaterminoscondiciones .botones {
+		grid-column: 1 / span 3;
+		grid-row: 5 / 6;
+		padding-left: 20px;
+		padding-right: 20px;
+		
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}	
+
+	.ventanaterminoscondiciones .close {
+		grid-column: -2 / -1;
+		grid-row: 1 / 2;
+		justify-self: end;
+		font-size: 1rem;
+		padding-right: 2px;
+		cursor: pointer;
+		margin-top: 0.1rem;
+    	margin-right: 0.1rem;
+	}
+
+	/**********************************************/
+
+
+	
+
+
+	.wrappercarruselfoto{
+		height: 50vh;
+		display: table-cell;
+    	vertical-align: middle;
+
+		
+	}
+
+
+	.wrappercarruselfoto img{
+		width:auto;
+		height: auto;
+		max-height: 70vh;
+		max-width: 800px;
+		
+
+		
+	}
+
+
+
+	.tabla{
+		display: table;width:80vw;margin: auto;
+	}
+
+
+	@media only screen and (max-width: 760px) {
+
+
+		.wrappercarruselflotante{
+			width:98% !important;
+			left: 0% !important;
+			margin-left:0px !important;
+			
+		}
+
+
+	.tabla{
+		display: table;width:100%;height:200px;margin: auto;
+		
+	}
+
+
+	.delader,.delaizq{
+		height:30px;
+	}
+
+.delaizq{
+	text-align: left;
+}
+
+	.wrappercarruselfoto{
+		height:160px;
+		
+	}
+
+
+	.wrappercarruselfoto img{
+		height:100%;
+		width: auto;
+		
+	}
+
+
+
+
+	 }
+
+
+
+	/************************************************/
+
+	@media only screen and (max-width: 960px) { 
+
+
+
+
+
+
+		#main-wrapper {
+			width: 100%;
+		}
+
+		.ladinamica {
+			width: 100%;
+		}
+
+		.portada {
+			width: 100%;
+		} 
+
+		.infosombra {
+			grid-column: 2 / -2;
+			grid-row: 2/4;
+
+		}
+
+		.info {
+			grid-column: 2 / -2;
+			grid-row: 2/3;
+		}
+
+		.socialdata {
+			grid-column: 2 / -2;
+			grid-row: 3/4;
+
+		}
+
+		.contadorregresivo .numeros > div{
+			font-size: 4rem;
+		}
+
+
+		.detalles {
+			grid-column: 2 / -2;
+			grid-row: 5/6;
+			margin-bottom: 0rem;
+			-ms-grid-row-span: 1;
+		}
+
+		
+		.formulario {
+			grid-column: 2 / -2;
+			grid-row: 6/7;
+			margin-top: 2rem;
+		}
+
+		.ganadores, .dinamicas, .experienciastelcel, .promo3dinamicas, .categoriadinamica, .headerdinamica {
+			width: 100%;
+		}
+
+		.headerdinamica .linea {
+	 		/
+	 	}
+
+	 	.headerdinamica h1 {
+	 		
+	 	}
+
+
+		.categoriadinamica {
+			justify-content: center;
+		}
+
+		.carruselcards .mascara {
+			position: relative;
+			height: 432px;
+			
+			grid-column: 1/-1;
+			grid-row: 1/2;
+
+			overflow: auto;
+   			white-space: nowrap;
+		}
+
+
+		.ventanaterminoscondiciones {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			/*height: 100%;*/
+			margin-left: 0px;
+			margin-top: 0px;
+			/*background-color: white;*/
+
+
+		}
+
+
+	}
+
+
+
+	.ganadores .galeriafotos {
+
+
+	}
+
+	.ganadores .galeriafotos .wrapperfoto {
+		width: 125px;
+		height: 144px;
+		cursor: pointer;
+		display: inline-block;
+	}
+
+
+	.ganadores .galeriafotos .wrapperfoto img {
+		width: 120px;
+		
+		object-fit: cover;
+	}
+
+
+
+
+	.wrappercarruselflotante {
+		color: white;
+		position: fixed;
+		left: 50%;
+		top: 0%;
+		width: 80%;
+		height: auto;
+		margin-left: -40%;
+		margin-top: 10px;
+		z-index: 20;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	 .fa-arrow-left {
+	 	display:none;
+		color: white;
+		border-radius: 50%;
+		background-color: none;
+		width: 38px;
+		height: 38px;
+		line-height: 38px;
+		text-align: center;
+
+		-webkit-transition: 0.1s;
+		/* Safari */
+		transition-duration: 0.1s;
+		transition-timing-function: ease-in;
+		position: fixed;
+		top:8%;
+		left:10px;
+		z-index: 1001;
+		font-size: 2rem;
+	}
+
+	.fa-arrow-right {
+		display:none;
+		border-radius: 50%;
+		background-color: none;
+		width: 38px;
+		height: 38px;
+		line-height: 38px;
+		text-align: center;
+
+		-webkit-transition: 0.1s;
+		/* Safari */
+		transition-duration: 0.1s;
+		transition-timing-function: ease-in;
+		position: fixed;
+		top:8%;
+		right:10px;
+		z-index: 1001;
+		font-size: 2rem;
+
+	}
+
+
+
+
+
+
+</style>
+
+
+	<section class="ladinamica"  >
+
+	<div class="portada">
+		<img src="images/portadablanca.jpg">
+	</div>
+		
+
+		<div class="infosombra"></div>
+
+		<div class="info">
+			<div class="wrapperdiaeventociudad">
+				<div class="diaevento" >
+					<div class="diae grismuyoscuro"></div>
+					<div class="mese grismuyoscuro"></div>
+				</div>
+				<div class="ciudad typodetallesvigencia grisoscuro"></div>
+			</div>
+
+			<h2 class="typotitulocard"></h2>
+			
+		</div>
+
+		<div class="socialdata">
+			<div class="likes manita" data-id="-1">
+				<div class="fa fa-heart-o" style="margin-right:0.5em"></div>
+				<div class="valorlikes totallikes"></div>
+			</div>
+			<div class="social">
+				<div class="fa fa-user-o" style="margin-right:0.5em"></div>
+				<div class="valorshares"></div>
+			</div>
+		</div>
+
+
+		
+
+		<div class="detalles">
+			<div class="bloqueizquierdo">
+				<h2 style="margin-bottom: 1rem"></h2>
+				<div class="descripcion"></div>
+			</div>
+
+
+		</div>
+
+		<div class="formulario">
+			<div class="ganadores" style="padding-top:4rem;width:350px;">
+				<h2 style="margin-bottom: 1rem">Ganadores</h2>
+				<div class="galeriafotos">
+				</div>
+
+			</div>			
+		</div>
+
+	</section>
+
+
+
+	<section class="publicidad" data-url="https://www.clarodrive.com/">
+		<div class="wrapperp">
+			<img src="images/publicidad/claro-drive-bne.jpg" class="imgdesktop">
+			<img src="images/publicidad/claro-drive-bnm.jpg" class="imgmobile">
+		</div>
+	</section>
+
+
+
+<div class="fondoventanasflotante"></div>
+
+<style type="text/css">
+	
+	.cello{
+		vertical-align: middle;
+		 width: 1%;
+	}
+
+
+</style>
+
+
+
+
+
+<!-- <div class="izq manita delaizq" ><img src="/images/flechaizqblanca.png" ></div> -->
+<div class="wrappercarruselflotante" style="height:35vh;">
+
+<div class="tabla" >
+
+	<div style="display: table-row;">
+		
+		<div style="display: table-cell;width:10%;" class="cello">
+			<img src="/images/flechaizqblanca.png" class="delaizq izq" >
+		</div>
+
+		<div style="display: table-cell;text-align: center;width:80%;" class="cello">
+			<div class="wrappercarruselfoto">
+				<img src="images/ganadoresblanco.jpg" id="imagenbig">
+			</div>
+		</div>
+
+
+		<div style="display: table-cell;width:10%;text-align: right;" class="cello">
+			<img src="/images/flechaderblanca.png" class="delader der">
+		</div>
+
+
+
+	</div>
+
+</div>
+
+</div>
+
+<!-- <div class="der manita delader" ><img src="/images/flechaderblanca.png" ></div>-->
+
+
+<script type="text/javascript">
+	var galeriaFotos = [];
+	var indexGaleriaFotos = 0;
+	var indexGrupoFotos = 0;
+	var totalGrupoFotosMod4 = 0;
+	var mod4 = 4;
+
+
+	$(document).ready(function () {
+		parent.postMessage('scrollthem,0', '*');
+
+		$(".fondoventanasflotante").hide();
+		$(".wrappercarruselflotante").hide();
+		$(".fa-arrow-left,.delader,.delaizq").hide();
+		$(".fa-arrow-right").hide();
+		$(".fondoventanasflotante, .wrappercarruselflotante").click(function () {
+			$(".fondoventanasflotante").hide();
+			$(".wrappercarruselflotante").hide();
+			$(".fa-arrow-left,.delaizq,.delader").hide();
+			$(".fa-arrow-right").hide();
+		});
+
+
+
+
+
+		// amplia foto de la galeria
+		$("body").undelegate(".galeriafotos .wrapperfoto", "click").delegate(".galeriafotos .wrapperfoto", "click",
+			function () {
+				indexGaleriaFoto = $(this).index() + (indexGrupoFotos * mod4);
+				$(".fondoventanasflotante").show();
+				$(".wrappercarruselflotante").show();
+				$(".fa-arrow-left,.delaizq,.delader").show();
+				$(".fa-arrow-right").show();
+				$("#imagenbig").attr("src", galeriaFotos[indexGaleriaFoto]);
+				parent.postMessage('scrollthem,0', '*');
+			})
+
+
+		// retrocede foto aumentada
+		$(".fa-arrow-left,.izq").click(function (event) {
+			event.stopPropagation();
+			indexGaleriaFoto -= 1;
+			if (indexGaleriaFoto < 0) {
+				indexGaleriaFoto = galeriaFotos.length - 1
+			}
+
+			$("#imagenbig").attr("src", galeriaFotos[indexGaleriaFoto]);
+			$("#imagenbig").hide().fadeIn(600);
+
+			/*
+
+			if (indexGaleriaFoto % mod4 == (mod4 - 1)) {
+				indexGrupoFotos--;
+				if (indexGrupoFotos < 0) {
+					indexGrupoFotos = (mod4 - 1)
+				};
+			}
+			if (indexGaleriaFoto == galeriaFotos.length - 1) {
+				indexGrupoFotos = totalGrupoFotosMod4 - 1;
+			}
+
+			
+			$('.galeriafotos').empty();
+			var htmlGallery = "";
+			for (var i = 0; i < mod4; i++) {
+				if (i + (indexGrupoFotos * mod4) >= galeriaFotos.length) {
+					break;
+				};
+				htmlGallery += '<div class="wrapperfoto">'
+				htmlGallery += '<img src="' + galeriaFotos[i + (indexGrupoFotos * mod4)] + '">'
+				htmlGallery += '</div>'
+			}
+			$('.galeriafotos').append(htmlGallery);
+			*/
+
+		});
+
+		// avanza foto aumentada
+		$(".fa-arrow-right,.der").click(function (event) {
+			event.stopPropagation();
+			indexGaleriaFoto = (indexGaleriaFoto + 1) % galeriaFotos.length;
+			var indexGaleriaFotoMod4 = indexGaleriaFoto % mod4;
+			$("#imagenbig").attr("src", galeriaFotos[indexGaleriaFoto]);
+			$("#imagenbig").hide().fadeIn(600);
+
+
+			/*
+			if (indexGaleriaFoto % mod4 == 0) {
+				indexGrupoFotos = (indexGrupoFotos + 1) % totalGrupoFotosMod4;
+			}
+
+			$('.galeriafotos').empty();
+			var htmlGallery = "";
+			for (var i = 0; i < mod4; i++) {
+				if (i + (indexGrupoFotos * mod4) >= galeriaFotos.length) {
+					break;
+				};
+				htmlGallery += '<div class="wrapperfoto">'
+				htmlGallery += '<img src="' + galeriaFotos[i + (indexGrupoFotos * mod4)] + '">'
+				htmlGallery += '</div>'
+			}
+			$('.galeriafotos').append(htmlGallery);
+
+			*/
+
+		})
+
+		$('.masfotos').click(function () {;
+			indexGrupoFotos = (indexGrupoFotos + 1) % totalGrupoFotosMod4;
+			$('.galeriafotos').empty();
+			var htmlGallery = "";
+			for (var i = 0; i < mod4; i++) {
+				if (i + (indexGrupoFotos * mod4) >= galeriaFotos.length) {
+					break;
+				};
+				htmlGallery += '<div class="wrapperfoto">'
+				htmlGallery += '<img src="' + galeriaFotos[i + (indexGrupoFotos * mod4)] + '">'
+				htmlGallery += '</div>'
+			}
+			$('.galeriafotos').append(htmlGallery);
+
+		})
+
+
+		$(".wrappercarruselflotante").swipe({
+			//Single swipe handler for left swipes
+			swipeRight: function (event, direction, distance, duration, fingerCount) {
+				event.stopPropagation();
+				indexGaleriaFoto -= 1;
+				if (indexGaleriaFoto < 0) {
+					indexGaleriaFoto = galeriaFotos.length - 1
+				}
+
+				$("#imagenbig").attr("src", galeriaFotos[indexGaleriaFoto]);
+				$("#imagenbig").hide().fadeIn(600);
+
+
+				if (indexGaleriaFoto % $(".galeriafotos .wrapperfoto").length == 3) {
+
+					indexGrupoFotos--;
+					if (indexGrupoFotos < 0) {
+						indexGrupoFotos = 1
+					};
+					for (i = 0; i < 4; i++) {
+						$(".galeriafotos .wrapperfoto img").eq(i).attr("src", galeriaFotos[i + (indexGrupoFotos * 4)]);
+					}
+				}
+			},
+			swipeLeft: function (event, direction, distance, duration, fingerCount) {
+				event.stopPropagation();
+				indexGaleriaFoto = (indexGaleriaFoto + 1) % galeriaFotos.length;
+
+				$("#imagenbig").attr("src", galeriaFotos[indexGaleriaFoto]);
+				$("#imagenbig").hide().fadeIn(600);
+
+				if (indexGaleriaFoto % $(".galeriafotos .wrapperfoto").length == 0) {
+					indexGrupoFotos = (indexGrupoFotos + 1) % (galeriaFotos.length / $(".galeriafotos .wrapperfoto").length);
+					for (i = 0; i < $(".galeriafotos .wrapperfoto").length; i++) {
+						$(".galeriafotos .wrapperfoto img").eq(i).attr("src", galeriaFotos[indexGaleriaFoto + i]);
+					}
+				}
+
+			},
+			//Default is 75px, set to 0 for demo so any distance triggers swipe
+			threshold: 75
+		});
+
+
+		var dinamicaJson = $.getJSON("https://admin.experienciastelcel.com/restful/promocion/" + id_dinamica + "/",
+			function (data) {
+				dinamicadataJson = data;
+				
+				$(".ladinamica .info h2").text(data.promocion.texto_ganadores);
+				$(".ladinamica .info .vigencia span").text(data.promocion.vigencia);
+				$(".totallikes").text(data.promocion.likes);
+				$(".participaciones").text(data.promocion.shares);
+				$(".portada img").attr("src", data.promocion.imagen_ganadores);
+				//$(".descripcion").html(data.promocion.inicio_juego_txt+data.promocion.descripcion_ganadores);
+				$(".descripcion").html(data.promocion.descripcion_ganadores);
+
+				if (data.promocion.galeria.length > 0) {
+					totalGrupoFotosMod4 = Math.ceil(data.promocion.galeria.length / mod4);
+					$('.galeriafotos').empty();
+					var htmlGallery = "";
+					for (var i = 0; i < data.promocion.galeria.length; i++) {
+						galeriaFotos.push(data.promocion.galeria[i].imagen);
+						//if (i < Math.min(data.promocion.galeria.length, 4)) {
+							htmlGallery += '<div class="wrapperfoto" style="background-image:url('+galeriaFotos[i]+');background-size:cover;margin:10px;background-position:center;">'
+							htmlGallery += ''
+							htmlGallery += '</div>'
+						//}
+
+					}
+					$('.galeriafotos').append(htmlGallery);
+					if (data.promocion.galeria.length <= 4) {
+						$('.wrapperbotoncentrado').remove();
+					}
+				} else {
+					$('.ganadores').empty();
+				}
+
+
+
+			});
+
+	});
+</script>

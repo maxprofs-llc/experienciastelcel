@@ -1,0 +1,129 @@
+<link rel="stylesheet" type="text/css" href="/css/dinamicas_angular.css"/>
+<section id="main-sopa">
+
+	<div class="trivia" ng-app='mainApp' ng-controller="sopaCtr" >
+
+		<div ng-hide="status=='finalizo'">
+
+			<!-- <div class="pagina"> -->
+			
+			<div style="padding:20px;;">
+			<div id="ventaja_informa" style="display: none;float: left;">Tienes ventaja de 30 seg</div>
+
+			 <div style="float:left;" id="counterup">
+			    <div class="tiempopregunta" contador-juego>
+				<span class="fa fa-clock-o" aria-hidden="true" style="padding:0px 20px;"></span> 
+				<span class="cronometro no-seleccionable">
+
+					<span id="days" class="hora_">00</span>
+					:
+					<span id="hours" class="hora_">00</span>
+					:
+					<span id="minutes" class="minuto_">00</span>
+					:
+					<span id="seconds" class="segundo_">00</span>
+				</span>
+			    </div>
+			</div>
+			<div style="float:right;">
+			<i class="fa fa-times closes no-seleccionable" aria-hidden="true"></i>
+			</div>
+			<div style="clear:both;height:0px;overflow:hidden;"> &nbsp; </div>
+			
+
+			</div>
+
+
+			<div class="textoportada" data-slide="1">
+
+				<div class="blue-box" ng-show="startgame==0">
+					<div ng-bind-html="dinamica.inicio_juego_txt">{{dinamica.inicio_juego_txt}}</div>
+
+
+
+				<p style="font-size:2rem;margin-top:1.5rem">¡Mucha suerte!</p>
+
+		 		<div class="checkbox azulclarotexttelcel tengolaventaja checkboxwrapper" style="margin-top: 2rem;">
+					<div class="linkcyanmayuscula_ no-seleccionable" style="margin-left: 0.8rem">
+						<p >
+							<input type="checkbox" class="checkme" name="aplicaventaja" style="padding-top: 5px;" check-ventaja>
+							<span style="margin:0px 5px;">Tengo el servicio</span>
+							<span class="ventaja_titulo bold">{{ventaja}}</span></div>
+						</p>
+					<div class="continuarp" style="margin: 20px 0px;">
+						<div id="iniciador" class="btn negro iniciar-pz" ng-click="iniciar();">Iniciar Juego</div>
+					</div>
+				</div>
+
+
+
+				</div>
+				
+
+
+				<section id="game-box" ng-show="startgame==1">
+					<div style="padding:20px;" >
+						
+						<span style="color:#4c4c4c;padding:10px;" data-palabra="{{p.palabra}}" ng-repeat="p in palabras">{{p.palabra}}</span>
+					</div>
+
+					<hr/>
+					<div style="padding:20px;">
+					<div ng-repeat="sr in sopa track by $index" style="width:100%;background: #ffffff; text-transform: uppercase; color:#black; font-weight: regular;" class="row_{{$index}}">
+						<div ng-repeat="cr in sr track by $index" class="tablero-col col_{{$index}}" play-ing>{{cr}}</div>
+					</div>
+					</div>
+
+				
+
+				
+				<div class="continuarp" style="margin: 20px 0px;text-align: center;">
+					<span class="btn negro"  finalizar-juego style="display:none;" id="finjuegobtn">  Finalizar</span>
+				</div>
+				
+			</section>
+
+
+				<div class="blue-box" ng-show="startgame==2">
+					<p style="font-size:1rem;">
+						Resolviste la sopa de letras en un tiempo de:
+					</p>
+					<div class="texto-alto" >{{tiempofinal}}</div>
+					<p style="font-size:1rem;margin-top:1.5rem">Si eres ganador, serás contactado por Telcel una vez finalizado el concurso.</p>
+					<div class="texto-alto">¡Mucha Suerte!</div>
+					<div class="continuarp" style="margin: 40px 0px;text-align: center;">
+						<div class="btn negro reiniciarpage"   style="display: inline-block;">Seguir <br> Jugando</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+
+		<script type="text/javascript" src="/js/angular.min.js"></script>
+		<script type="text/javascript" src="/js/angular-route.min.js"></script>
+		<script type="text/javascript" src="/js/angular-sanitize.js"></script>
+		<script type="text/javascript" src="/js/sopa_ctr.js"></script>
+
+	        <script type="text/javascript">	                
+	            $(".closes").click( function() {       
+	                    $(".fondoventanasflotante").hide();	                
+	                    $('#boxdinamica').hide();  
+
+	            });
+
+
+	            $('.reiniciarpage').click(function(e){
+
+					cargaContenido( "inicio.html" );	            	
+
+	            });
+
+
+
+
+	        </script>
+</section>

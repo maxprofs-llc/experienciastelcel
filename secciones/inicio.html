@@ -1,0 +1,2214 @@
+<style type="text/css">
+	.experienciastelcel {
+		width: 960px;
+		height: 448px;
+		margin: auto;
+		display: -ms-grid;
+		-ms-grid-columns: 10px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10px;
+		-ms-grid-rows: 1fr;
+
+		display: grid;
+		grid-template-columns: 10px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10px;
+		grid-template-rows: 1fr;
+		color: white;
+	}
+
+	.experienciastelcel .introduccion {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 14;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / -1;
+		width: 100%;
+		height: 100%;
+
+		display: grid;
+		grid-template-columns: 10px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10px;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	}
+
+	.experienciastelcel .introduccion img {
+		grid-column: 1 / -1;
+		grid-row: 1 / -1;
+		width: 100%;
+	}
+
+
+	.experienciastelcel .izq {
+
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 2;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		-ms-grid-column-align: center;
+		-ms-grid-row-align: center;
+
+		grid-column: 2 / span 1;
+		grid-row: 1 / span 1;
+		align-self: center;
+		justify-self: center;
+		cursor: pointer;
+	}
+
+	.experienciastelcel .der {
+
+		-ms-grid-column: 13;
+		-ms-grid-column-span: 1;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		-ms-grid-column-align: center;
+		-ms-grid-row-align: center;
+
+		grid-column: -3 / span 1;
+		grid-row: 1 / span 1;
+
+		align-self: center;
+		justify-self: center;
+		cursor: pointer;
+	}
+
+	#wrapperpuntosimagenes {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding-top: 1rem;
+		padding-bottom: 2rem;
+
+	}
+
+	#ventajamobile {
+		display: none;
+		width: calc(100%-20px);
+		margin: 0px auto 3rem;
+	}
+
+	#ventajamobile #wrapperb2 {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: nowrap;
+
+	}
+
+	#ventajamobile .iconoventaja {
+		width: 6rem;
+		margin-left: 0px;
+	}
+
+
+
+	#ventaja {
+		width: 960px;
+		margin: auto;
+		margin-bottom: 2rem;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.iconoventaja {
+		width: 6rem;
+		margin-left: 50px;
+	}
+
+	#bandera {
+		height: auto;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		font-size: 1.5rem;
+		line-height: 25px;
+		margin-left: 30px;
+	}
+
+	#ventajamobile #wrapperb1 {
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+	}
+
+	#ventajamobile #wrapperb1 #bandera,
+	#ventajamobile #wrapperb2 #bandera {
+		flex-basis: 100%;
+		margin-left: 0px;
+	}
+
+	#terminacionbandera {
+		height: 50px;
+		margin-left: -2px;
+	}
+
+	.puntosimagenes {
+		width: 135px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+	}
+
+	.puntoimagen {
+		font-size: 0.62rem;
+		cursor: pointer;
+		border-radius: 1rem;
+		background-color: #c8c8c8;
+		width: 1rem;
+		height: 1rem;
+		color: white;
+		text-align: center;
+		line-height: 1rem;
+	}
+
+	.puntoseleccionado {
+		background-color: black;
+	}
+
+	.pausacarrusel {
+		color: #c8c8c8;
+		font-size: 0.62rem;
+		cursor: pointer;
+		width: 1rem;
+		height: 1rem;
+		text-align: center;
+		line-height: 0.87rem;
+		border: 1px solid #c8c8c8;
+	}
+
+	/************ recompensas card principales ***************/
+
+	.promo3dinamicas {
+		width: 960px;
+		height: 620px;
+		margin: auto;
+		padding-top: 22px;
+		padding-bottom: 50px;
+		padding-left: 10px;
+		padding-right: 10px;
+		background-color: #ffffff;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+
+	.recompensacard:nth-child(1) {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 1;
+	}
+
+	.recompensacard:nth-child(2) {
+		-ms-grid-column: 3;
+		-ms-grid-column-span: 1;
+	}
+
+	.recompensacard:nth-child(3) {
+		-ms-grid-column: 5;
+		-ms-grid-column-span: 1;
+	}
+
+
+	.recompensacard {
+
+		font-size: 1rem;
+		background-color: rgb(255, 100, 100);
+		height: 512px;
+		width: 300px;
+
+		background-color: white;
+
+		display: -ms-grid;
+		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		-ms-grid-rows: 0.375em 2.8em 14.7em 11.125em 2.9375em;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: 0.375em 2.8em 14.7em 11.125em 2.9375em;
+
+		border-radius: 0.4em;
+		overflow: hidden;
+		border: 0.5px solid #baccd3;
+		cursor: pointer;
+		position: relative;
+	}
+
+	.recompensacard .bartop {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+		background-color: white;
+	}
+
+	.recompensacard .imagedinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 2;
+
+		grid-column: 1 / -1;
+		grid-row: 2 / 4;
+
+	}
+
+
+	.recompensacard .tagdinamica {
+		-ms-grid-column: 4;
+		-ms-grid-column-span: 5;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 4 / 9;
+		grid-row: 2 / span 1;
+
+		background-color: white;
+		text-align: center;
+		line-height: 36px;
+	}
+
+	.recompensacard .proximamentetext {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 7;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 2 / 9;
+		grid-row: 2 / span 1;
+
+		background-color: white;
+		text-align: center;
+		line-height: 3.4em;
+		color: white;
+	}
+
+
+	.recompensacard .diaevento {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 2;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 2 / 4;
+		grid-row: 2 / 3;
+		color: white;
+
+		display: flex;
+		flex-direction: column;
+
+		align-items: center;
+		justify-content: center;
+	}
+
+	.recompensacard .diaevento div {
+		text-align: center;
+	}
+
+	.recompensacard .diaevento .diacard {
+		margin-top: 0.4rem;
+		font-size: 1.4rem;
+		line-height: 0.8rem;
+		font-weight: bold;
+	}
+
+	.recompensacard .diaevento .mescard {
+		font-size: 0.7rem;
+		font-weight: normal;
+	}
+
+	.recompensacard .segmento {
+		-ms-grid-column: 10;
+		-ms-grid-column-span: 2;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 10 / 12;
+		grid-row: 2 / 3;
+		background-color: white;
+
+		border-radius: 0rem 0rem 0.5rem 0.5rem;
+
+		display: flex;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+	}
+
+	.recompensacard .segmento img {
+		height: 1.3rem;
+	}
+
+	.recompensacard .infodinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 4;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / 13;
+		grid-row: 4 / 5;
+		padding: 20px 20px 15px 20px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+	}
+
+	.recompensacard footer {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 5;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / 13;
+		grid-row: 5 / 6;
+		background-color: white;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px 18px;
+
+	}
+
+	.recompensacard footer div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+
+	.dinamicas {
+
+		width: 940px;
+		margin: auto;
+
+		display: -ms-grid;
+		-ms-grid-columns: 10px 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 10px;
+
+		-ms-grid-rows: 5.5rem 5px 569px;
+
+
+		display: grid;
+		grid-template-columns: 10px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10px;
+
+		grid-template-rows: 5.5rem 5px 509px;
+		grid-column-gap: 20px;
+
+		color: white;
+		background-color: #e1e8ef;
+		border: 1px #baccd3 solid;
+
+	}
+
+	.dinamicas .titulodinamica {
+		font-size: 1.2rem;
+		font-weight: bold;
+		line-height: 1.2rem;
+		width: inherit;
+	}
+
+	.bandatricolor {
+
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 27;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+
+		grid-column: 1 / -1;
+		grid-row: 2 / 3;
+
+		display: -ms-grid;
+		-ms-grid-columns: 10px 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 10px;
+
+		display: grid;
+		grid-template-columns: 10px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10px;
+		grid-column-gap: 20px;
+
+		background: rgb(157, 9, 147);
+		background: -moz-linear-gradient(90deg, rgba(157, 9, 147, 1) 0%, rgba(157, 9, 147, 1) 33.3%, rgba(0, 150, 209, 1) 33.3%, rgba(0, 150, 209, 1) 66.6%, rgba(255, 204, 0, 1) 66.6%, rgba(255, 204, 0, 1) 100%);
+		background: -webkit-linear-gradient(90deg, rgba(157, 9, 147, 1) 0%, rgba(157, 9, 147, 1) 33.3%, rgba(0, 150, 209, 1) 33.3%, rgba(0, 150, 209, 1) 66.6%, rgba(255, 204, 0, 1) 66.6%, rgba(255, 204, 0, 1) 100%);
+		background: linear-gradient(90deg, rgba(157, 9, 147, 1) 0%, rgba(157, 9, 147, 1) 33.3%, rgba(0, 150, 209, 1) 33.3%, rgba(0, 150, 209, 1) 66.6%, rgba(255, 204, 0, 1) 66.6%, rgba(255, 204, 0, 1) 100%);
+	}
+
+	/* css header subcategoria*/
+
+	.dinamicas header {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 27;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+
+		display: -ms-grid;
+		-ms-grid-columns: 10px 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 10px;
+
+		display: grid;
+		grid-template-columns: 10px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10px;
+		grid-column-gap: 20px;
+		background-color: #ffffff;
+		border-bottom: 0px;
+
+	}
+
+	.dinamicas header .linea {
+		-ms-grid-column: 3;
+		-ms-grid-column-span: 27;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		grid-column: 2 / -2;
+		grid-row: 1 / 2;
+
+		border-bottom: 1px solid rgb(180, 180, 180);
+	}
+
+	.dinamicas header h1 {
+		-ms-grid-column: 3;
+		-ms-grid-column-span: 11;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		line-height: 5.1rem;
+
+		grid-column: 2 / span 6;
+		grid-row: 1 / 2;
+
+	}
+
+	.dinamicas header h1 span {
+		/*font-size: 0.5em;*/
+		font-weight: 200;
+		align-self: end;
+	}
+
+	.dinamicas #dinamicascagetorias,
+	.dinamicas #dinamicasfechas,
+	.dinamicas #dinamicasubicacion {
+		font-size: 0.9rem;
+		padding-bottom: 0.6rem;
+		font-weight: normal;
+		line-height: 0.8rem;
+		align-self: center;
+
+	}
+
+	.dinamicas #dinamicascagetorias {
+		-ms-grid-column: 23;
+		-ms-grid-column-span: 3;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		line-height: 5.5rem;
+
+		grid-column: 12 / span 2;
+		grid-row: 1 / 2;
+		color: #02b0ef;
+		/*}*/
+	}
+
+
+
+	.desplegadosD div:hover {
+		background-color: #84ffff !important;
+		color: #4b585e;
+	}
+
+	.desplegadosD {
+		-ms-grid-row-align: start;
+		align-self: start;
+	}
+
+
+
+	.dinamicas .dinamicasmenucategorias div:hover {
+		background-color: #e1e8ef;
+	}
+
+	.dinamicas .dinamicasmenucategorias div {
+		background-color: rgb(245, 247, 250);
+		color: black;
+		padding-left: 0.35rem;
+		padding-bottom: 0.3rem;
+		padding-top: 0.3rem;
+		cursor: pointer;
+		font-size: 0.9rem;
+	}
+
+	.dinamicas .dinamicasmenucategorias {
+		position: relative;
+
+		-ms-grid-column: 23;
+		-ms-grid-column-span: 3;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+
+		grid-column: 12 / span 2;
+		grid-row: 2 / 3;
+		z-index: 5;
+		font-size: 0.9rem;
+		height: auto;
+	}
+
+
+
+	.dinamicas .carrusel {
+		position: absolute;
+	}
+
+	.carruselcards {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 27;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 2 / -2;
+		grid-row: 2 / 3;
+
+		display: -ms-grid;
+		-ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
+		-ms-grid-rows: 1fr;
+
+
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-column-gap: 20px;
+		grid-row-gap: 0px;
+		align-items: center;
+	}
+
+	.dinamicas .carruselcards {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 27;
+
+		-ms-grid-row: 3;
+		-ms-grid-row-span: 1;
+
+		grid-column: 2 / -2;
+		grid-row: 3 / 3;
+
+		display: -ms-grid;
+		-ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
+		-ms-grid-rows: 1fr;
+
+
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-column-gap: 20px;
+		grid-row-gap: 0px;
+		align-items: center;
+	}
+
+	.dinamicas .carruselcards .izq {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 1;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		-ms-grid-column-align: end;
+		-ms-grid-row-align: center;
+
+		grid-column: 1 / span 1;
+		grid-row: 1 / span 1;
+		justify-self: start;
+		z-index: 4;
+		cursor: pointer;
+	}
+
+	.dinamicas .carruselcards .der {
+		-ms-grid-column: 23;
+		-ms-grid-column-span: 1;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		-ms-grid-column-align: start;
+		-ms-grid-row-align: center;
+
+		grid-column: -2 / span 1;
+		grid-row: 1 / span 1;
+		justify-self: end;
+		z-index: 4;
+		cursor: pointer;
+	}
+
+
+
+
+	.carruselcards .mascara {
+		position: relative;
+		height: 432px;
+
+		-ms-grid-column: 3;
+		-ms-grid-column-span: 19;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		-ms-grid-row-align: center;
+
+		grid-column: 2/-2;
+		grid-row: 1/2;
+
+		overflow: hidden;
+
+		position: relative;
+	}
+
+	.carruselcards .wrappercards {
+		position: absolute;
+		height: 100%;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+
+	}
+
+	.dinamicacard {
+		width: 220px;
+		height: 423px;
+
+		display: -ms-grid;
+		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		-ms-grid-rows: 8px 36px 177px 154px 48px;
+
+
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: 8px 36px 177px 154px 48px;
+
+
+
+		font-size: 1rem;
+		background-color: white;
+
+		border-radius: 0.4em;
+		overflow: hidden;
+		border: 0.5px solid #baccd3;
+
+		cursor: pointer;
+
+		margin-left: 20px;
+
+		font-size: 0.7rem;
+		font-weight: normal;
+		line-height: 0.8rem;
+		position: relative;
+	}
+
+
+
+	.yajugo,.yajugogrande{
+
+
+    position: absolute;
+    top: 192px;
+    /* right: 24%; */
+    background-color:#0096d1;
+    padding:8px 20px;
+    font-size: 0.9rem;
+    line-height: 1;
+    width: 100%;
+    color:#fff;
+
+
+	}
+
+
+	.yajugogrande{
+		 top: 257px;	
+	}
+
+
+
+	.nada{
+		display: none !important;
+	}
+
+
+	.dinamicacard:first-child {
+		margin-left: 0px;
+	}
+
+	.dinamicacard .bartop {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / span 1;
+		background-color: white;
+	}
+
+	.dinamicacard .imagedinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 2;
+
+		grid-column: 1 / -1;
+		grid-row: 2 / span 2;
+
+	}
+
+
+	.dinamicacard .tagdinamica {
+		-ms-grid-column: 4;
+		-ms-grid-column-span: 6;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 4 / 10;
+		grid-row: 2 / 3;
+		background-color: white;
+		text-align: center;
+		line-height: 36px;
+	}
+
+	.dinamicacard .diaevento {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 2;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 2 / 4;
+		grid-row: 2 / 3;
+
+		background-color: rgb(62, 62, 62);
+		color: white;
+
+		display: flex;
+		flex-direction: column;
+
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	.dinamicacard .diaevento div {
+		text-align: center;
+	}
+
+	.dinamicacard .diaevento .diacard {
+		margin-top: 0.1rem;
+		font-size: 1.05rem;
+		line-height: 0.8rem;
+		font-weight: bold;
+	}
+
+	.dinamicacard .diaevento .mescard {
+		font-size: 0.7rem;
+		font-weight: normal;
+	}
+
+	.dinamicacard .proximamentetext {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 8;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 2 / 10;
+		grid-row: 2 / 3;
+		background-color: white;
+		text-align: center;
+		line-height: 36px;
+	}
+
+
+	.dinamicacard .segmento {
+		-ms-grid-column: 10;
+		-ms-grid-column-span: 2;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 1;
+
+		grid-column: 10 / 12;
+		grid-row: 2 / 3;
+		background-color: #f5f5f5;
+
+		border-radius: 0rem 0rem 0.5rem 0rem;
+
+		display: flex;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+	}
+
+	.dinamicacard .segmento img {
+		height: 1.3rem;
+	}
+
+	.dinamicacard .infodinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 4;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 4 / 5;
+		background-color: #f5f5f5;
+		padding: 20px 20px 15px 20px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.dinamicacard footer {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 5;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 5 / 6;
+		background-color: white;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px 18px;
+	}
+
+	.dinamicacard footer div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+
+
+
+
+	/******************** ganadores **********************/
+
+	.ganadores {
+		width: 960px;
+		margin: auto;
+
+		display: -ms-grid;
+		-ms-grid-columns: 10px 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 10px;
+		-ms-grid-rows: 113px 569px;
+
+
+		display: grid;
+		grid-template-columns: 10px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10px;
+		grid-template-rows: 113px 509px;
+		grid-column-gap: 20px;
+
+
+
+		color: white;
+		background-color: white;
+	}
+
+	.ganadores .tituloganadores {}
+
+
+	.ganadores header {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 27;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+
+		display: -ms-grid;
+		-ms-grid-columns: 10px 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 10px;
+
+		display: grid;
+		grid-template-columns: 10px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10px;
+		grid-column-gap: 20px;
+
+		border-bottom: 1px solid rgb(180, 180, 180);
+
+	}
+
+	.ganadores header .linea__ {
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 27;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		-ms-grid-row-align: end;
+
+		grid-column: 2 / -2;
+		grid-row: 1 / 2;
+
+		border-bottom: 1px solid rgb(180, 180, 180);
+	}
+
+	.ganadores header h1 {
+
+		-ms-grid-column: 3;
+		-ms-grid-column-span: 11;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		line-height: 5em;
+
+		grid-column: 2 / span 3;
+		grid-row: 1 / 2;
+		align-self: end;
+		padding-bottom: 1.2rem;
+	}
+
+	.ganadores .izq {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 1;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		-ms-grid-column-align: end;
+		-ms-grid-row-align: center;
+
+		grid-column: 1 / span 1;
+		grid-row: 1 / span 1;
+		justify-self: start;
+		z-index: 4;
+
+		cursor: pointer;
+	}
+
+	.ganadores .der {
+		-ms-grid-column: 23;
+		-ms-grid-column-span: 1;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		-ms-grid-column-align: start;
+		-ms-grid-row-align: center;
+
+		grid-column: -2 / span 1;
+		grid-row: 1 / span 1;
+		justify-self: end;
+		z-index: 4;
+
+		cursor: pointer;
+	}
+
+
+
+	.ganadorescard {
+		height: 423px;
+		width: 220px;
+		background-color: white;
+
+		display: -ms-grid;
+		-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		-ms-grid-rows: 8px 183px 29px 29px 120px 52px;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: 8px 183px 29px 29px 120px 52px;
+
+		margin-right: 20px;
+
+		border-radius: 0.4em;
+		overflow: hidden;
+		border: 0.5px solid #baccd3;
+
+		cursor: pointer;
+	}
+
+	.ganadorescard .bartop {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+		background-color: white;
+	}
+
+	.ganadorescard .imagedinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 2;
+
+		grid-column: 1 / -1;
+		grid-row: 2 / 4;
+
+	}
+
+
+	.ganadorescard .infodinamica {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 4;
+		-ms-grid-row-span: 2;
+
+		grid-column: 1 / 13;
+		grid-row: 4 / 6;
+		background-color: #fff;
+		padding: 20px 20px 15px 20px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+	}
+
+	.ganadorescard .detalles {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+
+		-ms-grid-row: 6;
+		-ms-grid-row-span: 1;
+
+		grid-column: 1 / 13;
+		grid-row: 6 / 7;
+		background-color: white;
+		color: rgb(100, 100, 100);
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px 18px;
+	}
+
+
+	.flotandoproximamente{
+		position:fixed;width:100%;height:auto;text-align: center;top:2.5%;display: none;z-index:11;
+	}
+
+	/*****************************************************/
+
+	@media only screen and (max-width: 960px) {
+
+
+
+
+		.flotandoproximamente{
+			top:1.8%;
+		}
+
+
+		.experienciastelcel {
+			width: 100%;
+			padding-bottom: 3rem;
+			height: auto;
+		}
+
+
+		.experienciastelcel .introduccion {
+			width: 100%;
+		}
+
+
+		.izq,
+		.der {
+			display: none;
+		}
+
+		.promo3dinamicas {
+			height: auto;
+			justify-content: center;
+		}
+
+		.recompensacard {
+			margin: 10px;
+		}
+
+		.ganadores,
+		.dinamicas,
+		.experienciastelcel,
+		.promo3dinamicas,
+		#ventaja {
+			width: 100%;
+		}
+
+		#wrapperpuntosimagenes {
+			display: none;
+		}
+
+		.carruselcards .mascara {
+			position: relative;
+
+			-ms-grid-column: 1;
+			-ms-grid-column-span: 12;
+
+			-ms-grid-row: 1;
+			-ms-grid-row-span: 1;
+
+			grid-column: 1/-1;
+			grid-row: 1/2;
+
+			overflow: auto;
+			overflow-y: hidden !important;
+
+		}
+
+		.carruselcards .wrappercards {}
+
+
+
+		.dinamicas {
+
+			width: 100%;
+			-ms-grid-rows: 7.3rem 5px 549px;
+			grid-template-rows: 7.3rem 5px 549px;
+		}
+
+		.dinamicas header {
+
+			grid-row: 113px 1fr;
+			grid-column-gap: 20px;
+			grid-template-rows: 1fr 0.5fr;
+		}
+
+
+
+		.dinamicas header h1,
+		.ganadores header h1 {
+			font-size: 1.4rem;
+			grid-column: 2 / -2;
+
+		}
+
+
+		.dinamicas #dinamicascagetorias {
+			line-height: 0rem;
+
+			-ms-grid-column: 3;
+			-ms-grid-column-span: 27;
+
+			-ms-grid-row: 2;
+			-ms-grid-row-span: 1;
+
+			grid-column: 2 / -2;
+			grid-row: 2 / span 1;
+		}
+
+
+		.dinamicas .dinamicasmenucategorias {
+			grid-column: 2 / -2;
+			grid-row: 1 / 3;
+			margin-top: calc(113px + 0.25rem);
+
+		}
+
+		.dinamicas .titulodinamica {
+			font-size: 1.2rem;
+			font-weight: bold;
+			line-height: 1.2rem;
+			width: 100%;
+			flex-shrink: 2;
+		}
+
+		.dinamicas .dinamicasmenucategorias div {
+			height: 3rem;
+			line-height: 3rem;
+		}
+
+		.desplegadosD div:hover {
+			background-color: #e1e8ef;
+
+		}
+
+		.desplegadosD div:active {
+			background-color: #d4d6d7;
+
+		}
+
+
+		#ventaja {
+			display: none;
+			text-align: center;
+			margin: 0 auto;
+		}
+
+
+		#ventajamobile {
+			display: block;
+			text-align: center;
+			margin: 0 auto 3rem;
+		}
+
+		#bandera {
+			font-size: 1.0rem;
+		}
+
+		.ganadores .tituloganadores {
+			font-size: 1.2rem;
+			font-weight: 300;
+			line-height: 1.2rem;
+			width: inherit;
+		}
+
+	}
+
+
+	.fondoventanasflotante {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.96);
+		z-index: 10;
+		display: none;
+	}
+
+
+
+
+
+
+
+
+
+</style>
+
+<section class="experienciastelcel">
+
+
+
+	<div class="introduccion">
+		<img src="images/bannersportada/banner_desktop_01.jpg?t=7" class="imgdesktop">
+		<img src="images/bannersportada/banner_mobile_01.jpg?t=7" class="imgmobile">
+	</div>
+
+	<div class="introduccion">
+		<img src="images/bannersportada/banner_desktop_02.jpg?t=7" class="imgdesktop">
+		<img src="images/bannersportada/banner_mobile_02.jpg?t=7" class="imgmobile">
+	</div>
+
+	<div class="introduccion">
+		<img src="images/bannersportada/banner_desktop_03.jpg?t=9" class="imgdesktop">
+		<img src="images/bannersportada/banner_mobile_03.jpg?t=9" class="imgmobile">
+	</div>
+
+	<img src="images/flechaizqblanca.png" class="izq layer2">
+	<img src="images/flechaderblanca.png" class="der layer2">
+
+</section>
+
+
+
+
+<div id="wrapperpuntosimagenes">
+	<div class="puntosimagenes layer2">
+		<div class="fa fa-pause pausacarrusel" aria-hidden="true"></div>
+		<div class="puntoimagen" data-i="0">1</div>
+		<div class="puntoimagen" data-i="1">2</div>
+		<div class="puntoimagen" data-i="2">3</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<section id="ventaja">
+	<img src="images/iconosventaja/iconoventaja.png" class="iconoventaja">
+	<div id="bandera">
+		<span style="font-weight: bold; font-size: 1.5rem; color: #02b0ef;">¡Participa del
+			<span class="ventaja_fecha"></span> y
+			<span class="ventaja_titulo"></span> te da ventaja!</span>
+		<br>
+		<span style="font-size: 1rem; color: #676F74;">Al participar en cualquier dinámica, obtén una respuesta correcta o una ayuda especial ¿¡qué esperas!?</span>
+	</div>
+</section>
+
+<section id="ventajamobile">
+	<div id="wrapperb1">
+		<img src="images/iconosventaja/iconoventaja.png" class="iconoventaja">
+		<div id="bandera">
+			<span style="font-weight: bold; font-size: 1.2rem; color: #02b0ef;">¡Participa del
+				<span class="ventaja_fecha"></span> y
+				<br>
+				<span class="ventaja_titulo"></span> te da ventaja!</span>
+		</div>
+	</div>
+	<div id="wrapperb2">
+		<div id="bandera">
+			<span style="font-size: 1rem; color: #676F74;">Al participar en cualquier dinámica, obtén una respuesta correcta o una ayuda especial ¿¡qué esperas!?</span>
+		</div>
+	</div>
+</section>
+
+<section class="promo3dinamicas">
+
+
+</section>
+
+
+<section class="dinamicas">
+	<header>
+		<h1 class="typotituloseccion negro">Dinámicas
+			<span class="fa fa-angle-double-right typotitulofiltro" aria-hidden="true"></span>
+			<span class="typotitulofiltro titulofiltro"> Futbol</span>
+		</h1>
+		<div id="dinamicascagetorias" class="no-seleccionable dinamicasfiltro">
+			<span>Categorías</span>
+			<span class="fa fa-caret-down" aria-hidden="true" style="margin-left: 0.2em"></span>
+		</div>
+	</header>
+
+	<div class="bandatricolor"></div>
+
+	<div class="carruselcards">
+		<div class="mascara">
+			<div class="wrappercards">
+
+			</div>
+		</div>
+		<img src="images/flechaizq.png" class="izq layer2">
+		<img src="images/flechader.png" class="der layer2">
+	</div>
+	<div class="dinamicasmenucategorias desplegadosD">
+
+	</div>
+
+</section>
+
+<section class="ganadores">
+	<header>
+		<h1 class="typotituloseccion grisoscuro">Ganadores</h1>
+	</header>
+
+	<div class="carruselcards">
+
+		<div class="mascara">
+			<div class="wrappercards">
+
+			</div>
+		</div>
+		<img src="images/flechaizq.png" class="izq layer2">
+		<img src="images/flechader.png" class="der layer2">
+	</div>
+</section>
+
+
+<section class="publicidad" data-url="https://www.claromusica.com/">
+	<div class="wrapperp">
+		<img src="images/publicidad/claro-musica-bne.jpg" class="imgdesktop">
+		<img src="images/publicidad/claro-musica-bnm.jpg" class="imgmobile">
+	</div>
+</section>
+
+
+
+
+<div id="fondoventanasflotante" class="fondoventanasflotante"></div>
+
+
+
+
+
+
+<div id="flotaproximamente" class="flotandoproximamente">
+	
+	<div style="background-color: #fff;width:300px;margin:auto;position:relative;border-radius: 6px;padding-top: 40px;">
+		<div id="closeflo" class="fa fa-times close" aria-hidden="true" style="position: absolute;right:10px;top:10px;"></div>
+		
+		<div style="padding:0px 0px;">
+			<img src="" id="imagenevento_flot">
+		</div>
+		
+		<div style="padding:10px;">
+			<div id="titulo_flot" style="font-size:1rem;padding:0px 20px 20px 0px;">Titulo</div>
+			<div style="font-size:1rem;padding:10px 20px;font-weight: bold;"> Muy pronto tendrás la experiencia </div>
+		</div>
+
+	</div>
+</div>
+
+
+
+
+<script type="text/javascript">
+	var desplegadosD_Over = false;
+	var timerdinamicasfiltro;
+	var recorrio = 3;
+	var recorrio_ganadores = 3;
+	var cuantos = 0;
+	var faltan = 0;
+
+
+	$(document).ready(function () {
+
+
+
+
+
+
+		parent.postMessage('scrollthem,0', '*');
+
+
+
+		var promocionesJson = $.getJSON("https://admin.experienciastelcel.com/restful/categorias/", function (datacat) {
+			var categoriasHTML = '<div class="no-seleccionable" data-filtro="todos">Ver todos</div>';
+			for (var i = 0; i < datacat.categorias.length; i++) {
+				categoriasHTML += '<div class="no-seleccionable" data-filtro="' + datacat.categorias[i].catslug + '" >' +
+				datacat.categorias[i].catname + '</div>'
+			}
+			$(".dinamicasmenucategorias").append(categoriasHTML);
+
+			$(".desplegadosD div").click(function () {
+				var filtro = $(this).data("filtro");
+				var filtrotitulo = $(this).text();
+				clearTimeout(timerdinamicasfiltro);
+				$(".desplegadosD").hide();
+				$(".dinamicasfiltro").find(".fa").removeClass("fa-times");
+				$(".dinamicasfiltro").find(".fa").addClass("fa-caret-down");
+				cargaDinamicasCarrusel(filtro, filtrotitulo);
+			})
+
+			$(".desplegadosD").mouseover(function () {
+				clearTimeout(timerdinamicasfiltro);
+				desplegadosD_Over = true;
+			});
+
+			$(".desplegadosD").mouseleave(function () {
+				$(".desplegadosD").hide();
+				desplegadosD_Over = false;
+				$(".dinamicasfiltro").find(".fa").removeClass("fa-times");
+				$(".dinamicasfiltro").find(".fa").addClass("fa-caret-down");
+			});
+		})
+
+
+
+
+		/****************  introduccion ************************/
+		$(".desplegadosD").hide();
+
+		var indexIntroduccion = 0;
+		var slideShowTimer;
+
+		$(".experienciastelcel .introduccion").hide();
+		$(".experienciastelcel .introduccion").eq(indexIntroduccion).show();
+
+
+
+		$(".experienciastelcel .der").click(function () {
+			clearInterval(slideShowTimer);
+			setTimeout(comenzarAnimacionSlideIntro(), 5000);
+			indexIntroduccion = (indexIntroduccion + 1) % $(".experienciastelcel .introduccion").length;
+			$(".experienciastelcel .introduccion").hide();
+			$(".experienciastelcel .introduccion").eq(indexIntroduccion).fadeIn(800, function () {
+				$(".puntoimagen").removeClass('puntoseleccionado');
+				$(".puntoimagen").eq(indexIntroduccion).addClass('puntoseleccionado');
+			});
+
+		})
+
+		$(".experienciastelcel .izq").click(function () {
+
+
+
+			clearInterval(slideShowTimer);
+			setTimeout(comenzarAnimacionSlideIntro(), 5000);
+
+			indexIntroduccion -= 1;
+			if (indexIntroduccion < 0) {
+				indexIntroduccion = $(".experienciastelcel .introduccion").length - 1;
+			}
+			$(".experienciastelcel .introduccion").hide();
+			$(".experienciastelcel .introduccion").eq(indexIntroduccion).fadeIn(800, function () {
+				$(".puntoimagen").removeClass('puntoseleccionado');
+				$(".puntoimagen").eq(indexIntroduccion).addClass('puntoseleccionado');
+			});
+
+
+		});
+
+
+
+		$(".puntoimagen").eq(0).addClass('puntoseleccionado');
+
+		$(".puntoimagen").click(function () {
+			clearInterval(slideShowTimer);
+			setTimeout(comenzarAnimacionSlideIntro(), 5000);
+			$(".puntoimagen").removeClass('puntoseleccionado');
+			$(this).addClass('puntoseleccionado');
+			indexIntroduccion = $(this).data("i");
+			$(".experienciastelcel .introduccion").hide();
+			$(".experienciastelcel .introduccion").eq(indexIntroduccion).fadeIn(600);
+		})
+
+		$(".pausacarrusel").click(function () {
+			if ($(this).hasClass('fa-pause')) {
+				clearInterval(slideShowTimer);
+				$(this).addClass('puntoseleccionado');
+				$(this).removeClass('fa-pause');
+				$(this).addClass('fa-play');
+			} else {
+
+
+				comenzarAnimacionSlideIntro()
+				$(this).removeClass('puntoseleccionado');
+				$(this).removeClass('fa-play');
+				$(this).addClass('fa-pause');
+			}
+
+
+		})
+
+
+		function comenzarAnimacionSlideIntro() {
+			//clearInterval(slideShowTimer);
+			slideShowTimer = setInterval(function () {
+				$(".experienciastelcel .introduccion").eq(indexIntroduccion).fadeOut(800);
+				indexIntroduccion = (indexIntroduccion + 1) % $(".experienciastelcel .introduccion").length;
+				$(".experienciastelcel .introduccion").eq(indexIntroduccion).fadeIn(800, function () {
+					$(".puntoimagen").removeClass('puntoseleccionado');
+					$(".puntoimagen").eq(indexIntroduccion).addClass('puntoseleccionado');
+				});
+			}, 10000)
+		}
+
+		//clearInterval(slideShowTimer);
+		comenzarAnimacionSlideIntro();
+
+		/******************* carrusel dinamicas *****************/
+
+		// 1 card 220px con gap de 20px =  240
+		// 3 card 220px con gap de 20px =  720
+
+
+		var elementos = $(".dinamicacard").length;
+		var pages = parseInt(elementos / 3);
+		var sueltos = elementos % 3;
+		var curpage = 0;
+		var stated = null;
+		var lista = [];
+
+
+
+		$(".dinamicas .carruselcards .izq").click(function () {
+
+			if (curpage > 0)
+				curpage--;
+
+			cuantos = $(".dinamicacard").length;
+			faltanizq = cuantos - recorrio;
+
+			if (curpage == pages & stated == 'der') {
+				lalistaback = lista.reverse();
+			} else {
+				lalistaback = 720;
+			}
+
+			stated = 'izq';
+
+			actual = $(".dinamicas .carruselcards .wrappercards").position().left;
+			totales = cuantos * 240;
+			recorr = (recorrio - 3) * 240;
+
+			$(".dinamicas .carruselcards  .der").removeClass("moving");
+			if (!$(this).hasClass("moving")) {
+				var trigger = $(this);
+				trigger.addClass("moving");
+				if ($(".dinamicas .carruselcards .wrappercards").position().left < 0) {
+					$(".dinamicas .carruselcards .wrappercards").animate({
+						left: "+=" + lista[curpage]
+					}, 600, function () {
+						// Animation complete.
+						trigger.removeClass("moving");
+						recorrio = recorrio - 3;
+
+
+					});
+				}
+			}
+		});
+
+
+		$(".dinamicas .carruselcards .der").click(function () {
+			var recorredor = 720;
+			stated = 'der';
+
+			elementos = $(".dinamicacard").length;
+			pages = parseInt(elementos / 3);
+			sueltos = elementos % 3;
+			if (lista.length == 0) {
+				for (i = 0; i < pages - 1; i++) {
+					lista.push(3 * 240);
+				}
+				lista.push(sueltos * 240);
+			}
+
+			cuantos = $(".dinamicacard").length;
+			faltan = cuantos - recorrio;
+
+			if (faltan < 3) {
+				recorredor = (faltan) * 240;
+			} else {
+				recorredor = 240 * 3;
+			}
+
+			$(".dinamicas .carruselcards .izq").removeClass("moving");
+			if (!$(this).hasClass("moving")) {
+
+				var trigger = $(this);
+				trigger.addClass("moving");
+
+
+				var izquierdapos = $(".dinamicas .carruselcards .wrappercards").position().left;
+				var derechapos = (cuantos - 3) * -240;
+
+				if (Math.round(izquierdapos) > derechapos) {
+					$(".dinamicas .carruselcards .wrappercards").animate({
+						left: "-=" + recorredor
+					}, 600, function () {
+						trigger.removeClass("moving");
+						recorrio = recorrio + 3;
+						curpage++;
+					});
+				} else {
+					$(".dinamicas .carruselcards .wrappercards").animate({
+						left: "0"
+					}, 300, function () {
+
+						trigger.removeClass("moving");
+						recorrio = 3;
+						recorredor = 0;
+						faltan = 0;
+						curpage = 0;
+					});
+				}
+			}
+
+
+
+
+		});
+
+
+		/*******************************************************/
+
+		/******************* carrusel ganadores *****************/
+
+
+
+
+
+
+		var elementos_ganadores = 0;
+		var pages_ganadores = 0;
+		var sueltos_ganadores = 0;
+		var curpage_ganadores = 0;
+		var stated_ganadores = null;
+		var lista_ganadores = [];
+
+
+
+		$(".ganadores .carruselcards .izq").click(function () {
+
+			if (curpage_ganadores > 0)
+				curpage_ganadores--;
+
+			cuantos_ganadores = $(".ganadorescard").length;
+			faltanizq_ganadores = cuantos_ganadores - recorrio_ganadores;
+
+			if (curpage_ganadores == pages_ganadores & stated_ganadores == 'der') {
+				lalistaback_ganadores = lista_ganadores.reverse();
+			} else {
+				lalistaback_ganadores = 720;
+			}
+
+			stated_ganadores = 'izq';
+
+			actual = $(".ganadores .carruselcards .wrappercards").position().left;
+			totales = cuantos_ganadores * 240;
+			recorr = (recorrio_ganadores - 3) * 240;
+
+			$(".ganadores .carruselcards  .der").removeClass("moving");
+			if (!$(this).hasClass("moving")) {
+				var trigger = $(this);
+				trigger.addClass("moving");
+				if ($(".ganadores .carruselcards .wrappercards").position().left < 0) {
+					$(".ganadores .carruselcards .wrappercards").animate({
+						left: "+=" + lista_ganadores[curpage_ganadores]
+					}, 600, function () {
+						// Animation complete.
+						trigger.removeClass("moving");
+						recorrio_ganadores = recorrio_ganadores - 3;
+
+
+					});
+				}
+			}
+		});
+
+
+		$(".ganadores .carruselcards .der").click(function () {
+			var recorredor = 720;
+			stated_ganadores = 'der';
+
+			elementos_ganadores = $(".ganadorescard").length;
+			pages_ganadores = parseInt(elementos_ganadores / 3);
+			sueltos_ganadores = elementos_ganadores % 3;
+			if (lista_ganadores.length == 0) {
+				for (i = 0; i < pages_ganadores - 1; i++) {
+					lista_ganadores.push(3 * 240);
+				}
+				lista_ganadores.push(sueltos_ganadores * 240);
+			}
+
+			cuantos_ganadores = $(".ganadorescard").length;
+			faltan_ganadores = cuantos_ganadores - recorrio_ganadores;
+
+			if (faltan_ganadores < 3) {
+				recorredor_ganadores = (faltan_ganadores) * 240;
+			} else {
+				recorredor_ganadores = 240 * 3;
+			}
+
+			$(".ganadores .carruselcards .izq").removeClass("moving");
+			if (!$(this).hasClass("moving")) {
+
+				var trigger = $(this);
+				trigger.addClass("moving");
+
+
+				var izquierdapos = $(".ganadores .carruselcards .wrappercards").position().left;
+				var derechapos = ($(".ganadorescard").length - 3) * -240;
+
+				if (Math.round(izquierdapos) > derechapos) {
+					$(".ganadores .carruselcards .wrappercards").animate({
+						left: "-=" + recorredor_ganadores
+					}, 600, function () {
+						trigger.removeClass("moving");
+						recorrio_ganadores = recorrio_ganadores + 3;
+						curpage_ganadores++;
+					});
+				} else {
+					$(".ganadores .carruselcards .wrappercards").animate({
+						left: "0"
+					}, 300, function () {
+
+						trigger.removeClass("moving");
+						recorrio_ganadores = 3;
+						recorredor_ganadores = 0;
+						faltan_ganadores = 0;
+						curpage_ganadores = 0;
+					});
+				}
+			}
+
+
+
+
+		});
+
+
+		//*************************************************************************
+
+
+
+
+
+
+		/*******************************************************/
+
+		var fondopromos = ["#9d0993", "#0096d1", "#ffcc00", "#c23127"];
+		var titulocolorpromos = ["#f48fb1", "#84ffff", "#ff8f00", "#e5a1a5"];
+
+		var promocionesJson = $.getJSON("https://admin.experienciastelcel.com/restful/promos/?upk=" + upk, function (data) {
+
+			ventaja_titulo = data.ventaja_texto;
+			ventaja = data.ventaja;
+			ventaja_fecha = data.fecha_ventaja;
+			ventaja_terminos = data.ventajaterminos;
+			$(".ventaja_titulo").text(ventaja_titulo);
+			$(".ventaja_fecha").text(ventaja_fecha);
+			$(".iconoventaja").attr("src", "images/iconosventaja/" + ventaja + ".png")
+			var promosHTML = '';
+
+			for (i = 0; i < 4; i++) {
+
+
+				if(data.dinamicas[i].participo==false){
+					clasejugo = 'nada';
+				}
+				else{
+					clasejugo = 'yajugogrande';
+				}
+
+
+
+				if (data.dinamicas[i].status == "proximamente") {
+					if (i > 2) {
+						promosHTML += '<div class="recompensacard proximamente shadowcard " data-id="' + data.dinamicas[i].pk +
+							'" style="cursor:not-allowed">'
+					} else {
+						promosHTML += '<div class="recompensacard proximamente shadowcard" data-id="' + data.dinamicas[i].pk +
+							'" style="cursor:not-allowed">'
+					}
+				} else {
+
+					if (i > 2) {
+						promosHTML += '<div class="recompensacard shadowcard " data-id="' + data.dinamicas[i].pk + '">'
+					} else {
+						promosHTML += '<div class="recompensacard shadowcard" data-id="' + data.dinamicas[i].pk + '">'
+					}
+				}
+
+
+
+				promosHTML += '	<div class="bartop"></div>'
+
+
+				promosHTML += '	<div class="imagedinamica"  data-id="' + data.dinamicas[i].pk + '" style="background: url(' + data.dinamicas[i].imagen +
+					');background-repeat: no-repeat;background-size: cover;background-position: center center;" >'
+				promosHTML += '	</div>'
+
+				if (data.dinamicas[i].status == "proximamente") {
+					promosHTML += '	<div class="proximamentetext typotagcard grisoscuro" style="background-color:' + fondopromos[i] +
+						'; color:' + titulocolorpromos[i] + '">Próximamente</div>';
+				} else {
+					promosHTML += '	<div class="tagdinamica typotagcard grisoscuro">' + data.dinamicas[i].ciudad + '</div>';
+					promosHTML += '	<div class="diaevento" style="background-color:' + fondopromos[i] + '" >';
+					promosHTML += '		<div class="diacard">' + data.dinamicas[i].dia_evento + '</div>'
+					promosHTML += '		<div class="mescard">' + data.dinamicas[i].mes_evento + '</div>'
+					promosHTML += '	</div>'
+				}
+
+
+
+
+				promosHTML += '	<div class="infodinamica" style="background-color: ' + fondopromos[i] + '">'
+				promosHTML += '		<div class="typotitulocardprincipal blanco">'
+				promosHTML += '			' + data.dinamicas[i].titulo + ' <span class="typotitulocardprincipalcolor" style="color:' +
+					titulocolorpromos[i] + '" >' + data.dinamicas[i].titulo_color + '</span>'
+				promosHTML += '		</div>'
+
+				if (data.dinamicas[i].status != "proximamente") {
+					promosHTML += '		<div class="vigencia typodetallesvigencia" style="color:' + titulocolorpromos[i] +
+						'" >Vigencia: ' + data.dinamicas[i].vigencia + '</div>'
+				}
+
+
+
+				promosHTML += '	</div>'
+				promosHTML += '	<footer class="grismedio typofootercard">'
+
+				if (data.dinamicas[i].liked == 1) {
+					promosHTML += '		<div class="liked grisoscuro"  data-id="' + data.dinamicas[i].pk + '">'
+					promosHTML += '			<div class="fa fa-heart grisrojooscuro" style="margin-right:0.5em"></div>'
+				} else {
+					promosHTML += '		<div class="likes grisoscuro"  data-id="' + data.dinamicas[i].pk + '">'
+					promosHTML += '			<div class="fa fa-heart-o" style="margin-right:0.5em"></div>'
+				}
+
+				// promosHTML += '		<div class="likes grisoscuro"  data-id="'+data.dinamicas[i].pk+'">'
+				// promosHTML += '			<div class="fa fa-heart-o" style="margin-right:0.5em"></div>'
+				promosHTML += '			<div class="totallikes">' + data.dinamicas[i].likes + '</div>'
+				promosHTML += '		</div>'
+
+
+				promosHTML += '		<div class="social">'
+				promosHTML += '			<div class="fa fa-user-o" style="margin-right:0.5em"></div>'
+				promosHTML += '			<div>' + data.dinamicas[i].participaciones + '</div>'
+				promosHTML += '		</div>'
+				promosHTML += '<div class="'+clasejugo+'">Gracias por participar.</div>	</footer>'
+				promosHTML += '</div>'
+
+			}
+			$(".promo3dinamicas").append(promosHTML);
+
+
+
+
+		});
+
+		function cargaDinamicasCarrusel(filtro, fitrotitulo) {
+			$(".dinamicas .carruselcards .der").removeClass("moving");
+			$(".dinamicas .carruselcards .izq").removeClass("moving");
+			$(".dinamicas .carruselcards .mascara .wrappercards").css('left', 0);
+			// $( ".dinamicas .carruselcards .mascara .wrappercards").position().left = 0;
+			$(".dinamicas .carruselcards .mascara .wrappercards").empty();
+			var url;
+			var clasetodos;
+			if (filtro == "todos") {
+				clasetodos = 'todos';
+				$(".dinamicas header h1 span").hide();
+				url = "https://admin.experienciastelcel.com/restful/promos/?upk=" + upk;
+			} else {
+				clasetodos = 'notodos';
+				$(".dinamicas header h1 .titulofiltro").text(" " + fitrotitulo);
+				$(".dinamicas header h1 span").show();
+				url = "https://admin.experienciastelcel.com/restful/promosby/?search=" + filtro + "&upk=" + upk;
+			}
+			var totalcards = 0;
+			recorrio = 3;
+			recorredor = 0;
+			faltan = 0;
+			lista = [];
+
+
+			var dinamicasJson = $.getJSON(url, function (data) {
+				var dinamicasHTML = '';
+				if (filtro == "todos") {
+					i = 3;
+				} else {
+					i = 0
+				}
+				for (i; i < data.dinamicas.length; i++) {
+
+
+					if(data.dinamicas[i].participo==false){
+						clasejugo = 'nada';
+					}
+					else{
+						clasejugo = 'yajugo';
+					}
+
+
+					totalcards++;
+					if (data.dinamicas[i].status == "proximamente") {
+						if (i == 3 && filtro == "todos") {
+							dinamicasHTML += '<div class="dinamicacard '+clasetodos+' proximamente shadowcard puntero "  data-id="' +
+								data.dinamicas[i].pk + '"  style="cursor:not-allowed" >'
+						} else {
+							dinamicasHTML += '<div class="dinamicacard proximamente '+clasetodos+' shadowcard puntero"  data-id="' + data.dinamicas[i].pk +
+								'"  style="cursor:not-allowed" >'
+						}
+
+					} else {
+						if (i == 3 && filtro == "todos") {
+							dinamicasHTML += '<div class="dinamicacard shadowcard '+clasetodos+' puntero "  data-id="' + data.dinamicas[i]
+								.pk + '" >'
+						} else {
+							dinamicasHTML += '<div class="dinamicacard shadowcard '+clasetodos+' puntero"  data-id="' + data.dinamicas[i].pk + '" >'
+						}
+
+					}
+
+
+					dinamicasHTML += '	<div class="bartop"></div>'
+
+					dinamicasHTML += '	<div class="imagedinamica" style="background: url(' + data.dinamicas[i].imagen +
+						');background-repeat: no-repeat;background-size: cover;background-position: center center;" >'
+
+					dinamicasHTML += '	</div>'
+					if (data.dinamicas[i].status == "proximamente") {
+						dinamicasHTML += '	<div class="proximamentetext typotagcard grisoscuro">Próximamente</div>'
+					} else {
+						dinamicasHTML += '	<div class="tagdinamica typotagcard grismedio">' + data.dinamicas[i].ciudad + '</div>'
+						dinamicasHTML += '	<div class="diaevento grismedio" >';
+						dinamicasHTML += '		<div class="diacard">' + data.dinamicas[i].dia_evento + '</div>'
+						dinamicasHTML += '		<div class="mescars">' + data.dinamicas[i].mes_evento + '</div>'
+						dinamicasHTML += '	</div>'
+
+					}
+
+
+					dinamicasHTML += '	<div class="infodinamica">'
+
+					dinamicasHTML += '		<div class="typotitulocard grismuyoscuro">'
+					dinamicasHTML += '			' + data.dinamicas[i].titulo_completo
+					dinamicasHTML += '		</div>'
+
+					if (data.dinamicas[i].status != "proximamente") {
+						dinamicasHTML += '		<div class="vigencia typodetallesvigencia grisoscuro">Vigencia: ' + data.dinamicas[i].vigencia +
+							'</div>'
+					}
+
+
+					dinamicasHTML += '	</div>'
+					dinamicasHTML += '	<footer class="grismedio">'
+
+					if (data.dinamicas[i].liked == 1) {
+						dinamicasHTML += '		<div class="liked grisoscuro"  data-id="' + data.dinamicas[i].pk + '">'
+						dinamicasHTML += '			<div class="fa fa-heart grisrojooscuro" style="margin-right:0.5em"></div>'
+					} else {
+						dinamicasHTML += '		<div class="likes grisoscuro"  data-id="' + data.dinamicas[i].pk + '">'
+						dinamicasHTML += '			<div class="fa fa-heart-o" style="margin-right:0.5em"></div>'
+					}
+
+					dinamicasHTML += '			<div class="totallikes">' + data.dinamicas[i].likes + '</div>'
+					dinamicasHTML += '		</div>'
+					dinamicasHTML += '		<div class="social">'
+					dinamicasHTML += '			<div class="fa fa-user-o" style="margin-right:0.5em"></div>'
+					dinamicasHTML += '			<div>' + data.dinamicas[i].participaciones + '</div>'
+					dinamicasHTML += '		</div>'
+					dinamicasHTML += '<div class="'+clasejugo+'">Gracias por participar.</div>	</footer>'
+					dinamicasHTML += '</div>'
+
+				}
+				var anchofinal = totalcards  * 240;
+				$(".dinamicas .carruselcards .mascara .wrappercards").css("width", anchofinal + "px");
+				$(".dinamicas .carruselcards .mascara .wrappercards").append(dinamicasHTML);
+			});
+		}
+
+		cargaDinamicasCarrusel("todos", "");
+
+
+		/****************** ganadores *******************************************/
+
+		/* fnalizados*/
+		//finalizados
+		var ganadoresJson = $.getJSON("https://admin.experienciastelcel.com/restful/finalizados/", function (data) {
+			var totalcards = 0;
+			var cardHTML = '';
+			var mensaje = null;
+			for (i = 0; i < data.dinamicas.length; i++) {
+				if(data.dinamicas[i].status=='espera'){
+					mensaje = '<div class="espera_los detalles typodetallesvigencia">Espera los resultados </div>';
+					
+				}
+				else{
+					mensaje = '<div class="detalles typodetallesvigencia">Detalles</div>';
+					
+				}
+				totalcards++;
+				cardHTML += '<div class="ganadorescard  noclick_'+data.dinamicas[i].status+'   shadowcard" data-id="' + data.dinamicas[i].pk + '" >'
+				cardHTML += '	<div class="bartop"></div>'
+				cardHTML += '	<div class="imagedinamica '+data.dinamicas[i].status+'" style="background: url(' + data.dinamicas[i].imagen +
+					');background-repeat: no-repeat;background-size: cover;background-position: center center;" >'
+				cardHTML += '	</div>'
+
+				cardHTML += '	<div class="infodinamica">'
+				cardHTML += '		<div class="typotitulocard grismuyoscuro">' + data.dinamicas[i].titulo_final + '</div>'
+				cardHTML += '	</div>'
+				cardHTML += mensaje
+				cardHTML += '</div>'
+			}
+			var anchofinal = totalcards * 240;
+			$(".ganadores .carruselcards .mascara .wrappercards").css("width", anchofinal + "px")
+			$(".ganadores .carruselcards .mascara .wrappercards").append(cardHTML);
+
+
+		});
+
+		/**********************************************************************/
+
+
+
+		$(".experienciastelcel").swipe({
+			//Single swipe handler for left swipes
+			swipeRight: function (event, direction, distance, duration, fingerCount) {
+				clearInterval(slideShowTimer);
+				setTimeout(comenzarAnimacionSlideIntro(), 5000);
+
+				indexIntroduccion = (indexIntroduccion + 1) % $(".experienciastelcel .introduccion").length;
+				$(".experienciastelcel .introduccion").hide();
+
+				$(".experienciastelcel .introduccion").eq(indexIntroduccion).fadeIn(800, function () {
+					$(".puntoimagen").removeClass('fa-circle');
+					$(".puntoimagen").eq(indexIntroduccion).addClass('fa-circle');
+				});
+			},
+			swipeLeft: function (event, direction, distance, duration, fingerCount) {
+
+				clearInterval(slideShowTimer);
+				setTimeout(comenzarAnimacionSlideIntro(), 5000);
+
+				indexIntroduccion -= 1;
+				if (indexIntroduccion < 0) {
+					indexIntroduccion = $(".experienciastelcel .introduccion").length - 1;
+				}
+				$(".experienciastelcel .introduccion").hide();
+
+				$(".experienciastelcel .introduccion").eq(indexIntroduccion).fadeIn(800, function () {
+					$(".puntoimagen").removeClass('fa-circle');
+					$(".puntoimagen").eq(indexIntroduccion).addClass('fa-circle');
+				});
+			},
+
+			threshold: 81
+		});
+
+
+
+
+
+
+		/************* menu filtrado dinamicas carrusel *********/
+
+		$(".dinamicasfiltro").mouseleave(function () {
+			timerdinamicasfiltro = setTimeout(function () {
+				if (!desplegadosD_Over) {
+					$(".desplegadosD").hide()
+					$(".dinamicasfiltro").find(".fa").removeClass("fa-times");
+					$(".dinamicasfiltro").find(".fa").addClass("fa-caret-down");
+				} else {
+					desplegadosD_Over = false;
+				};
+			}, 500)
+		});
+
+		$("#dinamicascagetorias").click(function () {
+			clearTimeout(timerdinamicasfiltro);
+
+			if ($(".dinamicasmenucategorias").is(":visible")) {
+				$(".dinamicasmenucategorias").hide();
+				$(this).find(".fa").removeClass("fa-times");
+				$(this).find(".fa").addClass("fa-caret-down");
+			} else {
+				$(".desplegadosD").hide();
+				$(".dinamicasmenucategorias").show();
+				$(this).find(".fa").removeClass("fa-caret-down");
+				$(this).find(".fa").addClass("fa-times");
+			}
+		})
+
+
+
+	})
+</script>

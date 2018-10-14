@@ -1,0 +1,284 @@
+{
+	"totales": 6, 
+	"dinamicas": [
+		{"likes": 840, 
+		"vigencia": "Dec. 14 | 2018", 
+		"imagen": "images/promos/mexicaliimagedinamica1.jpg", 
+		"pk": 28, 
+		"dinamica": "trivia", 
+		"titulo": "Vive la música en el", 
+		"vigenciaUTC": 1544745600.0, 
+		"shares": 120, 
+		"titulo_color": "Tecate Location Mexicali",
+		"ganadores": [
+			{
+				"foto": null
+			},
+			{
+				"foto": null
+			},
+			{
+				"foto": "images/pepe.jpg"
+			}
+		]
+		}, 
+
+		{"likes": 1340, 
+		"vigencia": "ABR. 16 | 2018", 
+		"imagen": "images/promos/lenyimagedinamica1.jpg", 
+		"pk": 29, 
+		"dinamica": "trivia", 
+		"titulo": "Lenny Kravitz", 
+		"vigenciaUTC": 1538611200.0, 
+		"shares": 520, 
+		"titulo_color": "te espera en su concierto",
+		"ganadores": [
+			{
+				"foto": "images/pepe.jpg"
+			}
+		]
+		},
+
+		{"likes": 404, 
+		"vigencia": "ABR. 20 | 2018", 
+		"imagen": "images/promos/nascarimagedinamica1.jpg", 
+		"pk": 29, 
+		"dinamica": "trivia", 
+		"titulo": "La velocidad de la NASCAR", 
+		"vigenciaUTC": 1538611200.0, 
+		"shares": 881, 
+		"titulo_color": "te espera a ti y un acompañante",
+		"ganadores": [
+			{
+				"foto": null
+			},
+			{
+				"foto": "images/pepe.jpg"
+			}
+		]},
+		{"likes": 840, 
+		"vigencia": "Dec. 14 | 2018", 
+		"imagen": "images/promos/mexicaliimagedinamica1.jpg", 
+		"pk": 28, 
+		"dinamica": "trivia", 
+		"titulo": "Vive la música en el", 
+		"vigenciaUTC": 1544745600.0, 
+		"shares": 120, 
+		"titulo_color": "Tecate Location Mexicali",
+		"ganadores": [
+			{
+				"foto": null
+			},
+			{
+				"foto": null
+			},
+			{
+				"foto": "images/pepe.jpg"
+			}
+
+		]
+		}, 
+
+		{"likes": 1340, 
+		"vigencia": "ABR. 16 | 2018", 
+		"imagen": "images/promos/lenyimagedinamica1.jpg", 
+		"pk": 29, 
+		"dinamica": "trivia", 
+		"titulo": "Lenny Kravitz", 
+		"vigenciaUTC": 1538611200.0, 
+		"shares": 520, 
+		"titulo_color": "te espera en su concierto",
+		"ganadores": [
+			{
+				"foto": "images/pepe.jpg"
+			}
+		]
+		},
+
+		{"likes": 404, 
+		"vigencia": "ABR. 20 | 2018", 
+		"imagen": "images/promos/nascarimagedinamica1.jpg", 
+		"pk": 29, 
+		"dinamica": "trivia", 
+		"titulo": "La velocidad de la NASCAR", 
+		"vigenciaUTC": 1538611200.0, 
+		"shares": 881, 
+		"titulo_color": "te espera a ti y un acompañante",
+		"ganadores": [
+			{
+				"foto": null
+			},
+			{
+				"foto": "images/pepe.jpg"
+			}
+		]},
+		{"likes": 840, 
+		"vigencia": "Dec. 14 | 2018", 
+		"imagen": "images/promos/mexicaliimagedinamica1.jpg", 
+		"pk": 28, 
+		"dinamica": "trivia", 
+		"titulo": "Vive la música en el", 
+		"vigenciaUTC": 1544745600.0, 
+		"shares": 120, 
+		"titulo_color": "Tecate Location Mexicali",
+		"ganadores": [
+			{
+				"foto": null
+			},
+			{
+				"foto": null
+			},
+			{
+				"foto": "images/pepe.jpg"
+			}
+
+		]
+		}, 
+
+		{"likes": 1340, 
+		"vigencia": "ABR. 16 | 2018", 
+		"imagen": "images/promos/lenyimagedinamica1.jpg", 
+		"pk": 29, 
+		"dinamica": "trivia", 
+		"titulo": "Lenny Kravitz", 
+		"vigenciaUTC": 1538611200.0, 
+		"shares": 520, 
+		"titulo_color": "te espera en su concierto",
+		"ganadores": [
+			{
+				"foto": "images/pepe.jpg"
+			}
+		]
+		},
+
+		{"likes": 404, 
+		"vigencia": "ABR. 20 | 2018", 
+		"imagen": "images/promos/nascarimagedinamica1.jpg", 
+		"pk": 29, 
+		"dinamica": "trivia", 
+		"titulo": "La velocidad de la NASCAR", 
+		"vigenciaUTC": 1538611200.0, 
+		"shares": 881, 
+		"titulo_color": "te espera a ti y un acompañante",
+		"ganadores": [
+			{
+				"foto": null
+			},
+			{
+				"foto": "images/pepe.jpg"
+			}
+		]},
+		{"likes": 840, 
+		"vigencia": "Dec. 14 | 2018", 
+		"imagen": "images/promos/mexicaliimagedinamica1.jpg", 
+		"pk": 28, 
+		"dinamica": "trivia", 
+		"titulo": "Vive la música en el", 
+		"vigenciaUTC": 1544745600.0, 
+		"shares": 120, 
+		"titulo_color": "Tecate Location Mexicali",
+		"ganadores": [
+			{
+				"foto": null
+			},
+			{
+				"foto": null
+			},
+			{
+				"foto": "images/pepe.jpg"
+			}
+
+		]
+		}, 
+
+		{"likes": 1340, 
+		"vigencia": "ABR. 16 | 2018", 
+		"imagen": "images/promos/lenyimagedinamica1.jpg", 
+		"pk": 29, 
+		"dinamica": "trivia", 
+		"titulo": "Lenny Kravitz", 
+		"vigenciaUTC": 1538611200.0, 
+		"shares": 520, 
+		"titulo_color": "te espera en su concierto",
+		"ganadores": [
+			{
+				"foto": "images/pepe.jpg"
+			}
+		]
+		},
+
+		{"likes": 404, 
+		"vigencia": "ABR. 20 | 2018", 
+		"imagen": "images/promos/nascarimagedinamica1.jpg", 
+		"pk": 29, 
+		"dinamica": "trivia", 
+		"titulo": "La velocidad de la NASCAR", 
+		"vigenciaUTC": 1538611200.0, 
+		"shares": 881, 
+		"titulo_color": "te espera a ti y un acompañante",
+		"ganadores": [
+			{
+				"foto": null
+			},
+			{
+				"foto": "images/pepe.jpg"
+			}
+		]},
+		{"likes": 840, 
+		"vigencia": "Dec. 14 | 2018", 
+		"imagen": "images/promos/mexicaliimagedinamica1.jpg", 
+		"pk": 28, 
+		"dinamica": "trivia", 
+		"titulo": "Vive la música en el", 
+		"vigenciaUTC": 1544745600.0, 
+		"shares": 120, 
+		"titulo_color": "Tecate Location Mexicali",
+		"ganadores": [
+			{
+				"foto": null
+			},
+			{
+				"foto": null
+			},
+			{
+				"foto": "images/pepe.jpg"
+			}
+
+		]
+		}, 
+
+		{"likes": 1340, 
+		"vigencia": "ABR. 16 | 2018", 
+		"imagen": "images/promos/lenyimagedinamica1.jpg", 
+		"pk": 29, 
+		"dinamica": "trivia", 
+		"titulo": "Lenny Kravitz", 
+		"vigenciaUTC": 1538611200.0, 
+		"shares": 520, 
+		"titulo_color": "te espera en su concierto",
+		"ganadores": [
+			{
+				"foto": "images/pepe.jpg"
+			}
+		]
+		},
+
+		{"likes": 404, 
+		"vigencia": "ABR. 20 | 2018", 
+		"imagen": "images/promos/nascarimagedinamica1.jpg", 
+		"pk": 29, 
+		"dinamica": "trivia", 
+		"titulo": "La velocidad de la NASCAR", 
+		"vigenciaUTC": 1538611200.0, 
+		"shares": 881, 
+		"titulo_color": "te espera a ti y un acompañante",
+		"ganadores": [
+			{
+				"foto": null
+			},
+			{
+				"foto": "images/pepe.jpg"
+			}
+		]}
+	]
+}

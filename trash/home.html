@@ -1,0 +1,850 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Experiencias Telcel</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="/slick/slick-theme.css">
+
+</head>
+<style type="text/css">
+*,h1,p,div {
+	box-sizing: border-box !important;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	line-height: 1.428571429em;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 0.9rem;
+}
+
+.no-seleccionable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+
+
+.imgmobile,
+.imgdesktop{
+	display: none;
+}
+
+.imgdesktop:first-child{
+	display:block;
+}
+
+	#mainhead{
+		box-shadow: 2px 4px 4px rgba(0,0,0,.4);
+		width:100%;
+		display: block;
+		position: fixed;
+		top:0px;
+		background-color: #fff;
+		z-index:101;
+	}	
+
+
+	.header_main{
+		max-width:940px;
+		width:100%;
+		margin:auto;
+		
+		padding:30px 0px;
+		
+	}
+
+	.promocard-box{
+
+		max-width:940px;
+		margin: auto;
+		
+
+	}
+
+
+
+	.header-promo{
+		font-size: 2.0rem;padding:30px;display: block;
+		background-color: #417DD6;
+		color:#fff;
+	}
+
+
+
+	.header-ganadores{
+		font-size: 2.0rem;padding:30px;display: block;
+		color:#000;
+		border-bottom: 1px solid black;
+
+	}
+
+
+	.titulo-h1,
+	.brand-it
+	{
+		display: inline-block;
+		font-size: 2.0rem;
+		font-weight: bold;
+		
+	}
+
+
+	.brand-it img{
+		width: 16rem;
+	}
+
+	.size2rem{
+		font-size: 2.0rem;
+	}
+	.bloqueln{
+		display: inline-block;
+	}
+	.lightword{
+		font-weight: 200;
+	}
+
+	.link-blue{
+		text-decoration: none !important;
+		color:#02b0ef;
+		font-size: 0.9rem;
+	}
+
+	.link-black{
+		text-decoration: none !important;
+		color:#000;
+		font-size: 0.9rem;
+	}
+
+	.link-black:hover{
+		background-color:#E1E5EF;
+	}
+
+
+
+
+
+	.right-box,
+	.main-right-box{
+		float: right;margin-right: 55px;
+	}
+
+	.droplist{
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+	}
+	.droplist li{
+		
+	}
+
+	.droplist li a{
+		display: block;
+		width:100%;
+		height: 100%;
+		padding:10px  20px;
+	}
+
+
+	.dropmenu,
+	.main-dropmenu{
+		display: none;
+		position: absolute;
+		z-index: 10;
+		background-color: #fff;height: auto;
+	}
+
+	.main-burger,
+	.burger{
+		display: none;
+	}
+
+
+	
+
+	.nav-link{
+		display: inline-block;margin: 0px;
+	}
+
+
+
+	/* destacados*/
+
+	.promocard{
+		
+		display:inline-block;
+		margin:10px auto;
+		position: relative;
+		
+
+	}
+
+
+	.card{
+		text-align: left;
+		font-size: 1.6rem;
+	    font-weight: 300;
+	    line-height: 1.8rem;
+	    box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+		
+
+	}
+
+	.card-des{
+		width:300px;height:512px;
+	}
+
+	.card-car{
+		width:96%;
+		height:450px;
+		margin:20px auto;
+	}
+
+
+.imgcard{
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height:280px;width:100%;
+	margin-top:10px;
+
+}
+
+
+
+.card-body{
+	background-color:#f5f5f5;
+	height: 180px;
+	overflow: hidden;
+}
+
+.card_top{
+	display: inline-block;
+	height: 45px;
+	font-size: 0.9rem;
+	width: auto;
+	position: absolute;
+	top:10px;
+}
+
+.fecha{
+	height: 45px;
+	margin: 0px;
+	left:25px;
+	width:52px;
+	text-align: center;
+	background:#000;
+	color:#fff;
+	padding:2px 0px 0px 0px;
+}
+
+.fecha .dia{
+	font-size: 1.4rem;
+	font-weight: bold;
+	height:18px;
+	padding:0px;
+}
+
+.fecha .mes{
+	font-size: 0.7rem;
+	font-weight: normal;
+	height: 10px;
+	padding:0px;
+}
+
+.prox{
+	display: none;
+}
+
+.lugar{
+	background-color:#fff;
+	width:126px;
+	padding-top: 3%;
+	text-align: center;
+	height: 45px;
+	margin: 0px;
+	left:77px;
+}
+
+
+
+.card-car .fecha{
+	left:10px;
+	width:52px;
+	text-align: center;
+	background:#000;
+	color:#fff;
+	padding:2px 0px 0px 0px;
+}
+
+.card-car  .fecha .dia{
+	font-size: 1.4rem;
+	font-weight: bold;
+	height:18px;
+	padding:0px;
+}
+
+.fecha .mes{
+	font-size: 0.7rem;
+	font-weight: normal;
+	height: 10px;
+	padding:0px;
+}
+
+.prox{
+	display: none;
+}
+
+.card-car .lugar{
+	background-color:#fff;
+	width:126px;
+	padding-top: 3%;
+	text-align: center;
+	height: 45px;
+	margin: 0px;
+	left:62px;
+}
+
+
+
+.card-footer{
+	background-color: #fff;
+	font-size: 0.75rem;
+	border-top:0px;
+	
+}
+
+.card-footer span{
+	margin: 0px 4px;
+}
+
+
+
+#carousel-box{
+	height:auto;width:100%;
+	padding:50px 0px;
+	background: linear-gradient(to bottom, #E1E5EF,#FFFFFF );
+}
+
+
+#ganador-box{
+	padding:40px 0px;
+}
+
+
+
+.carpromo{
+	height:auto;width:80%;margin: auto;
+}
+
+.likes_box{
+	
+	float: left;
+
+}
+
+.gamers_box{
+	float: right;
+
+}
+
+.cleaner{
+	clear: both;height: 0px;
+}
+
+
+
+
+</style>
+
+
+
+<style type="text/css">
+	
+	/*
+	PARA EL CARRUSEL
+	*/
+
+
+@media only screen and (max-width:875px) {
+
+
+		.slick-prev,.slick-next{
+			display: none !important;
+		}
+}
+
+
+
+ 
+
+@media only screen and (max-width:685px) {
+
+
+		.card-car{
+			width:320px !important;
+			margin: auto;
+		}
+}
+
+
+@media only screen and (max-width:400px) {
+
+
+		.card-car{
+			width:240px !important;
+			margin: auto;
+		}
+}
+
+
+
+
+
+  @media only screen and (max-width: 659px) {
+
+
+  	.header-promo{
+  		position: relative;
+  	}
+
+	.titulo-h1,
+	.singleblock{
+
+		width:100%;
+		display: block;
+		text-align: center;		
+	}
+
+
+
+	.dropmenu{
+		width:100%;
+		left:0px;
+	}
+
+	.droplaunch{
+		display: none;
+	}
+
+	.burger{
+		display: block;
+		position: absolute;
+		font-size: 1.2rem;
+		top:40%;
+		left: 5%;
+	}
+
+  }
+
+
+  @media only screen and (max-width: 960px) {
+
+
+
+	.header_main .droplist li:first-child{
+		border-top: dotted 1px #4c4c4c;
+	}
+
+
+
+
+	.header_main .droplist li{
+		border-bottom: dotted 1px #4c4c4c;
+	}
+
+
+  	.header_main{
+  		position:relative;
+  	}
+
+	
+	.brand-it{
+		width:100%;
+		display:block;
+		text-align: center;		
+	}
+
+
+	.brand-it img{
+		width: 12rem;
+	}
+
+	.main-dropmenu{
+		width:100%;
+		left:0px;
+		top:6.3rem;
+	
+	}
+
+	.nav-link{
+		display: none;
+	}
+
+	.main-burger{
+		display: block;
+		position: absolute;
+		font-size: 1.2rem;
+		top:40%;
+		left: 5%;
+	}
+
+  }
+
+
+/*PARA LAS DINAMICAS REPETIDAS*/
+
+  @media only screen and (min-width: 960px) {
+      .promocard:last-child {
+          background-color: lightblue;
+          display: none;
+      }
+      .carpromo:first-child{
+        display:grid !important;
+      }
+
+  }
+
+  @media only screen and (max-width: 639px) {
+
+      .promocard:last-child {
+          background-color: lightblue;
+          display: none;
+
+      }
+
+      .carpromo:first-child{
+        display: grid !important;
+      }
+
+
+  }
+
+
+</style>
+
+
+<body class="container-iframe" ng-app='mainApp' ng-controller="pageCtr">
+	<div class="container-iframe-no">
+		<header id="mainhead">
+			<div class="header_main">
+				<h1 class=" brand-it" style="font-weight: bolder;">
+					<img src="images/marca_sitio.png" width="300">
+				</h1>
+				<a href="#burger" class="main-burger link-black downer" data-to-drop="#submenumain"><i class="fa fa-bars" aria-hidden="true"></i></a>
+				<div class="main-right-box dropbox-down" style="margin: 0px;">
+					
+					<a href="#categorias" class="link-blue droplaunch downer nav-link" data-to-drop="#submenumain">
+						<span>Categorías</span>
+						<span class="fa fa-caret-down " aria-hidden="true" style="margin-left: 0.2em"></span>
+					</a>
+
+					<div id="submenumain" class="main-dropmenu">
+						<ul class="lista droplist">
+							<li>
+								<a href="#auto" class="link-black">Automovilismo</a>
+							</li>
+							<li>
+								<a href="#auto" class="link-black">Automovilismo</a>
+							</li>
+							<li>
+								<a href="#auto" class="link-black">Automovilismo</a>
+							</li>
+							<li>
+								<a href="#auto" class="link-black">Automovilismo</a>
+							</li>
+							<li>
+								<a href="#auto" class="link-black">Automovilismo</a>
+							</li>
+						</ul>
+					</div>
+
+					<a href="#ganadores" class="link-blue  nav-link">
+						<span>Ganadores</span>
+					</a>
+					<a href="#como" class="link-blue  nav-link">
+						<span>¿Cómo funciona?</span>
+					</a>			
+					<a href="#perfil" class="link-blue  nav-link">
+						<span>Perfil</span>
+					</a>
+				</div>
+
+				<div style="clear: both;height: 0px;">&nbsp;</div>
+			</div>
+		</header>
+
+		<div  style="margin:100px auto 0px auto;max-width: 960px;display: block;">
+
+			<div style="width:100%;height:400px;background:gray;">&nbsp;</div>
+
+
+			<section id="destacados">
+				<div  style="width:100%;margin:0px;padding: 20px 0px;text-align: center;">
+					
+					<div class="promocard promo_card" style="padding:10px;" ng-repeat="x in destacados" >
+						<div class="card card-des">
+							<div class="imgcard" style="background-image: url(https://admin.experienciastelcel.com/static/temps/promo_79_min.jpg);">
+								
+								<div class="card_top fecha">
+									<p class="dia">{{x}}</p>
+									<p class="mes">mes</p>
+								</div>
+								<div class="card_top lugar">
+									lugar
+								</div>
+								<div class="card_top prox">Próximamente</div>
+
+							</div>
+						  <div class="card-body">
+ 						    <div class="card-text" style="max-height: ">
+ 							     <p>Some quick example text to build on</p>
+							     <p>the card title and make up</p>
+						    </div>
+						    
+						  </div>
+						  <div class="card-footer">
+						  	<div class="likes_box">
+						  		<span class="fa fa-heart grisrojooscuro"></span>
+						  		<span>1</span>
+						  	</div>
+						  	<div class="gamers_box">
+						  		<span class="fa fa-heart grisrojooscuro"></span>
+						  		<span>1</span>
+						  	</div>
+						  	<div class="cleaner">&nbsp;</div>
+
+						  </div>
+						 
+						</div>
+				</div>
+			</div>
+			
+			</section>
+
+
+			<section class="promocard-box">
+
+				<div class="header-promo">
+					<h1 class="titulo-h1">Dinámicas</h1>
+					<p class="size2rem bloqueln singleblock">
+						<span  class="fa fa-angle-double-right " aria-hidden="true"></span>
+						<span  class="lightword"> Futbol</span>
+					</p>
+					<div class="right-box dropbox-down">
+						<a href="#burger" class="burger link-black downer" data-to-drop="#carousel-cats"><i class="fa fa-bars" aria-hidden="true"></i></a>
+						<a href="#categorias" class="link-blue droplaunch downer" data-to-drop="#carousel-cats">
+							<span>Categorías</span>
+							<span class="fa fa-caret-down " aria-hidden="true" style="margin-left: 0.2em"></span>
+						</a>
+
+						<div id="carousel-cats" class="dropmenu">
+							<ul class="lista droplist">
+								<li>
+									<a href="#auto" class="link-black">Automovilismo</a>
+								</li>
+								<li>
+									<a href="#auto" class="link-black">Automovilismo</a>
+								</li>
+								<li>
+									<a href="#auto" class="link-black">Automovilismo</a>
+								</li>
+								<li>
+									<a href="#auto" class="link-black">Automovilismo</a>
+								</li>
+								<li>
+									<a href="#auto" class="link-black">Automovilismo</a>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+
+					<div style="clear: both;height: 0px;">&nbsp;</div>
+				</div>
+
+				<section id="carousel-box">
+					
+
+					<slick infinite='true' arrows='true' slides-to-show='3' slides-to-scroll='3' class=" carpromo" >
+					  	<div ng-repeat="s in slidepromos">
+							<div class="card card-car">
+								<div class="imgcard" style="background-image: url(https://admin.experienciastelcel.com/static/temps/promo_79_min.jpg);">
+									
+									<div class="card_top fecha">
+										<p class="dia">{{s}}</p>
+										<p class="mes">mes</p>
+									</div>
+									<div class="card_top lugar">
+										lugar
+									</div>
+									<div class="card_top prox">Próximamente</div>
+
+								</div>
+							  <div class="card-body">
+	 						    <div class="card-text" style="max-height: ">
+	 							     <p>Some quick example text to build on</p>
+								     <p>the card title and make up</p>
+							    </div>
+							    
+							  </div>
+							  <div class="card-footer">
+							  	<div class="likes_box">
+							  		<span class="fa fa-heart grisrojooscuro"></span>
+							  		<span>1</span>
+							  	</div>
+							  	<div class="gamers_box">
+							  		<span class="fa fa-heart grisrojooscuro"></span>
+							  		<span>1</span>
+							  	</div>
+							  	<div class="cleaner">&nbsp;</div>
+
+							  </div>
+							 
+							</div>					  		
+
+
+
+						</div>
+					
+					</slick>
+
+				</section>
+
+			</section>
+
+
+
+			<section class="ganadores-box">
+
+				<div class="header-ganadores">
+					<h1 class="titulo-h1">Ganadores</h1>
+				</div>
+
+				<section id="ganador-box">
+					
+
+					<slick infinite='true' arrows='true' slides-to-show='3' slides-to-scroll='3' class=" carpromo" >
+					  	<div ng-repeat="s in slidepromos">
+							<div class="card card-car">
+								<div class="imgcard" style="background-image: url(https://admin.experienciastelcel.com/static/temps/promo_79_min.jpg);">
+									
+
+
+								</div>
+							  <div class="card-body">
+	 						    <div class="card-text" style="max-height: ">
+	 							     <p>Some quick example text to build on</p>
+								     <p>the card title and make up</p>
+							    </div>
+							    
+							  </div>
+							  <div class="card-footer">
+							  	<div class="likes_box">
+							  		<span class="fa fa-heart grisrojooscuro"></span>
+							  		<span>1</span>
+							  	</div>
+							  	<div class="gamers_box">
+							  		<span class="fa fa-heart grisrojooscuro"></span>
+							  		<span>1</span>
+							  	</div>
+							  	<div class="cleaner">&nbsp;</div>
+
+							  </div>
+							 
+							</div>					  		
+
+
+
+						</div>
+					
+					</slick>
+
+				</section>
+
+			</section>
+
+
+
+			<div style="width:100%;height:200px;background:gray;">&nbsp;</div>
+
+
+		</div>
+
+	</div>
+
+
+
+
+
+	<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/slick/slick.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function () {
+
+				parent.postMessage('scrollthem,0', '*');
+
+				$('.downer').click(function(e){
+					e.preventDefault();
+					var myclient = $(this).attr('data-to-drop');
+					$(myclient).toggle();
+
+				});
+
+				$('.dropmenu,.main-dropmenu').mouseleave(function(){
+					$(this).hide();
+					console.log('as');
+				});
+
+			});
+	</script>	
+
+
+<!-- EXTRA FILES JUST FOR HOME -->
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/angular-route.min.js"></script>
+	<script type="text/javascript" src="/js/angular-sanitize.js"></script>
+	<script type="text/javascript" src="/slick/angular-slick.js"></script>
+
+<!-- -->
+
+
+
+    <script type="text/javascript">    
+        var myapp = angular.module('mainApp',['ngRoute','ngSanitize','slickCarousel']);
+
+        myapp.config(['$httpProvider', function($httpProvider) {
+            $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+            $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+            $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';        
+        }]); 
+
+
+
+
+
+		myapp.controller('pageCtr',function($scope,$http){
+
+			$scope.destacados = [1,2,3,4];
+			$scope.slidepromos = [4,5,6,7,8,9,0,11,12,13,14,15,16,17];
+
+
+		});
+
+        
+    </script>
+
+
+
+
+</body>
+</html>
