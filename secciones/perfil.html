@@ -619,8 +619,22 @@
         /*display: none;*/
     }
 
+
+
+    .flotandoproximamente{
+        position:fixed;width:100%;height:auto;text-align: center;top:2.5%;display: none;z-index:11;
+    }
+
+
     /***************************************************/
     @media only screen and (max-width: 960px) { 
+
+
+        .flotandoproximamente{
+            top:1.8%;
+        }
+
+
 
         .wrappermisguardados , .wrappermihistorial, .categoriadinamica {
             padding-left: 40px;
@@ -795,7 +809,7 @@
 
     }
 
-    .dia{
+    .dia_ev{
         font-size:1.05rem;
         font-weight: bold;
         height: 15px;
@@ -803,7 +817,7 @@
 
     }
 
-    .mes{
+    .mes_ev{
         font-size:0.7rem;
         height: 10px;
     }
@@ -849,6 +863,22 @@
     .yajugogrande{
          top: 257px;    
     }
+
+
+
+    .fondoventanasflotante {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.96);
+        z-index: 10;
+        display: none;
+    }
+
+
+
 
 </style>
 
@@ -929,6 +959,34 @@
 </section>
 
 
+
+
+
+
+<div id="fondoventanasflotante" class="fondoventanasflotante"></div>
+<div id="flotaproximamente" class="flotandoproximamente">
+    
+    <div style="background-color: #fff;width:300px;margin:auto;position:relative;border-radius: 6px;padding-top: 40px;">
+        <div id="closeflo" class="fa fa-times close" aria-hidden="true" style="position: absolute;right:10px;top:10px;"></div>
+        
+        <div style="padding:0px 0px;">
+            <img src="" id="imagenevento_flot">
+        </div>
+        
+        <div style="padding:10px;">
+            <div id="titulo_flot" style="font-size:1rem;padding:0px 20px 20px 0px;">Titulo</div>
+            <div style="font-size:1rem;padding:10px 20px;font-weight: bold;"> Muy pronto tendrás la experiencia </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
 <script type="text/javascript">
     $(document).ready( function() {
         parent.postMessage('scrollthem,0', '*');
@@ -948,6 +1006,10 @@
 
 
         var likesJson = $.getJSON( "https://admin.experienciastelcel.com/restful/getprofileuser/?upk="+upk, function( data ) {
+
+
+            console.log(data.usuario.likes);
+
 
             if ( data.usuario.imagen.length > 3 ) {
                 //$(".aliasperfil img").attr("src","https://admin.experienciastelcel.com/"+data.usuario.imagen);
@@ -983,8 +1045,8 @@
                 
                 cardHTML += '<div class="topboxinfo">';
                 cardHTML += '<div class="dia_evento no_'+clase_status+'" >';
-                cardHTML += '<div class="dia">'+data.usuario.likes[i].dia_evento+'</div>';
-                cardHTML += '<div class="mes">'+data.usuario.likes[i].mes_evento+'</div>';
+                cardHTML += '<div class="dia_ev">'+data.usuario.likes[i].dia_evento+'</div>';
+                cardHTML += '<div class="mes_ev">'+data.usuario.likes[i].mes_evento+'</div>';
                 cardHTML += '</div>';
                 cardHTML += '<div class="ciudad_evento">'+mensaje+'</div>';
                 cardHTML += '</div>';
@@ -996,7 +1058,9 @@
                 cardHTML += '       <div class="typotitulocard grismuyoscuro">'+data.usuario.likes[i].titulo+'</div>'
                 cardHTML += '   </div>'
                 cardHTML += '   <div class="detalles typodetallesvigencia">';
+                if(clase_status!='proximamente'){
                 cardHTML += '<div>Vigencia: '+data.usuario.likes[i].fecha_vigencia+'</div>';
+                }
                 cardHTML += '<div></div></div>'
                 cardHTML += '</div>';
                
@@ -1020,8 +1084,8 @@
                 
                 cardHTML += '<div class="topboxinfo">';
                 cardHTML += '<div class="dia_evento">';
-                cardHTML += '<div class="dia">'+data.usuario.participaciones[i].dia_evento+'</div>';
-                cardHTML += '<div class="mes">'+data.usuario.participaciones[i].mes_evento+'</div>';
+                cardHTML += '<div class="dia_ev">'+data.usuario.participaciones[i].dia_evento+'</div>';
+                cardHTML += '<div class="mes_ev">'+data.usuario.participaciones[i].mes_evento+'</div>';
                 cardHTML += '</div>';
                 cardHTML += '<div class="ciudad_evento">'+data.usuario.participaciones[i].ciudad+'</div>';
                 cardHTML += '</div>';
