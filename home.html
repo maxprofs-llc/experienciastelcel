@@ -13,7 +13,6 @@
 
 
 	<script type="text/javascript" src="js/prefixfree.min.js"></script>
-	<script src="//js.honeybadger.io/v0.5/honeybadger.min.js" type="text/javascript" data-apiKey="60817078"></script>
 
 
 </head>
@@ -244,15 +243,8 @@
 							console.log(usuarioreg,'cargausuario');
 							if(usuarioreg==false){
 								usuarioreg = datosUsuario.correo;
-
-
 								urls = 'https://admin.experienciastelcel.com/restful/reg_tel_user/'; 
-								data = {'correo':datosUsuario.correo,
-										'nombre':datosUsuario.nombre,
-										'msisdn':datosUsuario.msisdn,
-										'region':datosUsuario.region,
-										'perfil':datosUsuario.perfil
-										};
+								data = {'correo':datosUsuario.correo,'nombre':datosUsuario.nombre};
 								
 								$.ajax({
 									'url':urls,
