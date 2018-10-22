@@ -14,6 +14,15 @@
 
 	<script type="text/javascript" src="js/prefixfree.min.js"></script>
 	<script src="//js.honeybadger.io/v0.5/honeybadger.min.js" type="text/javascript" data-apiKey="60817078"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127644698-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-127644698-1');
+</script>
 
 
 </head>
@@ -222,7 +231,7 @@
 				window.addEventListener("message",
 		         function (e) {
 		            
-		            if (e.origin !== "uat.mitelcel.com") {
+		            if (e.origin !== "mitelcel.com") {
 					  noe_s = true;
 		            }
 		            
