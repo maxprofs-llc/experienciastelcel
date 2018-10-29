@@ -445,8 +445,9 @@
 	$( "body" ).undelegate(  ".finalizar", "click").delegate( ".finalizar", "click", function() {
 		triviaindex++;
 		clearInterval( cuentaprogresiva );
-		console.log(trivia);
-		for(var r=1; r<trivia.length-2; r++ ) {
+		console.log(trivia,'aquiestaelrror');
+		for(var r=1; r<trivia.length-1; r++ ) {
+			console.log(trivia[r].respuesta[0]);
 			try{
 				dinamicadataJsonRespuesta.push( trivia[r].respuesta[0] );
 				dinamicadataJsonRespuesta.push( trivia[r].respuesta[1] );
@@ -456,7 +457,7 @@
 			}
 		}
 		dinamicadataJsonRespuesta.push( {'name':'tiempo','value': horf_+":"+minf_+":"+ segf_ } ) ;
-		console.log( dinamicadataJsonRespuesta );
+		
 
 		$.ajax({'url':'https://admin.experienciastelcel.com/restful/finaltrivia/',
 	        'type':'GET',
