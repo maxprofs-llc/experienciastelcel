@@ -947,7 +947,7 @@ dl dd{
 		<p class="titulo">Términos y Condiciones</p>
 
 
-		<div id="terms">
+		<div id="terms" style="display: none;">
 			<dl style="list-style: circle;">
 				<dt><h1 style="font-size: 1.3rem;font-weight: bold;">Términos y condiciones de la Promoción  <span id="nombrepormo"></span>  </h1></dt>
 				<dd>
@@ -1102,6 +1102,9 @@ dl dd{
 			</dl>
 
 		</div>
+
+
+		<div id="terminostxt_box"></div>
 
 		<div id="xventaja_terminos"></div>
 		<div id="xtyc_dinamica" ></div>
@@ -1346,6 +1349,11 @@ function downTime(countTo) {
         		$('.comenzar').remove();
         	}
 
+
+
+			$('#terminostxt_box').html(data.promocion.terminostxt);
+
+        	/*
         	$('#nombrepormo').html(data.promocion.titulo);
         	$('#termdin').html(data.promocion.termsdin);
         	$('#bases').html(data.promocion.bases);
@@ -1359,8 +1367,8 @@ function downTime(countTo) {
         	$('#nombre_dinamica').html(data.promocion.dinamica);
         	$('#ventaja_desc').html(data.promocion.descpdin);
         	$('#texto_ganadores').html(data.promocion.terminosycondiciones);
-        	
-
+    		*/    	
+	
 
         	var cierraalas = new Date(data.promocion.vigenciaUTC*1000);
         	
