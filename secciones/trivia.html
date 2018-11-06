@@ -313,6 +313,7 @@
 <script type="text/javascript">
 	
 
+
 	var dinamicadataJsonRespuesta = [];
 
 
@@ -347,7 +348,7 @@
 			promo = data.promocion;
 			dinamicadataJsonRespuesta = [ {'name':'promo','value': id_dinamica}, {'name':'uspk','value':upk} ];
 
-		
+
   			// portada
 	        trivia = [
 	        	{
@@ -445,7 +446,7 @@
 	$( "body" ).undelegate(  ".finalizar", "click").delegate( ".finalizar", "click", function() {
 		triviaindex++;
 		clearInterval( cuentaprogresiva );
-		console.log(trivia,'aquiestaelrror');
+		
 		for(var r=1; r<trivia.length-1; r++ ) {
 			console.log(trivia[r].respuesta[0]);
 			try{

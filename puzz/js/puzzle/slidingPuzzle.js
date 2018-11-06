@@ -164,7 +164,7 @@
         return {
             restrict: 'EA',
             replace: true,
-            template: '<div><table style="width:300px;height:300px;" class="sliding-puzzle" ng-class="{\'puzzle-solved\': puzzle.isSolved()}">' +
+            template: '<div><table style="width:420px;height:420px;" class="sliding-puzzle" ng-class="{\'puzzle-solved\': puzzle.isSolved()}">' +
                 '<tr ng-repeat="($row, row) in puzzle.grid">' +
                 '<td ng-repeat="($col, tile) in row" ng-click="puzzle.move($row, $col)" ng-style="tile.style" ng-class="{\'puzzle-empty\': tile.empty}" title="{{tile.id}}"></td>' +
                 '</tr>' +
@@ -206,7 +206,7 @@
                     var width = image.width / cols,
                         height = image.height / rows;
 
-                    var width = 100,height=100;
+                    var width = 140,height=140;
 
                     scope.puzzle.traverse(function(tile, row, col) {
                         tile.style = {

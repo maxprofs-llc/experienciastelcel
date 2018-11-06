@@ -53,12 +53,15 @@
 			<div id="finalizarbox"></div>
 			<div ng-app="puzzleApp" id="puzzbox" >
 				<div ng-show="hiddens">
-				
+				<div style="text-align: center;">
+
+					<img src="{{src}}" style="width:180px;" />
+				</div>
 				<div ng-include="type"></div>
 				
 				<script type="text/ng-template" id="sliding-puzzle">
 					<fieldset id="sliding-simple" style="border: 0px solid;margin:10px 0px; ">
-						<sliding-puzzle size="3x3" src="{{src}}" style="width:300px;margin: auto;"></sliding-puzzle>
+						<sliding-puzzle size="3x3" src="{{src}}" style="width:420px;margin: auto;"></sliding-puzzle>
 					</fieldset>
 				</script>
 
