@@ -455,7 +455,7 @@ $(document).ready(function() {
 	});
 
 
-	$( "body" ).undelegate(".proximamente .imagedinamica", "touchend").delegate( ".proximamente .imagedinamica", "touchend", function() {
+	$( "body" ).undelegate(".proximamente .imagedinamica", "click").delegate( ".proximamente .imagedinamica", "click", function() {
 
 		id_dinamica = $(this).data("id");
 
