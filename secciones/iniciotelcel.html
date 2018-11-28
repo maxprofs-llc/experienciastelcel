@@ -1273,19 +1273,19 @@
 
 
 <section class="experienciastelcel">
-	<div class="introduccion mitelcel manita">
+	<div class="introduccion mitelcel manita" data-titulo="Experiencias|1|Banner principal|No aplica|No aplica|Bienvenido" data-evento="clicBannerGeneral">
 		<img src="images/bannersportada/banner_desktop_01.jpg?t=7" class="imgdesktop">
 		<img src="images/bannersportada/banner_mobile_01.jpg?t=7" class="imgmobile">
 	</div>
 
-	<div class="introduccion mitelcel manita">
+	<div class="introduccion mitelcel manita" data-titulo="Experiencias|2|Banner principal|No aplica|No aplica|Todos somos ganadores" data-evento="clicBannerGeneral">
 		<img src="images/bannersportada/banner_desktop_02.jpg?t=7" class="imgdesktop">
 		<img src="images/bannersportada/banner_mobile_02.jpg?t=7" class="imgmobile">
 	</div>
 
-	<div class="introduccion mitelcel manita">
-		<img src="images/bannersportada/banner_desktop_03.jpg?t=15" class="imgdesktop">
-		<img src="images/bannersportada/banner_mobile_03.jpg?t=15" class="imgmobile">
+	<div class="introduccion mitelcel manita" data-titulo="Experiencias|1|Banner principal|No aplica|No aplica|Tienes una ventaja" data-evento="clicBannerGeneral">
+		<img src="images/bannersportada/banner_desktop_03.jpg?t=16" class="imgdesktop">
+		<img src="images/bannersportada/banner_mobile_03.jpg?t=16" class="imgmobile">
 	</div>
 
 	<img src="images/flechaizqblanca.png" class="izq layer2">
@@ -1347,6 +1347,10 @@
 	var recorrio = 3;
 	var cuantos = 0;
 	var faltan = 0;
+
+
+	var ecomListaBanners = 'Experiencias|1|Banner principal|No aplica|No aplica|Bienvenido,Experiencias|2|Banner principal|No aplica|No aplica|Todos somos ganadores,Experiencias|3|Banner principal|No aplica|No aplica|Tienes una ventaja,';
+
 
 
 	$(document).ready(function () {
@@ -1493,12 +1497,32 @@
 		/******************************************************/
 
 
+function string_to_slug(str) {
+    str = str.replace(/^\s+|\s+$/g, ''); // trim
+    str = str.toLowerCase();
+  
+    // remove accents, swap ñ for n, etc
+    var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
+    var to   = "aaaaeeeeiiiioooouuuunc------";
+    for (var i=0, l=from.length ; i<l ; i++) {
+        str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+    }
+
+    str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+        .replace(/\s+/g, '-') // collapse whitespace and replace by -
+        .replace(/-+/g, '-'); // collapse dashes
+
+    return str;
+}
+
 
 
 		$("body").undelegate(".recompensacard, .dinamicacard", "click").delegate(".recompensacard, .dinamicacard", "click",
 			function (data) {				
 				dpk = $(this).attr('data-id');
-				window.open("https://www.mitelcel.com/mitelcel/ingresa?ir=/experiencias&da="+dpk, "blank");
+				titulo = $(this).attr('data-titulo');
+				titulo = string_to_slug(titulo);
+				window.open("https://www.mitelcel.com/mitelcel/ingresa?ir=/experiencias&da="+dpk+'&ref=telcel&prom='+titulo, "blank");
 			});
 
 
@@ -1507,7 +1531,7 @@
 		$("body").undelegate(".recompensacard, .dinamicacard", "touchend").delegate(".recompensacard, .dinamicacard", "touchend",
 			function (data) {				
 				dpk = $(this).attr('data-id');
-				window.open("https://www.mitelcel.com/mitelcel/ingresa?ir=/experiencias&da="+dpk, "blank");
+				window.open("https://www.mitelcel.com/mitelcel/ingresa?ir=/experiencias&da="+dpk+'&ref=telcel&prom='+titulo, "blank");
 			});
 
 
@@ -1677,11 +1701,19 @@
 			$(".iconoventaja").attr("src", "images/iconosventaja/" + ventaja + ".png")
 			var promosHTML = '';
 
+
 			for (i = 0; i < 4; i++) {
+
+				j = i + 1;
+				prom = 'Experiencias|'+j+'|Promocional eventos|No aplica|No aplica|'+data.dinamicas[i].slug_titulo+',';
+				ecomListaBanners = ecomListaBanners + prom;
+				data_titulo="Experiencias|"+j+"|Promocional eventos|No aplica|No aplica|"+data.dinamicas[i].slug_titulo;
+				data_evento="clicBannerGeneral";
+				data_slug = data.dinamicas[i].slug_titulo;
 
 				if (data.dinamicas[i].status == "proximamente") {
 					if (i > 2) {
-						promosHTML += '<div class="recompensacard proximamente shadowcard " data-id="' + data.dinamicas[i].pk +
+						promosHTML += '<div data-titulo="'+data_titulo+'" data-evento="'+data_evento+'" class="recompensacard proximamente shadowcard " data-id="' + data.dinamicas[i].pk +
 							'" style="cursor:not-allowed">'
 					} else {
 						promosHTML += '<div class="recompensacard proximamente shadowcard" data-id="' + data.dinamicas[i].pk +
@@ -1690,9 +1722,9 @@
 				} else {
 
 					if (i > 2) {
-						promosHTML += '<div class="recompensacard shadowcard " data-id="' + data.dinamicas[i].pk + '">'
+						promosHTML += '<div data-titulo="'+data_titulo+'" data-evento="'+data_evento+'" class="recompensacard shadowcard " data-id="' + data.dinamicas[i].pk + '">'
 					} else {
-						promosHTML += '<div class="recompensacard shadowcard" data-id="' + data.dinamicas[i].pk + '">'
+						promosHTML += '<div data-titulo="'+data_titulo+'" data-evento="'+data_evento+'" class="recompensacard shadowcard" data-id="' + data.dinamicas[i].pk + '">'
 					}
 				}
 
@@ -1755,6 +1787,10 @@
 				promosHTML += '</div>'
 
 			}
+
+
+
+
 			$(".promo3dinamicas").append(promosHTML);
 
 
@@ -1783,29 +1819,46 @@
 			lista = [];
 
 			var dinamicasJson = $.getJSON(url, function (data) {
+
 				var dinamicasHTML = '';
 				if (filtro == "todos") {
 					i = 3;
 				} else {
 					i = 0
 				}
+
+				var masorden = 0;
+				var ordenin = 1;
 				for (i; i < data.dinamicas.length; i++) {
+
+					masorden++;
+					ordenin++;
+					data_slug = data.dinamicas[i].slug_titulo;
+					data_titulo="Experiencias|"+masorden+"|Promocional eventos|No aplica|No aplica|"+data_slug;
+					data_evento="clicBannerGeneral";
+
+
+					prom = 'Experiencias|'+masorden+'|Promocional eventos carousel|No aplica|No aplica|'+data_slug+',';
+					ecomListaBanners = ecomListaBanners + prom;
+
+					data_slug = data.dinamicas[i].slug_titulo;
+
 					totalcards++;
 					if (data.dinamicas[i].status == "proximamente") {
 						if (i == 3 && filtro == "todos") {
-							dinamicasHTML += '<div class="dinamicacard proximamente shadowcard puntero "  data-id="' + data
+							dinamicasHTML += '<div data-titulo="'+data_titulo+'" data-evento="'+data_evento+'" class="dinamicacard proximamente shadowcard puntero "  data-id="' + data
 								.dinamicas[i].pk + '"  style="cursor:not-allowed" >'
 						} else {
-							dinamicasHTML += '<div class="dinamicacard proximamente shadowcard puntero"  data-id="' + data.dinamicas[i].pk +
+							dinamicasHTML += '<div  data-titulo="'+data_titulo+'" data-evento="'+data_evento+'" class="dinamicacard proximamente shadowcard puntero"  data-id="' + data.dinamicas[i].pk +
 								'"  style="cursor:not-allowed" >'
 						}
 
 					} else {
 						if (i == 3 && filtro == "todos") {
-							dinamicasHTML += '<div class="dinamicacard shadowcard puntero "  data-id="' + data.dinamicas[i]
+							dinamicasHTML += '<div data-titulo="'+data_titulo+'" data-evento="'+data_evento+'" class="dinamicacard shadowcard puntero "  data-id="' + data.dinamicas[i]
 								.pk + '" >'
 						} else {
-							dinamicasHTML += '<div class="dinamicacard shadowcard puntero"  data-id="' + data.dinamicas[i].pk + '" >'
+							dinamicasHTML += '<div data-titulo="'+data_titulo+'" data-evento="'+data_evento+'" class="dinamicacard shadowcard puntero"  data-id="' + data.dinamicas[i].pk + '" >'
 						}
 
 					}
@@ -1866,7 +1919,19 @@
 				var anchofinal = totalcards  * 240;
 				$(".dinamicas .carruselcards .mascara .wrappercards").css("width", anchofinal + "px");
 				$(".dinamicas .carruselcards .mascara .wrappercards").append(dinamicasHTML);
+
+				dataecom = ecomListaBanners.slice(0, -1);
+
+				dlMetri={
+				'ecomPageName':'Experiencias',
+				'ecomListaBanners':dataecom};
+				console.log(dataecom);
+				_satellite.track("telExperiencias");
+
 			});
+
+
+
 		}
 
 		cargaDinamicasCarrusel("todos", "");
@@ -1940,12 +2005,15 @@
 		})
 
 		$(".mitelcel").click(function () {
-			window.open("https://www.mitelcel.com/mitelcel/ingresa?ir=/experiencias", "blank")
+			window.open("https://www.mitelcel.com/mitelcel/ingresa?ir=/experiencias&ref=telcel", "blank")
 		})
 
 		$("#main-header .brandmitelcel").click(function () {
-			window.open("https://www.mitelcel.com/mitelcel/ingresa?ir=/experiencias", "blank")
+			window.open("https://www.mitelcel.com/mitelcel/ingresa?ir=/experiencias&ref=telcel", "blank")
 		})
 
 	})
+
+
+
 </script>
