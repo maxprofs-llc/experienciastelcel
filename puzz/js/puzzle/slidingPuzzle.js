@@ -84,8 +84,10 @@
             this.finalizar = function(){
 
                 var lologre = false;
+
                 if(this.isSolved()){
                     lologre = 1;
+
                 }
                 else{
                     lologre = 0;
@@ -164,11 +166,11 @@
         return {
             restrict: 'EA',
             replace: true,
-            template: '<div><table style="width:300px;height:300px;" class="sliding-puzzle" ng-class="{\'puzzle-solved\': puzzle.isSolved()}">' +
+            template: '<div><table style="width:300px;height:300px;" ng-hide="puzzle.isSolved()" class="sliding-puzzle" ng-class="{\'puzzle-solved\': puzzle.isSolved()}">' +
                 '<tr ng-repeat="($row, row) in puzzle.grid">' +
                 '<td ng-repeat="($col, tile) in row" ng-click="puzzle.move($row, $col)" ng-style="tile.style" ng-class="{\'puzzle-empty\': tile.empty}" title="{{tile.id}}"></td>' +
                 '</tr>' +
-                '</table>'+
+                '</table><div ng-show="puzzle.isSolved()"><img src="{{puzzle.imagen}}" style="width:300px;" /></div>'+
                 ''+
                 '<div class="distancia" ng-show="puzzle.isSolved()"><span class="btn negro" ng-click="puzzle.finalizar()">Finalizar</span></div></div>',
             scope: {
@@ -182,7 +184,7 @@
                     image = new Image();
 
                 function create() {
-
+                    
                     scope.puzzle = slidingPuzzle(rows, cols);
 
                     if (attrs.api) {
@@ -234,6 +236,7 @@
                     image.src = src;
                     image.onload = function() {
                         loading = false;
+                        scope.puzzle.imagen = image.src;
                         scope.$apply(function() {
                             tile();
                         });

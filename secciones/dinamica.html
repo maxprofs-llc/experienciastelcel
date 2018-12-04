@@ -1164,6 +1164,10 @@ function downTime(countTo) {
 
 
 		var getStatusJson = $.getJSON( "https://admin.experienciastelcel.com/restful/participando/"+upk+"/"+id_dinamica+"/", function(data) {
+			
+
+
+
 			if ( data.status == "finalizo" ) {
 				$(".aceptoterminoscondiciones, .terminoscondiciones, .comenzar").remove();
 				$(".graciasporparticipar").show();
@@ -1183,8 +1187,8 @@ function downTime(countTo) {
 
         	console.log(data);
 
-        	if(data.promocion.status=='publish'){
-
+        	if(data.promocion.status=='publish' || data.promocion.status=='working'){
+        		dom = true;
         	}
         	else{
         		$('.contadorregresivo').html('&nbsp;');
